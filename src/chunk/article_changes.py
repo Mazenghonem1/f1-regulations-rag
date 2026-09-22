@@ -30,7 +30,7 @@ def _normalised(body: str) -> str:
     return _WS_RE.sub(" ", body).strip()
 
 
-def _latest_versions(articles: list[dict]) -> list[dict]:
+def latest_versions(articles: list[dict]) -> list[dict]:
     """Some Issues were re-published same-day under a new source PDF (e.g.
     "..._v1.pdf" / "..._v2.pdf", or a "-v2" reissue with no "-v1" on disk) --
     same (season, kind, issue), two source_pdf values. Keep only the
@@ -61,7 +61,7 @@ def diff_issues(articles: list[dict]) -> dict[str, list[dict]]:
     order. An Article absent from an Issue and present in the next is an
     addition; present then absent is a removal; present in both with a
     different body is a text change."""
-    articles = _latest_versions(articles)
+    articles = latest_versions(articles)
     by_family = _issue_sequence(articles)
 
     changes: dict[str, list[dict]] = defaultdict(list)

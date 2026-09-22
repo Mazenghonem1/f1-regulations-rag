@@ -5,7 +5,7 @@ Run: python -m src.chunk.run
 import json
 import pathlib
 
-from .article_changes import diff_issues
+from .article_changes import diff_issues, latest_versions
 from .decisions import parse_decision
 from .dedupe import dedupe_decisions
 from .extract import extract_text
@@ -105,7 +105,7 @@ def main():
     decisions, coverage = process_decisions()
     (PROCESSED_DIR / "decisions.json").write_text(json.dumps(decisions, indent=2))
 
-    regulations = process_regulations()
+    regulations = latest_versions(process_regulations())
     (PROCESSED_DIR / "regulation_articles.json").write_text(
         json.dumps(regulations, indent=2)
     )
