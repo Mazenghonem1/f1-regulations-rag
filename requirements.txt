@@ -1,0 +1,12 @@
+# torch/transformers/sentence-transformers/numpy are pinned together: the
+# unpinned combo (2026-09) pulled a transformers build requiring torch>=2.5
+# alongside torch 2.2.2, and numpy 2.x, which broke sentence-transformers'
+# import chain outright. This trio is verified compatible on Python 3.11.
+requests
+beautifulsoup4
+pdfminer.six
+sentence-transformers==3.3.1
+transformers==4.46.3
+torch==2.2.2
+rank_bm25
+numpy<2
