@@ -22,8 +22,16 @@ from .mitigating import is_justified_distinction
 SIMILARITY_THRESHOLD = 0.75
 
 
+def _normalise_outcome(outcome: str) -> str:
+    """Strip trailing punctuation -- "5 second time penalty" and "5 second
+    time penalty." are the same Outcome, not a divergence (verified: this
+    exact pair appeared as a spurious flag on a real query, purely from
+    inconsistent trailing periods in the source PDFs)."""
+    return outcome.strip().lower().rstrip(".")
+
+
 def _outcomes_differ(a: dict, b: dict) -> bool:
-    oa, ob = (a.get("outcome") or "").strip().lower(), (b.get("outcome") or "").strip().lower()
+    oa, ob = _normalise_outcome(a.get("outcome") or ""), _normalise_outcome(b.get("outcome") or "")
     return bool(oa) and bool(ob) and oa != ob
 
 
