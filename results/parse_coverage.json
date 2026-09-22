@@ -1,0 +1,34 @@
+{
+  "total_candidates": 187,
+  "deduped_count": 0,
+  "kept_count": 187,
+  "templated_count": 169,
+  "non_templated_count": 18,
+  "field_coverage": {
+    "cited_articles": {
+      "present": 168,
+      "total": 169,
+      "rate": 0.994
+    },
+    "outcome": {
+      "present": 166,
+      "total": 169,
+      "rate": 0.982
+    }
+  },
+  "failures": {
+    "cited_articles": [
+      "data/raw/decisions/2023/Australian Grand Prix/2023_australian_grand_prix_-_decision_-_scuderia_ferrari_-_right_of_review.pdf"
+    ],
+    "outcome": [
+      "data/raw/decisions/2023/Australian Grand Prix/2023 Australian Grand Prix - Decision - AGPC.pdf",
+      "data/raw/decisions/2023/United States Grand Prix/2023 United States Grand Prix - Decision - Sprint Shootout SC2-SC1 Times .pdf",
+      "data/raw/decisions/2024/United States Grand Prix/2024 United States Grand Prix - Infringement - Organiser and Promoter - Track Invasion.pdf"
+    ]
+  },
+  "both_article_and_outcome": {
+    "present": 165,
+    "total": 169,
+    "rate": 0.976
+  }
+}
