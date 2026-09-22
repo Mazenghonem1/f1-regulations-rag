@@ -2,5 +2,6 @@
 __pycache__/
 *.pyc
 data/raw/
+data/processed/.embed_cache/
 .DS_Store
 *.egg-info/
