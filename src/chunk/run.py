@@ -16,7 +16,7 @@ RAW_DIR = pathlib.Path("data/raw")
 PROCESSED_DIR = pathlib.Path("data/processed")
 RESULTS_DIR = pathlib.Path("results")
 
-DECISION_FIELDS = ["cited_articles", "outcome"]  # coverage is reported on these
+DECISION_FIELDS = ["cited_articles", "outcome", "date"]  # coverage is reported on these
 
 
 def _load_sidecar(pdf_path: pathlib.Path) -> dict:

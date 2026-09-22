@@ -53,7 +53,14 @@ def embed_chunks(chunks: list[dict]) -> np.ndarray:
 def embed_query(query: str) -> np.ndarray:
     """Embed a single query string with the same model/normalisation as the
     corpus, so dot product == cosine similarity."""
+    return embed_texts([query])[0]
+
+
+def embed_texts(texts: list[str]) -> np.ndarray:
+    """Embed a list of strings as one batch (uncached) -- for ad-hoc text
+    comparisons outside the indexed corpus, e.g. comparing two Decisions'
+    Fact text. Use embed_chunks for the corpus itself, which caches to disk."""
     model = _get_model()
-    return model.encode([query], normalize_embeddings=True, convert_to_numpy=True)[0].astype(
+    return model.encode(texts, normalize_embeddings=True, convert_to_numpy=True).astype(
         np.float32
     )

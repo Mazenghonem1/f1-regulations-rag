@@ -24,6 +24,15 @@ LABELS = [
 _LEADING_WORDS_RE = re.compile(r"^\s*([A-Za-z/ ]{2,20}?)\s(.*)$")
 
 DOCUMENT_NUMBER_RE = re.compile(r"Document\s+(\d+)")
+# "Date       02 April 2023" sits on the same physical line as the "To" field
+# (a two-column header layout), not as its own flush-left label -- doesn't
+# fit the LABELS scheme above, needs its own line-anywhere search.
+DATE_RE = re.compile(r"Date\s+(\d{1,2}\s+\w+\s+\d{4})")
+_MONTHS = {
+    "january": 1, "february": 2, "march": 3, "april": 4, "may": 5, "june": 6,
+    "july": 7, "august": 8, "september": 9, "october": 10, "november": 11,
+    "december": 12,
+}
 # Bare/section-prefixed regulation articles: 33.3, C3.14.4. Also matches a
 # whole-Article citation with no sub-clause ("Article 44") when it directly
 # follows the word "Article", without matching every bare number in the text.
@@ -99,6 +108,19 @@ def document_number(text: str) -> str | None:
     return m.group(1) if m else None
 
 
+def decision_date(text: str) -> str | None:
+    """Return the Decision's issue date as ISO "YYYY-MM-DD", parsed from the
+    "Date DD Month YYYY" header field, or None if absent/unparseable."""
+    m = DATE_RE.search(text)
+    if not m:
+        return None
+    day_s, month_s, year_s = m.group(1).split()
+    month = _MONTHS.get(month_s.lower())
+    if month is None:
+        return None
+    return f"{year_s}-{month:02d}-{int(day_s):02d}"
+
+
 def cited_articles(infringement_text: str) -> list[str]:
     appendix_matches = APPENDIX_ARTICLE_RE.findall(infringement_text)
     # Appendix citations don't use a dotted number ("Article 2 (d)"), so
@@ -136,6 +158,7 @@ def parse_decision(text: str, source_meta: dict) -> dict:
     return {
         **source_meta,
         "document_number": document_number(text),
+        "date": decision_date(text),
         "is_incident_template": is_incident_template,
         "driver_no": fields.get("No / Driver"),
         "competitor": fields.get("Competitor"),

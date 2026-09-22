@@ -14,6 +14,11 @@
       "present": 166,
       "total": 169,
       "rate": 0.982
+    },
+    "date": {
+      "present": 169,
+      "total": 169,
+      "rate": 1.0
     }
   },
   "failures": {
@@ -24,7 +29,8 @@
       "data/raw/decisions/2023/Australian Grand Prix/2023 Australian Grand Prix - Decision - AGPC.pdf",
       "data/raw/decisions/2023/United States Grand Prix/2023 United States Grand Prix - Decision - Sprint Shootout SC2-SC1 Times .pdf",
       "data/raw/decisions/2024/United States Grand Prix/2024 United States Grand Prix - Infringement - Organiser and Promoter - Track Invasion.pdf"
-    ]
+    ],
+    "date": []
   },
   "both_article_and_outcome": {
     "present": 165,
