@@ -5,6 +5,7 @@ Run: python -m src.chunk.run
 import json
 import pathlib
 
+from .article_changes import diff_issues
 from .decisions import parse_decision
 from .dedupe import dedupe_decisions
 from .extract import extract_text
@@ -109,6 +110,9 @@ def main():
         json.dumps(regulations, indent=2)
     )
 
+    changes = diff_issues(regulations)
+    (PROCESSED_DIR / "article_changes.json").write_text(json.dumps(changes, indent=2))
+
     (RESULTS_DIR / "parse_coverage.json").write_text(json.dumps(coverage, indent=2))
 
     print(f"Decisions: {len(decisions)} kept ({coverage['deduped_count']} deduped)")
@@ -117,6 +121,7 @@ def main():
     both = coverage["both_article_and_outcome"]
     print(f"  both article+outcome: {both['present']}/{both['total']} ({both['rate']:.1%})")
     print(f"Regulation Articles: {len(regulations)} chunks")
+    print(f"Article changes: {len(changes)} Articles with recorded changes")
 
 
 if __name__ == "__main__":

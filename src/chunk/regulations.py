@@ -36,6 +36,14 @@ NOISE_RE = re.compile(
     re.I,
 )
 
+# "APPENDIX 1" etc. -- not an Article, but the last Article in a Regulation is
+# followed only by Appendices with this header form (no "N)" or "ARTICLE N:"),
+# so without an explicit stop here the last Article's body swallows every
+# Appendix to end-of-document (verified: 2023 sporting Issues 1-2, Article 63
+# body ballooning to >100k chars). Bounds the last Article the same way the
+# next Article header bounds every other one.
+APPENDIX_RE = re.compile(r"^\s*APPENDIX\s+\d+\b", re.I)
+
 
 def _strip_noise(text: str) -> str:
     return "\n".join(line for line in text.splitlines() if not NOISE_RE.match(line))
@@ -64,6 +72,7 @@ def split_articles(text: str) -> list[dict]:
     lines = text.splitlines()
 
     headers = []  # (line_index, article_id, title)
+    appendix_lines = []
     for i, line in enumerate(lines):
         m = BARE_ARTICLE_RE.match(line)
         if m:
@@ -72,10 +81,20 @@ def split_articles(text: str) -> list[dict]:
         m = SECTION_ARTICLE_RE.match(line)
         if m:
             headers.append((i, m.group(1), m.group(2).strip()))
+            continue
+        if APPENDIX_RE.match(line):
+            appendix_lines.append(i)
+
+    # The table of contents lists "APPENDIX 1" too, long before the real
+    # Appendix section -- only the first appendix marker *after* the last
+    # Article header is the real section boundary.
+    last_header = headers[-1][0] if headers else -1
+    after_headers = [i for i in appendix_lines if i > last_header]
+    appendix_start = min(after_headers, default=len(lines))
 
     candidates = []
     for idx, (start, article_id, title) in enumerate(headers):
-        end = headers[idx + 1][0] if idx + 1 < len(headers) else len(lines)
+        end = headers[idx + 1][0] if idx + 1 < len(headers) else appendix_start
         body = "\n".join(lines[start + 1 : end]).strip()
         candidates.append(
             {
