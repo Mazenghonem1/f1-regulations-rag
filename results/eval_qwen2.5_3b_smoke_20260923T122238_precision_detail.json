@@ -1,0 +1,40 @@
+{
+  "without_reranking": {
+    "precision": 1.0,
+    "scored": 3,
+    "skipped": 0,
+    "per_question": [
+      {
+        "id": "q01",
+        "hit": true
+      },
+      {
+        "id": "q02",
+        "hit": true
+      },
+      {
+        "id": "q03",
+        "hit": true
+      }
+    ]
+  },
+  "with_reranking": {
+    "precision": 1.0,
+    "scored": 3,
+    "skipped": 0,
+    "per_question": [
+      {
+        "id": "q01",
+        "hit": true
+      },
+      {
+        "id": "q02",
+        "hit": true
+      },
+      {
+        "id": "q03",
+        "hit": true
+      }
+    ]
+  }
+}

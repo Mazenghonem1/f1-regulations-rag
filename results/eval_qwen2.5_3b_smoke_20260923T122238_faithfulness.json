@@ -1,0 +1,38 @@
+{
+  "faithfulness": 0.6666666666666666,
+  "scored": 6,
+  "unsupported": 2,
+  "per_citation": [
+    {
+      "question_id": "q01",
+      "doc_id": "dec:2023:Austrian Grand Prix:66",
+      "supported": true
+    },
+    {
+      "question_id": "q01",
+      "doc_id": "dec:2023:Austrian Grand Prix:61",
+      "supported": true
+    },
+    {
+      "question_id": "q01",
+      "doc_id": "dec:2023:Austrian Grand Prix:59",
+      "supported": true
+    },
+    {
+      "question_id": "q01",
+      "doc_id": "dec:2023:Austrian Grand Prix:62",
+      "supported": true
+    },
+    {
+      "question_id": "q02",
+      "doc_id": "dec:2023:Monaco Grand Prix:49",
+      "supported": false
+    },
+    {
+      "question_id": "q02",
+      "doc_id": "dec:2024:Qatar Grand Prix:86",
+      "supported": false,
+      "reason": "doc_id not found in retrieved chunks"
+    }
+  ]
+}
