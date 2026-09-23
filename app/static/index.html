@@ -68,29 +68,25 @@
     color: var(--grey);
   }
 
-  /* the vivid question box -- this is the one bold element on the page */
+  /* the vivid question box -- checkered-flag frame, the one bold element on the page */
   .ask-box {
     position: relative;
-    background: var(--ink);
-    border-radius: 10px;
-    padding: 1.5rem 1.5rem 1.25rem;
-    box-shadow: 0 8px 24px rgba(23,24,28,0.18);
-    overflow: hidden;
+    padding: 14px;
+    background-image:
+      linear-gradient(45deg, var(--ink) 25%, transparent 25%, transparent 75%, var(--ink) 75%),
+      linear-gradient(45deg, var(--ink) 25%, transparent 25%, transparent 75%, var(--ink) 75%);
+    background-size: 14px 14px;
+    background-position: 0 0, 7px 7px;
   }
-  .ask-box::before {
-    content: "";
-    position: absolute;
-    top: 0; left: 0; right: 0;
-    height: 5px;
-    background: repeating-linear-gradient(
-      90deg, var(--racing-red) 0 24px, var(--ink) 24px 48px
-    );
+  .ask-box-inner {
+    background: var(--paper);
+    padding: 1.25rem 1.25rem 1rem;
   }
   .ask-box label {
     display: block;
     font-size: 0.75rem;
     font-weight: 600;
-    color: #E8A33D;
+    color: var(--racing-red);
     margin-bottom: 0.6rem;
   }
   .ask-box textarea {
@@ -100,13 +96,12 @@
     font: inherit;
     font-size: 1.05rem;
     padding: 0.7rem 0.85rem;
-    border: none;
-    border-radius: 6px;
-    background: var(--paper);
+    border: 1.5px solid var(--ink);
+    background: white;
     color: var(--ink);
   }
   .ask-box textarea:focus {
-    outline: 3px solid var(--racing-red);
+    outline: 2px solid var(--racing-red);
     outline-offset: 1px;
   }
   .ask-box .row {
@@ -118,7 +113,7 @@
   }
   .ask-box .status {
     font-size: 0.85rem;
-    color: #C9C2AC;
+    color: var(--grey);
   }
   .ask-box button {
     font: inherit;
@@ -128,7 +123,6 @@
     background: var(--racing-red);
     color: white;
     border: none;
-    border-radius: 6px;
     cursor: pointer;
     transition: background 0.15s ease;
   }
@@ -254,11 +248,13 @@
   </div>
 
   <div class="ask-box">
-    <label for="question">Your question</label>
-    <textarea id="question" rows="2" placeholder="e.g. What penalty applies to a driver who starts the race from an incorrect grid location?"></textarea>
-    <div class="row">
-      <span id="status" class="status"></span>
-      <button id="ask">Ask</button>
+    <div class="ask-box-inner">
+      <label for="question">Your question</label>
+      <textarea id="question" rows="2" placeholder="e.g. What penalty applies to a driver who starts the race from an incorrect grid location?"></textarea>
+      <div class="row">
+        <span id="status" class="status"></span>
+        <button id="ask">Ask</button>
+      </div>
     </div>
   </div>
 
