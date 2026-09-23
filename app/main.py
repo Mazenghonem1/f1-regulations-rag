@@ -47,6 +47,27 @@ def ask(req: AskRequest):
         return {"error": str(e)}
     return {
         "retrieved_chunk_ids": [c["chunk_id"] for c in chunks],
+        "sources": [_source_summary(c) for c in chunks],
         "flags": flags,
         "output": output,
+    }
+
+
+def _source_summary(chunk: dict) -> dict:
+    """A display-ready summary for one retrieved chunk -- the frontend
+    shows real content, not the raw chunk_id string."""
+    if chunk["doc_type"] == "regulation":
+        return {
+            "chunk_id": chunk["chunk_id"],
+            "doc_type": "regulation",
+            "label": f"Article {chunk['article_id']}",
+            "detail": f"{chunk['kind'].title()} Regulations, {chunk['season']}",
+            "excerpt": chunk["text"].split("\n", 1)[-1][:280],
+        }
+    return {
+        "chunk_id": chunk["chunk_id"],
+        "doc_type": "decision",
+        "label": f"Document {chunk['chunk_id'].rsplit(':', 1)[-1]}",
+        "detail": f"{chunk.get('event') or ''} {chunk.get('season') or ''}".strip(),
+        "excerpt": (chunk.get("fact") or chunk.get("outcome") or "")[:280],
     }

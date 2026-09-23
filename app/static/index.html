@@ -3,41 +3,268 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>F1 Regulations RAG</title>
+<title>F1 Regulations &amp; Rulings</title>
 <style>
-  :root { color-scheme: light dark; }
+  :root {
+    --paper: #F6F4EE;
+    --ink: #17181C;
+    --blue: #223A5E;
+    --red: #93221F;
+    --racing-red: #C81E2C;
+    --grey: #726D5D;
+    --rule: #C9C2AC;
+  }
+  * { box-sizing: border-box; }
+  html { background: var(--paper); }
   body {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-    max-width: 760px; margin: 2rem auto; padding: 0 1rem; line-height: 1.5;
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    line-height: 1.5;
   }
-  h1 { font-size: 1.3rem; }
-  textarea { width: 100%; box-sizing: border-box; font: inherit; padding: 0.5rem; }
-  button { padding: 0.5rem 1.2rem; font: inherit; cursor: pointer; }
-  .flag {
-    border-left: 4px solid #d97706; background: rgba(217,119,6,0.08);
-    padding: 0.5rem 0.75rem; margin: 0.5rem 0; border-radius: 4px;
+  .wrap { max-width: 760px; margin: 0 auto; padding: 2.5rem 1.25rem 6rem; }
+
+  /* running motif: a thin checkered rule, used sparingly at section breaks */
+  .checker-rule {
+    height: 6px;
+    margin: 2.25rem 0;
+    background-image:
+      linear-gradient(45deg, var(--ink) 25%, transparent 25%, transparent 75%, var(--ink) 75%),
+      linear-gradient(45deg, var(--ink) 25%, transparent 25%, transparent 75%, var(--ink) 75%);
+    background-size: 6px 6px;
+    background-position: 0 0, 3px 3px;
+    opacity: 0.12;
   }
-  .flag.superseded { border-color: #7c3aed; background: rgba(124,58,237,0.08); }
+
+  .masthead {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 2.5rem;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+  .masthead .name {
+    font-weight: 700;
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  .masthead .name .flag-chip {
+    display: inline-block;
+    width: 14px; height: 14px;
+    background-image:
+      linear-gradient(45deg, var(--ink) 25%, transparent 25%, transparent 75%, var(--ink) 75%),
+      linear-gradient(45deg, var(--ink) 25%, transparent 25%, transparent 75%, var(--ink) 75%);
+    background-size: 7px 7px;
+    background-position: 0 0, 3.5px 3.5px;
+    border-radius: 2px;
+  }
+  .masthead .sub {
+    font-size: 0.78rem;
+    color: var(--grey);
+  }
+
+  /* the vivid question box -- this is the one bold element on the page */
+  .ask-box {
+    position: relative;
+    background: var(--ink);
+    border-radius: 10px;
+    padding: 1.5rem 1.5rem 1.25rem;
+    box-shadow: 0 8px 24px rgba(23,24,28,0.18);
+    overflow: hidden;
+  }
+  .ask-box::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 5px;
+    background: repeating-linear-gradient(
+      90deg, var(--racing-red) 0 24px, var(--ink) 24px 48px
+    );
+  }
+  .ask-box label {
+    display: block;
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: #E8A33D;
+    margin-bottom: 0.6rem;
+  }
+  .ask-box textarea {
+    width: 100%;
+    resize: vertical;
+    min-height: 3.2rem;
+    font: inherit;
+    font-size: 1.05rem;
+    padding: 0.7rem 0.85rem;
+    border: none;
+    border-radius: 6px;
+    background: var(--paper);
+    color: var(--ink);
+  }
+  .ask-box textarea:focus {
+    outline: 3px solid var(--racing-red);
+    outline-offset: 1px;
+  }
+  .ask-box .row {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 0.9rem;
+    margin-top: 0.9rem;
+  }
+  .ask-box .status {
+    font-size: 0.85rem;
+    color: #C9C2AC;
+  }
+  .ask-box button {
+    font: inherit;
+    font-weight: 700;
+    font-size: 0.9rem;
+    padding: 0.6rem 1.5rem;
+    background: var(--racing-red);
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.15s ease;
+  }
+  .ask-box button:hover:not(:disabled) { background: #A81824; }
+  .ask-box button:disabled { opacity: 0.6; cursor: default; }
+
+  /* the ruling */
+  .ruling {
+    padding-top: 0.25rem;
+  }
+  .ruling .on-article {
+    font-style: italic;
+    font-size: 0.9rem;
+    color: var(--grey);
+    margin-bottom: 0.7rem;
+  }
+  .ruling .verdict {
+    font-size: 1.3rem;
+    line-height: 1.5;
+    font-weight: 500;
+    max-width: 620px;
+  }
+  .ruling .verdict.error { color: var(--racing-red); font-size: 1.05rem; font-weight: 400; }
+
+  /* sources */
+  .sources-heading {
+    font-size: 0.78rem;
+    font-weight: 600;
+    color: var(--grey);
+    margin-bottom: 0.75rem;
+  }
+  .source-entry {
+    display: grid;
+    grid-template-columns: 100px 1fr;
+    gap: 1.1rem;
+    padding: 1rem 0;
+    border-top: 1px solid var(--rule);
+  }
+  .source-entry:last-child { border-bottom: 1px solid var(--rule); }
+  .source-tag {
+    font-size: 0.78rem;
+    line-height: 1.5;
+    padding-top: 0.1rem;
+  }
+  .source-tag .kind { display: block; color: var(--grey); margin-bottom: 0.15rem; }
+  .source-tag .id { color: var(--blue); font-weight: 600; }
+  .source-entry.decision .source-tag .id { color: var(--red); }
+  .source-body {
+    font-size: 0.98rem;
+    line-height: 1.55;
+  }
+  .source-meta {
+    font-size: 0.78rem;
+    color: var(--grey);
+    margin-top: 0.35rem;
+  }
+
+  /* contradiction flags -- one gets the full stamp treatment, the rest list quietly */
+  .flags-heading {
+    font-size: 0.78rem;
+    font-weight: 600;
+    color: var(--grey);
+    margin-bottom: 0.9rem;
+  }
+  .stamp-flag {
+    display: flex;
+    align-items: flex-start;
+    gap: 1.25rem;
+    margin-bottom: 1.25rem;
+  }
+  .stamp-svg { flex-shrink: 0; transform: rotate(-9deg); filter: url(#stampRough); mix-blend-mode: multiply; }
+  .stamp-svg .stamp-text { fill: var(--racing-red); font-family: inherit; }
+  .stamp-svg .ring { fill: none; stroke: var(--racing-red); }
+  .stamp-svg.divergent .stamp-text,
+  .stamp-svg.divergent .ring { stroke: var(--blue); fill: var(--blue); }
+  .stamp-explain {
+    font-size: 0.88rem;
+    color: var(--ink);
+    max-width: 460px;
+    line-height: 1.55;
+    padding-top: 0.5rem;
+  }
+  .stamp-explain .granularity {
+    display: block;
+    font-size: 0.75rem;
+    color: var(--grey);
+    margin-top: 0.35rem;
+  }
+  .more-flags {
+    font-size: 0.85rem;
+    color: var(--grey);
+    padding-left: 0.1rem;
+  }
+
+  /* citations */
   .citation {
-    border: 1px solid currentColor; opacity: 0.85;
-    padding: 0.4rem 0.6rem; margin: 0.3rem 0; border-radius: 4px; font-size: 0.9rem;
+    border-left: 3px solid var(--rule);
+    padding: 0.15rem 0 0.15rem 0.9rem;
+    margin-bottom: 0.75rem;
+    font-size: 0.9rem;
   }
-  .error { color: #dc2626; }
-  #answer { white-space: pre-wrap; }
-  .muted { opacity: 0.6; font-size: 0.85rem; }
+  .citation strong { color: var(--blue); }
+  .citation .quote { color: var(--grey); margin-top: 0.15rem; }
+
+  .retrieved-note {
+    font-size: 0.78rem;
+    color: var(--grey);
+    margin-top: 2rem;
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    .fade-in { animation: fadeIn 0.3s ease; }
+  }
+  @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
 </style>
 </head>
 <body>
-<h1>F1 Regulations &amp; Stewards&rsquo; Decisions RAG</h1>
-<p class="muted">Answers only from retrieved FIA regulation/decision text. Contradictions between sources are flagged explicitly rather than blended away.</p>
+<div class="wrap">
 
-<textarea id="question" rows="2" placeholder="e.g. What penalty applies to a driver who starts the race from an incorrect grid location?"></textarea>
-<div style="margin-top: 0.5rem;">
-  <button id="ask">Ask</button>
-  <span id="status" class="muted"></span>
+  <div class="masthead">
+    <div class="name"><span class="flag-chip"></span>F1 Regulations &amp; Rulings</div>
+    <div class="sub">Ask about F1 rules and stewards&rsquo; decisions &mdash; contradictions between sources are called out, not hidden.</div>
+  </div>
+
+  <div class="ask-box">
+    <label for="question">Your question</label>
+    <textarea id="question" rows="2" placeholder="e.g. What penalty applies to a driver who starts the race from an incorrect grid location?"></textarea>
+    <div class="row">
+      <span id="status" class="status"></span>
+      <button id="ask">Ask</button>
+    </div>
+  </div>
+
+  <div id="result"></div>
+
 </div>
-
-<div id="result" style="margin-top: 1.5rem;"></div>
 
 <script>
 const askBtn = document.getElementById('ask');
@@ -45,11 +272,33 @@ const questionEl = document.getElementById('question');
 const statusEl = document.getElementById('status');
 const resultEl = document.getElementById('result');
 
+const WAIT_MESSAGES = [
+  'Checking the regulations…',
+  'Looking through stewards’ decisions…',
+  'Comparing rulings for consistency…',
+  'Reviewing the relevant articles…',
+  'Almost there…',
+];
+let waitTimer = null;
+
+function startWaiting() {
+  let i = 0;
+  statusEl.textContent = WAIT_MESSAGES[0];
+  waitTimer = setInterval(() => {
+    i = (i + 1) % WAIT_MESSAGES.length;
+    statusEl.textContent = WAIT_MESSAGES[i];
+  }, 4000);
+}
+function stopWaiting() {
+  clearInterval(waitTimer);
+  statusEl.textContent = '';
+}
+
 async function ask() {
   const question = questionEl.value.trim();
   if (!question) return;
   askBtn.disabled = true;
-  statusEl.textContent = 'Retrieving, checking for contradictions, generating... (can take a while on CPU)';
+  startWaiting();
   resultEl.innerHTML = '';
   try {
     const res = await fetch('/ask', {
@@ -60,58 +309,115 @@ async function ask() {
     const data = await res.json();
     render(data);
   } catch (e) {
-    resultEl.innerHTML = `<p class="error">Request failed: ${escapeHtml(String(e))}</p>`;
+    resultEl.innerHTML = `<div class="checker-rule"></div><p class="ruling verdict error">Something went wrong reaching the server. Please try again.</p>`;
   } finally {
     askBtn.disabled = false;
-    statusEl.textContent = '';
+    stopWaiting();
   }
 }
 
 function escapeHtml(s) {
-  return s.replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+  return String(s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+}
+
+function stampSvg(label, sublabel, kind) {
+  const cls = kind === 'divergent_precedent' ? 'stamp-svg divergent' : 'stamp-svg';
+  const word = kind === 'divergent_precedent' ? 'Divergent' : 'Superseded';
+  const filterId = 'stampRough';
+  return `
+    <svg class="${cls}" width="112" height="112" viewBox="0 0 128 128" aria-hidden="true">
+      <circle class="ring" cx="64" cy="64" r="58" stroke-width="2.5"/>
+      <circle class="ring" cx="64" cy="64" r="50" stroke-width="1"/>
+      <path id="arcTop-${label}" d="M 20 64 A 44 44 0 0 1 108 64" fill="none"/>
+      <text font-size="9" letter-spacing="2.5" font-style="italic" class="stamp-text">
+        <textPath href="#arcTop-${label}" startOffset="50%" text-anchor="middle">${escapeHtml(sublabel)}</textPath>
+      </text>
+      <text x="64" y="70" font-size="17" font-weight="700" text-anchor="middle" class="stamp-text">${word}</text>
+      <filter id="${filterId}" x="-20%" y="-20%" width="140%" height="140%">
+        <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" seed="7" result="noise"/>
+        <feDisplacementMap in="SourceGraphic" in2="noise" scale="2.2"/>
+      </filter>
+    </svg>`;
 }
 
 function render(data) {
+  let html = '<div class="checker-rule"></div>';
+
   if (data.error) {
-    resultEl.innerHTML = `<p class="error">${escapeHtml(data.error)}</p>`;
+    html += `<p class="ruling verdict error">${escapeHtml(data.error)}</p>`;
+    resultEl.innerHTML = html;
     return;
   }
-  const out = data.output || {};
-  let html = '';
 
+  const out = data.output || {};
+  html += '<div class="ruling fade-in">';
   if (out.error) {
-    html += `<p class="error">Generation error: ${escapeHtml(out.error)}</p>`;
+    html += `<p class="verdict error">The system couldn&rsquo;t generate an answer this time. Please try asking again.</p>`;
   } else {
-    html += `<h3>Answer</h3><p id="answer">${escapeHtml(out.answer || '(no answer)')}</p>`;
+    html += `<p class="verdict">${escapeHtml(out.answer || 'No answer was returned.')}</p>`;
   }
+  html += '</div>';
+
+  html += '<div class="checker-rule"></div>';
+  html += '<div class="sources-heading">Sources consulted</div><div class="sources">';
+  for (const s of (data.sources || []).slice(0, 6)) {
+    const isDecision = s.doc_type === 'decision';
+    html += `<div class="source-entry ${isDecision ? 'decision' : ''}">
+      <div class="source-tag"><span class="kind">${isDecision ? 'Decision' : 'Regulation'}</span><span class="id">${escapeHtml(s.label)}</span></div>
+      <div><div class="source-body">${escapeHtml(s.excerpt) || '<em>No excerpt available.</em>'}</div><div class="source-meta">${escapeHtml(s.detail)}</div></div>
+    </div>`;
+  }
+  html += '</div>';
 
   if (data.flags && data.flags.length) {
-    const shown = data.flags.slice(0, 8);
-    html += `<h3>Contradiction flags (${data.flags.length}${data.flags.length > shown.length ? `, showing first ${shown.length}` : ''})</h3>`;
-    for (const f of shown) {
-      const cls = f.type === 'superseded_precedent' ? 'flag superseded' : 'flag';
-      const label = f.type === 'superseded_precedent'
-        ? `Superseded Precedent &mdash; Article ${escapeHtml(f.article)}: cited ${escapeHtml(f.decision)} (${escapeHtml(f.decision_date)}), Article changed ${escapeHtml(f.changed_on)} [${escapeHtml(f.match_granularity)}]`
-        : `Divergent Precedent &mdash; Article ${escapeHtml(f.article)}${f.suppressed ? ' (suppressed: justified distinction)' : ''}`;
-      html += `<div class="${cls}">${label}</div>`;
+    const unsuppressed = data.flags.filter(f => !f.suppressed);
+    const primary = unsuppressed[0] || data.flags[0];
+    const rest = data.flags.filter(f => f !== primary);
+
+    html += '<div class="checker-rule"></div>';
+    html += `<div class="flags-heading">Contradiction check (${data.flags.length} flag${data.flags.length === 1 ? '' : 's'})</div>`;
+
+    if (primary) {
+      const isSuperseded = primary.type === 'superseded_precedent';
+      const sub = isSuperseded ? `ART. ${primary.article} · ${primary.changed_on || ''}` : `ART. ${primary.article}`;
+      const explain = isSuperseded
+        ? `This decision cited Article ${escapeHtml(primary.article)}, which was later changed on ${escapeHtml(primary.changed_on)} &mdash; after the decision was made.`
+        : `Two decisions on Article ${escapeHtml(primary.article)} reached different outcomes for similar circumstances.`;
+      const granularity = isSuperseded && primary.match_granularity
+        ? `match detail: ${escapeHtml(primary.match_granularity)}`
+        : (primary.suppressed ? 'this difference looks justified by the facts, not a real conflict' : '');
+      html += `<div class="stamp-flag">
+        ${stampSvg(primary.article || 'x', sub, primary.type)}
+        <div class="stamp-explain">${explain}${granularity ? `<span class="granularity">${granularity}</span>` : ''}</div>
+      </div>`;
+    }
+    if (rest.length) {
+      html += `<div class="more-flags">+ ${rest.length} more flag${rest.length === 1 ? '' : 's'} found for related articles.</div>`;
     }
   }
 
   if (out.citations && out.citations.length) {
-    html += '<h3>Citations</h3>';
+    html += '<div class="checker-rule"></div>';
+    html += '<div class="flags-heading">Cited in the answer</div>';
     for (const c of out.citations) {
-      html += `<div class="citation"><strong>${escapeHtml(c.doc_id)}</strong> (${escapeHtml(c.article_or_decision)})<br>${escapeHtml(c.quote_or_paraphrase)}</div>`;
+      html += `<div class="citation"><strong>${escapeHtml(c.article_or_decision)}</strong> (${escapeHtml(c.doc_id)})<div class="quote">${escapeHtml(c.quote_or_paraphrase)}</div></div>`;
     }
   }
 
-  html += `<p class="muted">Retrieved: ${(data.retrieved_chunk_ids || []).map(escapeHtml).join(', ')}</p>`;
   resultEl.innerHTML = html;
 }
 
+function autoGrow() {
+  questionEl.style.height = 'auto';
+  questionEl.style.height = questionEl.scrollHeight + 'px';
+}
+
 askBtn.addEventListener('click', ask);
+questionEl.addEventListener('input', autoGrow);
 questionEl.addEventListener('keydown', e => {
   if (e.key === 'Enter' && (e.metaKey || e.ctrlKey)) ask();
 });
+autoGrow();
 </script>
 </body>
 </html>

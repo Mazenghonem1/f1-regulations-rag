@@ -22,6 +22,10 @@ def main():
     assert "error" not in body, body
     assert body["retrieved_chunk_ids"], "expected non-empty retrieval"
     assert "answer" in body["output"], body["output"]
+    assert body["sources"], "expected non-empty source summaries"
+    for s in body["sources"]:
+        assert s["doc_type"] in ("regulation", "decision"), s
+        assert s["label"] and s["chunk_id"], s
 
     print("OK — / serves the UI, /ask retrieves + generates a real answer.")
 
