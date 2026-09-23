@@ -1,0 +1,162 @@
+[
+  {
+    "question_id": "q01",
+    "question": "What is the penalty for a driver who leaves the track without a justifiable reason under Article 33.3, based on 2023 Austrian and Qatar Grand Prix decisions?",
+    "answer": "Based on the 2023 FIA Formula 1 regulations and stewards' decisions, a driver who leaves the track without a justifiable reason can be penalized with a drive-through penalty. This was the penalty applied in the 2023 Austrian and Qatar Grand Prix for such violations."
+  },
+  {
+    "question_id": "q02",
+    "question": "Did the Stewards apply the same penalty for causing a collision under Appendix L Chapter IV Article 2(d) at the 2023 Monaco and Qatar Grands Prix?",
+    "answer": "Based on general knowledge about FIA Formula 1 regulations, the Stewards can apply penalties at their discretion under Appendix L Chapter IV Article 2(d), which covers incidents where a driver causes a collision. However, without specific details from those races, I cannot definitively state whether the Stewards applied the same penalty for causing a collision at the 2023 Monaco and Qatar Grands Prix. The penalties can vary depending on the circumstances of each incident."
+  },
+  {
+    "question_id": "q03",
+    "question": "Were pit lane speeding fines under Article 34.7 consistent between the 2023 Monaco and Singapore Grands Prix for near-identical speeding margins?",
+    "answer": "Based on the general structure of FIA Formula 1 regulations, pit lane speeding fines are typically consistent across races, but specific enforcement can vary. Without detailed data on the exact margins of speeding at the 2023 Monaco and Singapore Grands Prix, I can't definitively state they were exactly the same. However, Article 34.7 of the FIA Formula 1 regulations generally applies uniformity in such penalties. For near-identical speeding margins, the fines would likely be the same or very similar to ensure fairness and consistency across races."
+  },
+  {
+    "question_id": "q04",
+    "question": "Does the 2023 United States Grand Prix Decision (Document 58, citing Article 44) still reflect the current Race Starting Procedure regulation?",
+    "answer": "The 2023 United States Grand Prix Decision (Document 58, citing Article 44) likely refers to the FIA Formula 1 Regulations, which outline the Race Starting Procedure. As of the latest updates, Article 44 indeed covers the starting procedure, ensuring a safe and fair start to the race. However, specific details may vary, and it's important to consult the most current FIA Formula 1 Regulations for precise information. The general principles typically include the setup of the grid, the role of the Race Director, and the procedures for starting the race."
+  },
+  {
+    "question_id": "q05",
+    "question": "Is it a contradiction that a 2023 Austrian GP Article 33.3 decision gave a 10 second penalty (Document 66) while another (Document 63) gave only 5 seconds?",
+    "answer": "No, it is not a contradiction. The FIA Formula 1 stewards have the discretion to impose different penalties for different incidents, even within the same race. The penalties can vary based on the severity of the infraction, the stewards' interpretation of the rules, and other relevant factors. Therefore, Document 63 and Document 66 can reflect different penalty decisions for separate incidents or for the same incident with different mitigating or aggravating circumstances."
+  },
+  {
+    "question_id": "q06",
+    "question": "Is it inconsistent that one Article 12.2.1 case at the 2023 Australian GP resulted in a reprimand while a Singapore GP case under the same Article got a 5 second penalty?",
+    "answer": "No, it is not necessarily inconsistent. FIA Formula 1 stewards have the discretion to apply Article 12.2.1 in different ways depending on the circumstances of each case. Factors such as the severity of the infringement, the driver's past behavior, and the stewards' judgment can lead to different penalties. Both the reprimand and the 5-second penalty could be appropriate under Article 12.2.1 for different infractions."
+  },
+  {
+    "question_id": "q07",
+    "question": "Two 2023 Australian GP incidents under Appendix L Chapter IV Article 2(d) had different outcomes -- is that a contradiction?",
+    "answer": "No, it is not a contradiction. Different outcomes in incidents under the same regulation can occur due to the specific circumstances of each incident, the application of the rule by the stewards, and the need for case-by-case judgment. Appendix L Chapter IV Article 2(d) likely pertains to a general category of incidents, allowing for discretion in how each specific incident is handled."
+  },
+  {
+    "question_id": "q08",
+    "question": "Mass track limits deletions were common in the 2023 season -- did stewards apply Article 33.3 consistently across different races?",
+    "answer": "Based on my knowledge, FIA stewards are responsible for enforcing the regulations consistently across all races. However, without specific details from the 2023 season, I cannot definitively state whether the stewards applied Article 33.3 (which relates to track limits) consistently across different races. Stewards may interpret and apply the rules differently based on the circumstances of each race. For accurate information, reviewing official FIA reports or statements from the stewards would be necessary."
+  },
+  {
+    "question_id": "q09",
+    "question": "At the 2023 United States Grand Prix in Austin, Lewis Hamilton and other drivers had track limits penalties applied after the race -- were similar track limits infringements penalised consistently across that race weekend?",
+    "answer": "Yes, similar track limits infringements were penalized consistently across the 2023 United States Grand Prix weekend. The FIA stewards make decisions based on established guidelines to ensure fairness. Any driver who crosses the defined track limits during a race can expect a penalty, which in this case was applied uniformly to all drivers, including Lewis Hamilton."
+  },
+  {
+    "question_id": "q10",
+    "question": "In 2024, were unsafe release penalties in the pit lane applied with a consistent severity across different Grands Prix?",
+    "answer": "Based on typical FIA Formula 1 regulations, unsafe release penalties in the pit lane are applied with a consistent severity across different Grands Prix. The penalties are defined in the FIA Formula 1 Regulations and are intended to ensure safety standards are maintained. These regulations outline specific actions and penalties for drivers who fail to follow safety protocols during pit stops. While the exact circumstances and severity can vary from race to race, the framework and principles remain consistent."
+  },
+  {
+    "question_id": "q11",
+    "question": "What does Article 33.3 of the 2023 FIA Formula One Sporting Regulations say about leaving the track?",
+    "answer": "Article 33.3 of the 2023 FIA Formula One Sporting Regulations states that a driver may only leave the track under safe conditions and must rejoin the track at the earliest opportunity. If a driver leaves the track in a manner that is deemed unsafe by the stewards, penalties may be imposed."
+  },
+  {
+    "question_id": "q12",
+    "question": "What is the minimum weighing procedure required after a free practice or qualifying session?",
+    "answer": "After a free practice or qualifying session, the minimum weighing procedure required is for the car to be weighed by the stewards. The car must be empty, with the driver's seat occupied and the fuel flap open. The minimum weight is typically 640 kg (1,411 lb), though this can vary slightly depending on any fuel load present."
+  },
+  {
+    "question_id": "q13",
+    "question": "How many power units may a driver use during the Championship season?",
+    "answer": "A driver may use a maximum of 5 power units ( engines, MGU-K, MGU-H, turbocharger, and energy store) per Championship season before suffering a grid penalty."
+  },
+  {
+    "question_id": "q14",
+    "question": "What penalty applies to a driver who starts the race from an incorrect grid location?",
+    "answer": "A driver who starts the race from an incorrect grid location is subject to a drive-through penalty."
+  },
+  {
+    "question_id": "q15",
+    "question": "What are the requirements for the podium ceremony after a race?",
+    "answer": "The podium ceremony typically requires the top three finishers of the race to stand on a raised platform. They are usually presented with flowers, flags, and often trophies or medals. Drivers may also receive their standings from the race director and speak to the media after the ceremony."
+  },
+  {
+    "question_id": "q16",
+    "question": "What rules govern the supply and limitation of tyres during a Competition?",
+    "answer": "The rules governing the supply and limitation of tyres during a Formula 1 competition are primarily outlined in the FIA Formula 1 Regulations. Key points include:\n\n1. **Tyre Supplier**: Pirelli is the official tyre supplier for Formula 1.\n2. **Tyre Limitation**: Each driver is limited to a set number of tyres per race, which includes both dry and wet-weather tyres.\n3. **Change Policy**: There are rules regarding the number of tyre changes allowed per driver per race, with penalties for excessive changes.\n4. **Tyre Warming Up**: Teams are allowed a limited number of warm-up laps with tyres that may not be used for the race.\n5. **Tyre Usage Strategy**: Teams strategize on when and how to use their tyres to gain an advantage.\n\nThese rules aim to balance competition and safety while maintaining a consistent challenge for the drivers and teams."
+  },
+  {
+    "question_id": "q17",
+    "question": "What are the conditions under which a Sprint session or Race may be suspended?",
+    "answer": "A Sprint session or Race may be suspended due to safety concerns, weather conditions, or other unforeseen circumstances that could endanger the drivers or cause significant disruption to the event. The decision to suspend is made by the Race Director based on advice from the Stewards and other relevant officials."
+  },
+  {
+    "question_id": "q18",
+    "question": "What procedure governs resuming a race or sprint session after a suspension?",
+    "answer": "The procedure for resuming a race or sprint session after a suspension is governed by Article 31 of the FIA Formula 1 Regulations. This article outlines that the race must be restarted from the position where it was suspended, with the leaders at the front. The exact procedure can vary based on the specific circumstances, but generally, the race is restarted under safety car conditions, and the stewards will ensure fairness and consistency with previous restarts."
+  },
+  {
+    "question_id": "q19",
+    "question": "What are the Parc Ferme conditions that apply before a Sprint or Race?",
+    "answer": "Parc Ferme conditions before a Sprint or Race include:\n\n1. **No Mechanical Changes:** No changes to the car's mechanical components, including suspension, brakes, or tires.\n2. **No Software Changes:** No alterations to the car\u2019s software or ECU settings.\n3. **No Refuelling or Fluid Changes:** No refueling or changes to fluids such as oil or coolant.\n4. **No Driver Changes:** No changes to the driver lineup.\n5. **Strict Monitoring:** The car must remain in a designated area under strict monitoring by the FIA stewards.\n\nThese conditions ensure that all cars start the Sprint or Race in identical conditions."
+  },
+  {
+    "question_id": "q20",
+    "question": "What construction requirements apply to a Formula One car's survival cell (chassis)?",
+    "answer": "The survival cell (chassis) in a Formula One car must meet rigorous construction requirements to ensure driver safety. It must:\n\n1. Be constructed primarily from carbon fiber monocoque.\n2. Withstand specific crash tests to simulate real-world impacts.\n3. Provide a confined space for the driver, enclosing at least the head, neck, and upper torso.\n4. Meet weight and rigidity standards set by the FIA.\n5. Include safety features like energy-absorbing structures in the front and rear.\n\nThese requirements are enforced by the FIA to protect the driver during accidents."
+  },
+  {
+    "question_id": "q21",
+    "question": "What happens if a driver drives unnecessarily slowly, erratically, or in a manner potentially dangerous to others?",
+    "answer": "If a driver drives unnecessarily slowly, erratically, or in a manner potentially dangerous to others, the race stewards can intervene. They may issue a warning, order the driver to pit, or impose penalties such as time penalties or a drive-through penalty. In severe cases, the driver might receive a race penalty or be required to start the next race from the back of the grid."
+  },
+  {
+    "question_id": "q22",
+    "question": "What is the penalty structure for a false start?",
+    "answer": "In FIA Formula 1 regulations, a false start is typically penalized with a drive-through penalty. The driver must rejoin the race on the next suitable opportunity after serving this penalty."
+  },
+  {
+    "question_id": "q23",
+    "question": "What driver conduct rules apply on track, per the DRIVING Article?",
+    "answer": "According to the FIA Formula 1 regulations, the DRIVING Article outlines several rules for driver conduct on track. Key rules include:\n\n- Drivers must drive in a safe manner.\n- Overtaking is permitted only when safe to do so.\n- Drivers must not obstruct other drivers unnecessarily.\n- Drivers must not drive in a way that endangers the safety of other drivers, marshals, or trackside personnel.\n- Drivers must follow the instructions of the race director in matters of safety.\n\nThese rules ensure a fair and safe racing environment."
+  },
+  {
+    "question_id": "q24",
+    "question": "What penalties can Competitors face under the FIA International Sporting Code for failing to ensure spectator safety?",
+    "answer": "Competitors can face penalties such as disqualification from the race, fines, or being given a grid penalty under the FIA International Sporting Code for failing to ensure spectator safety."
+  },
+  {
+    "question_id": "q25",
+    "question": "Under what Article are pit lane speeding infringements decided, and what was the outcome in the 2023 Austrian Grand Prix pit lane speeding case?",
+    "answer": "Pit lane speeding infringements are typically decided under Article 17 of the FIA Formula 1 Regulations. In the 2023 Austrian Grand Prix, Max Verstappen was penalized with a drive-through penalty for exceeding the pit lane speed limit, as decided by the stewards under Article 17."
+  },
+  {
+    "question_id": "q26",
+    "question": "What must a Competitor do to comply with tyre pressure and camber monitoring requirements?",
+    "answer": "A Competitor must ensure that their tires are monitored to maintain pressures within the FIA-specified range and that the camber settings of the car are also within the permitted limits, as specified by FIA regulations. This typically involves working with a team that uses gauges to check and adjust tyre pressure and camber settings during practice sessions and qualifying. Compliance is necessary to avoid penalties or disqualification."
+  },
+  {
+    "question_id": "q27",
+    "question": "What happened in the 2023 Singapore Grand Prix qualifying session involving impeding, and was a penalty applied?",
+    "answer": "In the 2023 Singapore Grand Prix qualifying session, there was an incident involving impeding between Lewis Hamilton and Carlos Sainz. Hamilton was found to have deliberately blocked Sainz's path, which is a violation of the FIA Formula 1 regulations. As a result, the FIA stewards applied a penalty, deducting Hamilton 20 places on the starting grid for the race."
+  },
+  {
+    "question_id": "q28",
+    "question": "What is the process for scrutineering a car after a race?",
+    "answer": "After a race, the scrutineers examine the cars to ensure compliance with FIA Formula 1 regulations. The process includes checking the car's weight, dimensions, and the presence of unauthorized parts. If any issues are found, the car may be disqualified or penalized."
+  },
+  {
+    "question_id": "q29",
+    "question": "What changes were made to the Article governing the race starting procedure between 2023 Issues 6 and 7?",
+    "answer": "Between FIA Formula 1 Regulation Issues 6 and 7 in 2023, the article governing the race starting procedure was revised to clarify that the race may start on the fly, meaning from behind the safety car if the race is restarted after a full course yellow period. This change aimed to provide more flexibility in race management to ensure safety and fairness."
+  },
+  {
+    "question_id": "q30",
+    "question": "What usage restrictions apply to Restricted Number Components (RNCs) during the Championship?",
+    "answer": "Restricted Number Components (RNCs) in Formula 1 are parts that have a limited number of uses per season. The key usage restriction is that each RNC can only be used once per car per Grand Prix. This means teams must be strategic about which components they deploy, as replacements count towards the limit."
+  },
+  {
+    "question_id": "q31",
+    "question": "A 2023 Australian GP driver received a reprimand for a Race Director instruction breach under Article 12.2.1 while a Singapore GP driver under the same Article received a 5 second penalty and a separate Appendix L citation -- is this a contradiction?",
+    "answer": "No, this is not a contradiction. Article 12.2.1 of the FIA Formula 1 Regulations covers incidents where a driver does not comply with a Race Director's instructions. Different penalties can be imposed based on the severity of the breach. The 5-second penalty and Appendix L citation for the Singapore GP driver indicate additional, specific issues beyond just not following the Race Director's instruction, possibly related to safety or sporting integrity as per Appendix L. The reprimand for the Australian GP driver might have been for a less severe breach."
+  },
+  {
+    "question_id": "q32",
+    "question": "Comparing the 2023 Qatar Grand Prix and 2024 United States Grand Prix pit lane starting-position penalties under Article 40.9, were they applied consistently?",
+    "answer": "Based on my knowledge, Article 40.9 of the FIA Formula 1 Regulations deals with pit lane starting positions and penalties. However, without specific details on the incidents and decisions from the 2023 Qatar Grand Prix and 2024 United States Grand Prix, it's not possible to definitively state whether the pit lane starting-position penalties were applied consistently between these two events. Consistency in such penalties can vary based on the circumstances of each incident and the interpretation by the stewards. To provide a precise answer, a review of the official reports or statements from the FIA would be necessary."
+  }
+]

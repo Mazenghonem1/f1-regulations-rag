@@ -1,0 +1,302 @@
+[
+  {
+    "id": "q01",
+    "type": "seeded_contradiction",
+    "detector": "divergent_precedent",
+    "question": "What is the penalty for a driver who leaves the track without a justifiable reason under Article 33.3, based on 2023 Austrian and Qatar Grand Prix decisions?",
+    "gold_article": "33.3",
+    "gold_chunk_ids": ["dec:2023:Austrian Grand Prix:66", "dec:2023:Qatar Grand Prix:81"],
+    "expected_flag": true,
+    "notes": "Real divergence: 2023 Austrian GP Document 66 gave a 10s penalty, 2023 Qatar GP Document 81 gave 5s, both citing Article 33.3 with materially similar Fact text ('leaving the track without a justifiable reason multiple times'). Verified in Phase 6."
+  },
+  {
+    "id": "q02",
+    "type": "seeded_contradiction",
+    "detector": "divergent_precedent",
+    "question": "Did the Stewards apply the same penalty for causing a collision under Appendix L Chapter IV Article 2(d) at the 2023 Monaco and Qatar Grands Prix?",
+    "gold_article": "Appendix L Chapter IV Article 2(d)",
+    "gold_chunk_ids": ["dec:2023:Monaco Grand Prix:49", "dec:2023:Qatar Grand Prix:86"],
+    "expected_flag": true,
+    "notes": "Real divergence: Monaco 2023 Document 49 gave a 5s penalty + 2 penalty points for causing a collision; Qatar 2023 Document 86, also citing Appendix L Ch. IV Art. 2(d) for causing a collision, gave no further action."
+  },
+  {
+    "id": "q03",
+    "type": "seeded_contradiction",
+    "detector": "divergent_precedent",
+    "question": "Were pit lane speeding fines under Article 34.7 consistent between the 2023 Monaco and Singapore Grands Prix for near-identical speeding margins?",
+    "gold_article": "34.7",
+    "gold_chunk_ids": ["dec:2023:Monaco Grand Prix:24", "dec:2023:Singapore Grand Prix:19"],
+    "expected_flag": true,
+    "notes": "Real divergence, verified: Monaco 2023 Document 24 (pit lane speeding at 63.0 km/h) fined €300; Singapore 2023 Document 19 (pit lane speeding at 63.7 km/h, an almost identical speed) fined €400. Near-identical Fact text and speed, different fine amount."
+  },
+  {
+    "id": "q04",
+    "type": "seeded_contradiction",
+    "detector": "superseded_precedent",
+    "question": "Does the 2023 United States Grand Prix Decision (Document 58, citing Article 44) still reflect the current Race Starting Procedure regulation?",
+    "gold_article": "44",
+    "gold_chunk_ids": ["dec:2023:United States Grand Prix:58"],
+    "expected_flag": true,
+    "notes": "Real Superseded Precedent: Decision dated 2023-10-22 cites Article 44 (Race Starting Procedure), which was amended on 2023-10-25 (Issue 6->7) and again multiple times through 2024. Verified against article_changes.json in Phase 6."
+  },
+  {
+    "id": "q05",
+    "type": "negative_justified_distinction",
+    "detector": "divergent_precedent",
+    "question": "Is it a contradiction that a 2023 Austrian GP Article 33.3 decision gave a 10 second penalty (Document 66) while another (Document 63) gave only 5 seconds?",
+    "gold_article": "33.3",
+    "gold_chunk_ids": ["dec:2023:Austrian Grand Prix:66", "dec:2023:Austrian Grand Prix:63"],
+    "expected_flag": false,
+    "notes": "Justified Distinction, not a contradiction: Document 66's car left the track on its 4th occasion after already having served a 5s penalty (real repeat-offence escalation); Document 63's car was only on its 3rd occasion after a black-and-white flag warning (a lesser prior sanction). Different occasion_count and prior_sanction kind -- correctly suppressed in Phase 6."
+  },
+  {
+    "id": "q06",
+    "type": "negative_justified_distinction",
+    "detector": "divergent_precedent",
+    "question": "Is it inconsistent that one Article 12.2.1 case at the 2023 Australian GP resulted in a reprimand while a Singapore GP case under the same Article got a 5 second penalty?",
+    "gold_article": "12.2.1",
+    "gold_chunk_ids": ["dec:2023:Australian Grand Prix:27", "dec:2023:Singapore Grand Prix:41"],
+    "expected_flag": false,
+    "notes": "Justified Distinction: different Session (Practice 3 vs Race) -- the incidents occurred under different circumstances, so a different outcome is not a Divergent Precedent. Correctly suppressed in Phase 6."
+  },
+  {
+    "id": "q07",
+    "type": "negative_justified_distinction",
+    "detector": "divergent_precedent",
+    "question": "Two 2023 Australian GP incidents under Appendix L Chapter IV Article 2(d) had different outcomes -- is that a contradiction?",
+    "gold_article": "Appendix L Chapter IV Article 2(d)",
+    "gold_chunk_ids": ["dec:2023:Australian Grand Prix:52", "dec:2023:Australian Grand Prix:46"],
+    "expected_flag": false,
+    "notes": "Justified Distinction: Reason text differs on intent (one Decision's Reason discusses deliberate/intentional language, the other doesn't) -- correctly suppressed in Phase 6."
+  },
+  {
+    "id": "q08",
+    "type": "seeded_contradiction",
+    "detector": "divergent_precedent",
+    "question": "Mass track limits deletions were common in the 2023 season -- did stewards apply Article 33.3 consistently across different races?",
+    "gold_article": "33.3",
+    "gold_chunk_ids": [],
+    "expected_flag": true,
+    "notes": "From Phase 1 controversy research (entry 1, Austin 2023 / entry 2, Austria 2023): stewards themselves admitted enforcement was 'completely unsatisfactory'. Open-ended question exercising the same Article 33.3 pool as q01/q05 -- gold chunk ids intentionally left open since many valid (Decision, Decision) pairs exist; grade on whether at least one real, unsuppressed Divergent Precedent under 33.3 is surfaced."
+  },
+  {
+    "id": "q09",
+    "type": "seeded_contradiction",
+    "detector": "divergent_precedent",
+    "question": "At the 2023 United States Grand Prix in Austin, Lewis Hamilton and other drivers had track limits penalties applied after the race -- were similar track limits infringements penalised consistently across that race weekend?",
+    "gold_article": "33.3",
+    "gold_chunk_ids": [],
+    "expected_flag": true,
+    "notes": "From Phase 1 controversy research (entry 1): 35 lap times deleted, multiple post-race penalties of varying severity applied at COTA 2023. Same underlying phenomenon as q01/q08 -- tests whether retrieval surfaces this event's specific Decisions."
+  },
+  {
+    "id": "q10",
+    "type": "seeded_contradiction",
+    "detector": "divergent_precedent",
+    "question": "In 2024, were unsafe release penalties in the pit lane applied with a consistent severity across different Grands Prix?",
+    "gold_article": "Appendix L Chapter IV Article 2(b)",
+    "gold_chunk_ids": [],
+    "expected_flag": true,
+    "notes": "From Phase 1 controversy research (entry 12) and Phase 6's real detector output: a 2023 US GP case under Appendix L Ch. IV Art. 2(b) resulted in no further action, while a 2024 Austrian GP case under the same Article got a 10s penalty + penalty points."
+  },
+  {
+    "id": "q11",
+    "type": "ordinary_lookup",
+    "question": "What does Article 33.3 of the 2023 FIA Formula One Sporting Regulations say about leaving the track?",
+    "gold_article": "33",
+    "gold_chunk_ids": ["reg:2023:sporting:1:33"],
+    "expected_flag": false,
+    "notes": "Verified in Phase 5 manual query smoke test -- Article 33 is the correct top BM25/hybrid result for this exact wording."
+  },
+  {
+    "id": "q12",
+    "type": "ordinary_lookup",
+    "question": "What is the minimum weighing procedure required after a free practice or qualifying session?",
+    "gold_article": "35",
+    "gold_chunk_ids": ["reg:2023:sporting:1:35"],
+    "expected_flag": false,
+    "notes": "Verified in Phase 5 manual smoke test -- Article 35 (WEIGHING)."
+  },
+  {
+    "id": "q13",
+    "type": "ordinary_lookup",
+    "question": "How many power units may a driver use during the Championship season?",
+    "gold_article": "28",
+    "gold_chunk_ids": ["reg:2023:sporting:1:28"],
+    "expected_flag": false,
+    "notes": "Verified in Phase 5 manual smoke test -- Article 28 (POWER UNIT USAGE)."
+  },
+  {
+    "id": "q14",
+    "type": "ordinary_lookup",
+    "question": "What penalty applies to a driver who starts the race from an incorrect grid location?",
+    "gold_article": "48",
+    "gold_chunk_ids": ["reg:2023:sporting:1:48"],
+    "expected_flag": false,
+    "notes": "Article 48 (2023) is INCORRECT STARTING LOCATION -- note this differs from the 2025 Issue where Article 48 is FALSE START (renumbered across issues); question is scoped to the 2023 season text."
+  },
+  {
+    "id": "q15",
+    "type": "ordinary_lookup",
+    "question": "What are the requirements for the podium ceremony after a race?",
+    "gold_article": "63",
+    "gold_chunk_ids": ["reg:2023:sporting:1:63", "reg:2023:sporting:2:63"],
+    "expected_flag": false,
+    "notes": "Verified in Phase 5 manual smoke test -- Article 63 (PODIUM CEREMONY AND POST RACE PRESS CONFERENCE)."
+  },
+  {
+    "id": "q16",
+    "type": "ordinary_lookup",
+    "question": "What rules govern the supply and limitation of tyres during a Competition?",
+    "gold_article": "30",
+    "gold_chunk_ids": ["reg:2023:sporting:1:30"],
+    "expected_flag": false,
+    "notes": "Article 30 (SUPPLY OF TYRES IN THE CHAMPIONSHIP AND TYRE LIMITATION)."
+  },
+  {
+    "id": "q17",
+    "type": "ordinary_lookup",
+    "question": "What are the conditions under which a Sprint session or Race may be suspended?",
+    "gold_article": "57",
+    "gold_chunk_ids": ["reg:2024:sporting:1:57", "reg:2025:sporting:1:57"],
+    "expected_flag": false,
+    "notes": "Verified in Phase 5 manual smoke test under the query 'unsafe rejoin after leaving the track', which surfaced Article 57 (SUSPENDING A SPRINT SESSION OR A RACE)."
+  },
+  {
+    "id": "q18",
+    "type": "ordinary_lookup",
+    "question": "What procedure governs resuming a race or sprint session after a suspension?",
+    "gold_article": "58",
+    "gold_chunk_ids": ["reg:2025:sporting:1:58"],
+    "expected_flag": false,
+    "notes": "Verified in Phase 5 manual smoke test -- Article 58 (RESUMING A SPRINT SESSION OR A RACE), the safety-car-restart-adjacent Article referenced in Phase 1 controversy entries 8 and 11."
+  },
+  {
+    "id": "q19",
+    "type": "ordinary_lookup",
+    "question": "What are the Parc Ferme conditions that apply before a Sprint or Race?",
+    "gold_article": "40",
+    "gold_chunk_ids": ["reg:2024:sporting:4:40"],
+    "expected_flag": false,
+    "notes": "Verified in Phase 5 manual smoke test -- Article 40 (PRE-SPRINT AND PRE-RACE PARC FERME). Article 40 only exists from 2024 Issue 4 onward (not Issue 1-3) -- checked against the actual corpus rather than assumed."
+  },
+  {
+    "id": "q20",
+    "type": "ordinary_lookup",
+    "question": "What construction requirements apply to a Formula One car's survival cell (chassis)?",
+    "gold_article": "12",
+    "gold_chunk_ids": ["reg:2023:technical:1:12"],
+    "expected_flag": false,
+    "notes": "Technical Regulations Article 12 (CAR CONSTRUCTION AND SURVIVAL CELL)."
+  },
+  {
+    "id": "q21",
+    "type": "ordinary_lookup",
+    "question": "What happens if a driver drives unnecessarily slowly, erratically, or in a manner potentially dangerous to others?",
+    "gold_article": "33",
+    "gold_chunk_ids": ["reg:2023:sporting:1:33"],
+    "expected_flag": false,
+    "notes": "Article 33.4, within the same Article 33 chunk as track limits -- tests whether retrieval surfaces the correct chunk for a sub-clause-level question."
+  },
+  {
+    "id": "q22",
+    "type": "ordinary_lookup",
+    "question": "What is the penalty structure for a false start?",
+    "gold_article": "48",
+    "gold_chunk_ids": ["reg:2025:sporting:1:48"],
+    "expected_flag": false,
+    "notes": "Verified in Phase 5 manual smoke test -- 2025 Article 48 is FALSE START (this Article was renumbered/repurposed between the 2023 and 2025 seasons, see q14's note)."
+  },
+  {
+    "id": "q23",
+    "type": "ordinary_lookup",
+    "question": "What driver conduct rules apply on track, per the DRIVING Article?",
+    "gold_article": "33",
+    "gold_chunk_ids": ["reg:2024:sporting:1:33"],
+    "expected_flag": false,
+    "notes": "Verified in Phase 5 manual smoke test."
+  },
+  {
+    "id": "q24",
+    "type": "ordinary_lookup",
+    "question": "What penalties can Competitors face under the FIA International Sporting Code for failing to ensure spectator safety?",
+    "gold_article": "12.2.1",
+    "gold_chunk_ids": [],
+    "expected_flag": false,
+    "notes": "Article 12.2.1 is an International Sporting Code Article, not an FIA F1 Sporting/Technical Regulation Article, so it is NOT present in regulation_articles.json at all -- this question tests whether the system correctly reports it cannot find the Article text in the regulation corpus, rather than hallucinating an answer, since only Decisions (which cite 12.2.1) are in the corpus."
+  },
+  {
+    "id": "q25",
+    "type": "ordinary_lookup",
+    "question": "Under what Article are pit lane speeding infringements decided, and what was the outcome in the 2023 Austrian Grand Prix pit lane speeding case?",
+    "gold_article": "34.7",
+    "gold_chunk_ids": [],
+    "expected_flag": false,
+    "notes": "Tests a combined regulation + Decision lookup: the Article number should come from a Decision's cited_articles field, cross-referenced against the pit lane speeding Decision documents visible in Phase 5's smoke test."
+  },
+  {
+    "id": "q26",
+    "type": "ordinary_lookup",
+    "question": "What must a Competitor do to comply with tyre pressure and camber monitoring requirements?",
+    "gold_article": "30",
+    "gold_chunk_ids": ["reg:2024:sporting:1:30"],
+    "expected_flag": false,
+    "notes": "Broader tyre-regulation lookup, distinct wording from q16 to test retrieval robustness to phrasing."
+  },
+  {
+    "id": "q27",
+    "type": "ordinary_lookup",
+    "question": "What happened in the 2023 Singapore Grand Prix qualifying session involving impeding, and was a penalty applied?",
+    "gold_article": "12.2.1",
+    "gold_chunk_ids": ["dec:2023:Singapore Grand Prix:41"],
+    "expected_flag": false,
+    "notes": "From Phase 1 controversy research (entry 3): Verstappen impeding incidents at Singapore 2023 qualifying, where stewards said the outcome 'will not serve as a precedent'. Framed here as a plain lookup rather than a seeded contradiction, since the eval set only has ground truth for the specific Decision documents verified in the corpus, not the exact Verstappen incident reported in the press (which may not be the same Document number)."
+  },
+  {
+    "id": "q28",
+    "type": "ordinary_lookup",
+    "question": "What is the process for scrutineering a car after a race?",
+    "gold_article": "31",
+    "gold_chunk_ids": ["reg:2023:sporting:1:31"],
+    "expected_flag": false,
+    "notes": "SCRUTINEERING Article, referenced in RECON.md's Table of Contents excerpt."
+  },
+  {
+    "id": "q29",
+    "type": "ordinary_lookup",
+    "question": "What changes were made to the Article governing the race starting procedure between 2023 Issues 6 and 7?",
+    "gold_article": "44",
+    "gold_chunk_ids": ["reg:2023:sporting:6:44", "reg:2023:sporting:7:44"],
+    "expected_flag": false,
+    "notes": "Directly tests article_changes.json (Phase 4) retrieval/use -- same underlying change as q04's Superseded Precedent flag, asked as a direct regulation-history question rather than a Decision-vs-regulation contradiction."
+  },
+  {
+    "id": "q30",
+    "type": "ordinary_lookup",
+    "question": "What usage restrictions apply to Restricted Number Components (RNCs) during the Championship?",
+    "gold_article": "29",
+    "gold_chunk_ids": ["reg:2023:sporting:1:29"],
+    "expected_flag": false,
+    "notes": "USAGE OF RESTRICTED NUMBER COMPONENTS, referenced in RECON.md's Table of Contents excerpt."
+  },
+  {
+    "id": "q31",
+    "type": "negative_justified_distinction",
+    "detector": "divergent_precedent",
+    "question": "A 2023 Australian GP driver received a reprimand for a Race Director instruction breach under Article 12.2.1 while a Singapore GP driver under the same Article received a 5 second penalty and a separate Appendix L citation -- is this a contradiction?",
+    "gold_article": "12.2.1",
+    "gold_chunk_ids": ["dec:2023:Australian Grand Prix:27", "dec:2023:Singapore Grand Prix:41"],
+    "expected_flag": false,
+    "notes": "Duplicate ground truth to q06, phrased differently to test consistency of the suppression decision across paraphrased questions."
+  },
+  {
+    "id": "q32",
+    "type": "seeded_contradiction",
+    "detector": "divergent_precedent",
+    "question": "Comparing the 2023 Qatar Grand Prix and 2024 United States Grand Prix pit lane starting-position penalties under Article 40.9, were they applied consistently?",
+    "gold_article": "40.9",
+    "gold_chunk_ids": [],
+    "expected_flag": true,
+    "notes": "From Phase 6's real detector output: an unsuppressed Divergent Precedent flag was raised for Article 40.9 between a Qatar 2023 and US GP 2024 Decision with differently-worded pit-lane-start outcomes."
+  }
+]

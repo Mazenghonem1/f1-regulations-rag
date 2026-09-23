@@ -17,10 +17,45 @@ from .prompt import build_prompt
 GENERATE_TIMEOUT_S = 600
 
 
-def _call_ollama(prompt: str, model: str) -> str:
+# The exact response shape (PLAN.md): {answer, citations: [{doc_id,
+# article_or_decision, quote_or_paraphrase}], contradictions_flagged}.
+# Passed to Ollama as a JSON Schema (not just format="json") so the required
+# keys are grammar-constrained at decode time, not merely requested in text.
+# Verified necessary: format="json" alone produced syntactically valid JSON
+# that invented its own shape ({"answer": ..., "reasoning": ...}) instead of
+# the required keys, on the same question that a plain-text-only instruction
+# had earlier caused to be answered in prose -- a schema-shaped 3B model
+# failure that neither a retry count nor a "respond with ONLY JSON" sentence
+# fixes, only decode-time constraint does.
+RESPONSE_SCHEMA = {
+    "type": "object",
+    "properties": {
+        "answer": {"type": "string"},
+        "citations": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "doc_id": {"type": "string"},
+                    "article_or_decision": {"type": "string"},
+                    "quote_or_paraphrase": {"type": "string"},
+                },
+                "required": ["doc_id", "article_or_decision", "quote_or_paraphrase"],
+            },
+        },
+        "contradictions_flagged": {"type": "array", "items": {"type": "string"}},
+    },
+    "required": ["answer", "citations", "contradictions_flagged"],
+}
+
+
+def call_ollama(prompt: str, model: str, response_format=None) -> str:
+    payload = {"model": model, "prompt": prompt, "stream": False}
+    if response_format is not None:
+        payload["format"] = response_format
     response = requests.post(
         f"{OLLAMA_URL}/api/generate",
-        json={"model": model, "prompt": prompt, "stream": False},
+        json=payload,
         timeout=GENERATE_TIMEOUT_S,
     )
     response.raise_for_status()
@@ -40,7 +75,7 @@ def generate(
 
     last_error = None
     for _attempt in range(2):
-        raw = _call_ollama(prompt, model)
+        raw = call_ollama(prompt, model, response_format=RESPONSE_SCHEMA)
         try:
             return parse_structured_output(raw)
         except MalformedOutputError as e:

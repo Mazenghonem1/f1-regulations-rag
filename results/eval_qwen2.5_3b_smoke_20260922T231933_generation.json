@@ -1,0 +1,879 @@
+[
+  {
+    "question_id": "q01",
+    "retrieved_chunk_ids": [
+      "dec:2023:Austrian Grand Prix:75",
+      "dec:2023:Austrian Grand Prix:66",
+      "dec:2023:Austrian Grand Prix:59",
+      "dec:2023:Austrian Grand Prix:67",
+      "dec:2023:Austrian Grand Prix:62",
+      "dec:2023:Austrian Grand Prix:61",
+      "dec:2023:Austrian Grand Prix:68",
+      "dec:2023:Austrian Grand Prix:63"
+    ],
+    "flags": [
+      {
+        "type": "divergent_precedent",
+        "article": "33.3",
+        "decisions": [
+          "dec:2023:Austrian Grand Prix:75",
+          "dec:2023:Austrian Grand Prix:66"
+        ],
+        "outcomes": [
+          "Penalties below imposed after the race, added to elapsed race time. No     No / Driver                  Competitor                                Penalty 1     55 \u2013 Carlos Sainz            Scuderia Ferrari                          10 second time penalty 2     44 \u2013 Lewis Hamilton          Mercedes AMG-Petronas F1 Team             10 second time penalty 3     10 \u2013 Pierre Gasly            BWT Alpine F1 Team                        10 second time penalty 4     23 \u2013 Alexander Albon         Williams Racing                           10 second time penalty 5     31 \u2013 Esteban Ocon            BWT Alpine F1 Team                        5 second time penalty 6     31 \u2013 Esteban Ocon            BWT Alpine F1 Team                        10 second time penalty 7     31 \u2013 Esteban Ocon            BWT Alpine F1 Team                        5 second time penalty 8     31 \u2013 Esteban Ocon            BWT Alpine F1 Team                        10 second time penalty 9     2 \u2013 Logan Sargeant           Williams Racing                           10 second time penalty 10     21 \u2013 Nyck de Vries           Scuderia AlphaTauri                       10 second time penalty 11     21 \u2013 Nyck de Vries           Scuderia AlphaTauri                       5 second time penalty 12     22 \u2013 Yuki Tsunoda            Scuderia AlphaTauri                       5 second time penalty",
+          "10 second time penalty."
+        ],
+        "similarity": 1.0,
+        "suppressed": true,
+        "evidence": [
+          "occasion_count differs: None vs 4",
+          "prior_sanction differs: None vs 'penalty'"
+        ]
+      },
+      {
+        "type": "divergent_precedent",
+        "article": "33.3",
+        "decisions": [
+          "dec:2023:Austrian Grand Prix:75",
+          "dec:2023:Austrian Grand Prix:59"
+        ],
+        "outcomes": [
+          "Penalties below imposed after the race, added to elapsed race time. No     No / Driver                  Competitor                                Penalty 1     55 \u2013 Carlos Sainz            Scuderia Ferrari                          10 second time penalty 2     44 \u2013 Lewis Hamilton          Mercedes AMG-Petronas F1 Team             10 second time penalty 3     10 \u2013 Pierre Gasly            BWT Alpine F1 Team                        10 second time penalty 4     23 \u2013 Alexander Albon         Williams Racing                           10 second time penalty 5     31 \u2013 Esteban Ocon            BWT Alpine F1 Team                        5 second time penalty 6     31 \u2013 Esteban Ocon            BWT Alpine F1 Team                        10 second time penalty 7     31 \u2013 Esteban Ocon            BWT Alpine F1 Team                        5 second time penalty 8     31 \u2013 Esteban Ocon            BWT Alpine F1 Team                        10 second time penalty 9     2 \u2013 Logan Sargeant           Williams Racing                           10 second time penalty 10     21 \u2013 Nyck de Vries           Scuderia AlphaTauri                       10 second time penalty 11     21 \u2013 Nyck de Vries           Scuderia AlphaTauri                       5 second time penalty 12     22 \u2013 Yuki Tsunoda            Scuderia AlphaTauri                       5 second time penalty",
+          "5 second time penalty."
+        ],
+        "similarity": 1.0,
+        "suppressed": true,
+        "evidence": [
+          "occasion_count differs: None vs 3",
+          "prior_sanction differs: None vs 'flag'"
+        ]
+      },
+      {
+        "type": "divergent_precedent",
+        "article": "33.3",
+        "decisions": [
+          "dec:2023:Austrian Grand Prix:75",
+          "dec:2023:Austrian Grand Prix:67"
+        ],
+        "outcomes": [
+          "Penalties below imposed after the race, added to elapsed race time. No     No / Driver                  Competitor                                Penalty 1     55 \u2013 Carlos Sainz            Scuderia Ferrari                          10 second time penalty 2     44 \u2013 Lewis Hamilton          Mercedes AMG-Petronas F1 Team             10 second time penalty 3     10 \u2013 Pierre Gasly            BWT Alpine F1 Team                        10 second time penalty 4     23 \u2013 Alexander Albon         Williams Racing                           10 second time penalty 5     31 \u2013 Esteban Ocon            BWT Alpine F1 Team                        5 second time penalty 6     31 \u2013 Esteban Ocon            BWT Alpine F1 Team                        10 second time penalty 7     31 \u2013 Esteban Ocon            BWT Alpine F1 Team                        5 second time penalty 8     31 \u2013 Esteban Ocon            BWT Alpine F1 Team                        10 second time penalty 9     2 \u2013 Logan Sargeant           Williams Racing                           10 second time penalty 10     21 \u2013 Nyck de Vries           Scuderia AlphaTauri                       10 second time penalty 11     21 \u2013 Nyck de Vries           Scuderia AlphaTauri                       5 second time penalty 12     22 \u2013 Yuki Tsunoda            Scuderia AlphaTauri                       5 second time penalty",
+          "5 second time penalty."
+        ],
+        "similarity": 1.0,
+        "suppressed": true,
+        "evidence": [
+          "occasion_count differs: None vs 3",
+          "prior_sanction differs: None vs 'flag'"
+        ]
+      },
+      {
+        "type": "divergent_precedent",
+        "article": "33.3",
+        "decisions": [
+          "dec:2023:Austrian Grand Prix:75",
+          "dec:2023:Austrian Grand Prix:62"
+        ],
+        "outcomes": [
+          "Penalties below imposed after the race, added to elapsed race time. No     No / Driver                  Competitor                                Penalty 1     55 \u2013 Carlos Sainz            Scuderia Ferrari                          10 second time penalty 2     44 \u2013 Lewis Hamilton          Mercedes AMG-Petronas F1 Team             10 second time penalty 3     10 \u2013 Pierre Gasly            BWT Alpine F1 Team                        10 second time penalty 4     23 \u2013 Alexander Albon         Williams Racing                           10 second time penalty 5     31 \u2013 Esteban Ocon            BWT Alpine F1 Team                        5 second time penalty 6     31 \u2013 Esteban Ocon            BWT Alpine F1 Team                        10 second time penalty 7     31 \u2013 Esteban Ocon            BWT Alpine F1 Team                        5 second time penalty 8     31 \u2013 Esteban Ocon            BWT Alpine F1 Team                        10 second time penalty 9     2 \u2013 Logan Sargeant           Williams Racing                           10 second time penalty 10     21 \u2013 Nyck de Vries           Scuderia AlphaTauri                       10 second time penalty 11     21 \u2013 Nyck de Vries           Scuderia AlphaTauri                       5 second time penalty 12     22 \u2013 Yuki Tsunoda            Scuderia AlphaTauri                       5 second time penalty",
+          "5 second time penalty."
+        ],
+        "similarity": 1.0,
+        "suppressed": true,
+        "evidence": [
+          "occasion_count differs: None vs 3",
+          "prior_sanction differs: None vs 'flag'"
+        ]
+      },
+      {
+        "type": "divergent_precedent",
+        "article": "33.3",
+        "decisions": [
+          "dec:2023:Austrian Grand Prix:75",
+          "dec:2023:Austrian Grand Prix:61"
+        ],
+        "outcomes": [
+          "Penalties below imposed after the race, added to elapsed race time. No     No / Driver                  Competitor                                Penalty 1     55 \u2013 Carlos Sainz            Scuderia Ferrari                          10 second time penalty 2     44 \u2013 Lewis Hamilton          Mercedes AMG-Petronas F1 Team             10 second time penalty 3     10 \u2013 Pierre Gasly            BWT Alpine F1 Team                        10 second time penalty 4     23 \u2013 Alexander Albon         Williams Racing                           10 second time penalty 5     31 \u2013 Esteban Ocon            BWT Alpine F1 Team                        5 second time penalty 6     31 \u2013 Esteban Ocon            BWT Alpine F1 Team                        10 second time penalty 7     31 \u2013 Esteban Ocon            BWT Alpine F1 Team                        5 second time penalty 8     31 \u2013 Esteban Ocon            BWT Alpine F1 Team                        10 second time penalty 9     2 \u2013 Logan Sargeant           Williams Racing                           10 second time penalty 10     21 \u2013 Nyck de Vries           Scuderia AlphaTauri                       10 second time penalty 11     21 \u2013 Nyck de Vries           Scuderia AlphaTauri                       5 second time penalty 12     22 \u2013 Yuki Tsunoda            Scuderia AlphaTauri                       5 second time penalty",
+          "5 second time penalty."
+        ],
+        "similarity": 0.9828358292579651,
+        "suppressed": true,
+        "evidence": [
+          "occasion_count differs: None vs 3",
+          "prior_sanction differs: None vs 'flag'"
+        ]
+      },
+      {
+        "type": "divergent_precedent",
+        "article": "33.3",
+        "decisions": [
+          "dec:2023:Austrian Grand Prix:75",
+          "dec:2023:Austrian Grand Prix:68"
+        ],
+        "outcomes": [
+          "Penalties below imposed after the race, added to elapsed race time. No     No / Driver                  Competitor                                Penalty 1     55 \u2013 Carlos Sainz            Scuderia Ferrari                          10 second time penalty 2     44 \u2013 Lewis Hamilton          Mercedes AMG-Petronas F1 Team             10 second time penalty 3     10 \u2013 Pierre Gasly            BWT Alpine F1 Team                        10 second time penalty 4     23 \u2013 Alexander Albon         Williams Racing                           10 second time penalty 5     31 \u2013 Esteban Ocon            BWT Alpine F1 Team                        5 second time penalty 6     31 \u2013 Esteban Ocon            BWT Alpine F1 Team                        10 second time penalty 7     31 \u2013 Esteban Ocon            BWT Alpine F1 Team                        5 second time penalty 8     31 \u2013 Esteban Ocon            BWT Alpine F1 Team                        10 second time penalty 9     2 \u2013 Logan Sargeant           Williams Racing                           10 second time penalty 10     21 \u2013 Nyck de Vries           Scuderia AlphaTauri                       10 second time penalty 11     21 \u2013 Nyck de Vries           Scuderia AlphaTauri                       5 second time penalty 12     22 \u2013 Yuki Tsunoda            Scuderia AlphaTauri                       5 second time penalty",
+          "5 second time penalty."
+        ],
+        "similarity": 0.9828358292579651,
+        "suppressed": true,
+        "evidence": [
+          "occasion_count differs: None vs 3",
+          "prior_sanction differs: None vs 'flag'"
+        ]
+      },
+      {
+        "type": "divergent_precedent",
+        "article": "33.3",
+        "decisions": [
+          "dec:2023:Austrian Grand Prix:75",
+          "dec:2023:Austrian Grand Prix:63"
+        ],
+        "outcomes": [
+          "Penalties below imposed after the race, added to elapsed race time. No     No / Driver                  Competitor                                Penalty 1     55 \u2013 Carlos Sainz            Scuderia Ferrari                          10 second time penalty 2     44 \u2013 Lewis Hamilton          Mercedes AMG-Petronas F1 Team             10 second time penalty 3     10 \u2013 Pierre Gasly            BWT Alpine F1 Team                        10 second time penalty 4     23 \u2013 Alexander Albon         Williams Racing                           10 second time penalty 5     31 \u2013 Esteban Ocon            BWT Alpine F1 Team                        5 second time penalty 6     31 \u2013 Esteban Ocon            BWT Alpine F1 Team                        10 second time penalty 7     31 \u2013 Esteban Ocon            BWT Alpine F1 Team                        5 second time penalty 8     31 \u2013 Esteban Ocon            BWT Alpine F1 Team                        10 second time penalty 9     2 \u2013 Logan Sargeant           Williams Racing                           10 second time penalty 10     21 \u2013 Nyck de Vries           Scuderia AlphaTauri                       10 second time penalty 11     21 \u2013 Nyck de Vries           Scuderia AlphaTauri                       5 second time penalty 12     22 \u2013 Yuki Tsunoda            Scuderia AlphaTauri                       5 second time penalty",
+          "5 second time penalty"
+        ],
+        "similarity": 0.9828358292579651,
+        "suppressed": true,
+        "evidence": [
+          "occasion_count differs: None vs 3",
+          "prior_sanction differs: None vs 'flag'"
+        ]
+      },
+      {
+        "type": "divergent_precedent",
+        "article": "33.3",
+        "decisions": [
+          "dec:2023:Austrian Grand Prix:66",
+          "dec:2023:Austrian Grand Prix:59"
+        ],
+        "outcomes": [
+          "10 second time penalty.",
+          "5 second time penalty."
+        ],
+        "similarity": 1.0,
+        "suppressed": true,
+        "evidence": [
+          "occasion_count differs: 4 vs 3",
+          "prior_sanction differs: 'penalty' vs 'flag'"
+        ]
+      },
+      {
+        "type": "divergent_precedent",
+        "article": "33.3",
+        "decisions": [
+          "dec:2023:Austrian Grand Prix:66",
+          "dec:2023:Austrian Grand Prix:67"
+        ],
+        "outcomes": [
+          "10 second time penalty.",
+          "5 second time penalty."
+        ],
+        "similarity": 1.0,
+        "suppressed": true,
+        "evidence": [
+          "occasion_count differs: 4 vs 3",
+          "prior_sanction differs: 'penalty' vs 'flag'"
+        ]
+      },
+      {
+        "type": "divergent_precedent",
+        "article": "33.3",
+        "decisions": [
+          "dec:2023:Austrian Grand Prix:66",
+          "dec:2023:Austrian Grand Prix:62"
+        ],
+        "outcomes": [
+          "10 second time penalty.",
+          "5 second time penalty."
+        ],
+        "similarity": 1.0,
+        "suppressed": true,
+        "evidence": [
+          "occasion_count differs: 4 vs 3",
+          "prior_sanction differs: 'penalty' vs 'flag'"
+        ]
+      },
+      {
+        "type": "divergent_precedent",
+        "article": "33.3",
+        "decisions": [
+          "dec:2023:Austrian Grand Prix:66",
+          "dec:2023:Austrian Grand Prix:61"
+        ],
+        "outcomes": [
+          "10 second time penalty.",
+          "5 second time penalty."
+        ],
+        "similarity": 0.9828358292579651,
+        "suppressed": true,
+        "evidence": [
+          "occasion_count differs: 4 vs 3",
+          "prior_sanction differs: 'penalty' vs 'flag'"
+        ]
+      },
+      {
+        "type": "divergent_precedent",
+        "article": "33.3",
+        "decisions": [
+          "dec:2023:Austrian Grand Prix:66",
+          "dec:2023:Austrian Grand Prix:68"
+        ],
+        "outcomes": [
+          "10 second time penalty.",
+          "5 second time penalty."
+        ],
+        "similarity": 0.9828358292579651,
+        "suppressed": true,
+        "evidence": [
+          "occasion_count differs: 4 vs 3",
+          "prior_sanction differs: 'penalty' vs 'flag'"
+        ]
+      },
+      {
+        "type": "divergent_precedent",
+        "article": "33.3",
+        "decisions": [
+          "dec:2023:Austrian Grand Prix:66",
+          "dec:2023:Austrian Grand Prix:63"
+        ],
+        "outcomes": [
+          "10 second time penalty.",
+          "5 second time penalty"
+        ],
+        "similarity": 0.9828358292579651,
+        "suppressed": true,
+        "evidence": [
+          "occasion_count differs: 4 vs 3",
+          "prior_sanction differs: 'penalty' vs 'flag'"
+        ]
+      }
+    ],
+    "output": {
+      "answer": "The penalty for a driver who leaves the track without a justifiable reason under Article 33.3 is a 5-second time penalty. This was seen in several decisions from the 2023 Austrian and Qatar Grand Prix, such as the decision from Document 66, where the Stewards imposed a 5-second time penalty for leaving the track multiple times without a justifiable reason.",
+      "citations": [
+        {
+          "doc_id": "dec:2023:Austrian Grand Prix:66",
+          "article_or_decision": "Austrian Grand Prix 2023, Document 66",
+          "quote_or_paraphrase": "The Stewards reviewed video, and received timing information from the Race Director. The car left the track on seven (7) occasions without justifiable reason, after having received a 5 second time penalty on the fourth (4th) occasion."
+        }
+      ],
+      "contradictions_flagged": []
+    }
+  },
+  {
+    "question_id": "q02",
+    "retrieved_chunk_ids": [
+      "dec:2023:Monaco Grand Prix:49",
+      "dec:2023:Australian Grand Prix:46",
+      "dec:2023:Monaco Grand Prix:51",
+      "dec:2024:Saudi Arabian Grand Prix:45",
+      "dec:2024:Austrian Grand Prix:71",
+      "dec:2023:Qatar Grand Prix:86",
+      "dec:2024:Mexico City Grand Prix:50",
+      "dec:2024:Austrian Grand Prix:65"
+    ],
+    "flags": [
+      {
+        "type": "divergent_precedent",
+        "article": "Appendix L Chapter IV Article 2(d)",
+        "decisions": [
+          "dec:2023:Monaco Grand Prix:49",
+          "dec:2024:Austrian Grand Prix:71"
+        ],
+        "outcomes": [
+          "5 second time penalty. 2 penalty points (total of 2 for the 12 month period)",
+          "10 second time penalty. 2 penalty points (total of 4 for the 12 month period)."
+        ],
+        "similarity": 0.7594608068466187,
+        "suppressed": false,
+        "evidence": []
+      },
+      {
+        "type": "divergent_precedent",
+        "article": "Appendix L Chapter IV Article 2(d)",
+        "decisions": [
+          "dec:2023:Monaco Grand Prix:49",
+          "dec:2023:Qatar Grand Prix:86"
+        ],
+        "outcomes": [
+          "5 second time penalty. 2 penalty points (total of 2 for the 12 month period)",
+          "No further action."
+        ],
+        "similarity": 0.97048020362854,
+        "suppressed": false,
+        "evidence": []
+      },
+      {
+        "type": "divergent_precedent",
+        "article": "Appendix L Chapter IV Article 2(d)",
+        "decisions": [
+          "dec:2024:Saudi Arabian Grand Prix:45",
+          "dec:2024:Austrian Grand Prix:71"
+        ],
+        "outcomes": [
+          "10 second time penalty. 3 penalty points (total of 3 for the 12 month period).",
+          "10 second time penalty. 2 penalty points (total of 4 for the 12 month period)."
+        ],
+        "similarity": 0.833243191242218,
+        "suppressed": false,
+        "evidence": []
+      },
+      {
+        "type": "divergent_precedent",
+        "article": "Appendix L Chapter IV Article 2(d)",
+        "decisions": [
+          "dec:2024:Saudi Arabian Grand Prix:45",
+          "dec:2024:Austrian Grand Prix:65"
+        ],
+        "outcomes": [
+          "10 second time penalty. 3 penalty points (total of 3 for the 12 month period).",
+          "10 second time penalty. 2 penalty points (total of 8 for the 12 month period)."
+        ],
+        "similarity": 0.8019923567771912,
+        "suppressed": false,
+        "evidence": []
+      },
+      {
+        "type": "divergent_precedent",
+        "article": "Appendix L Chapter IV Article 2(d)",
+        "decisions": [
+          "dec:2024:Austrian Grand Prix:71",
+          "dec:2023:Qatar Grand Prix:86"
+        ],
+        "outcomes": [
+          "10 second time penalty. 2 penalty points (total of 4 for the 12 month period).",
+          "No further action."
+        ],
+        "similarity": 0.7862482070922852,
+        "suppressed": false,
+        "evidence": []
+      },
+      {
+        "type": "divergent_precedent",
+        "article": "Appendix L Chapter IV Article 2(d)",
+        "decisions": [
+          "dec:2024:Austrian Grand Prix:71",
+          "dec:2024:Austrian Grand Prix:65"
+        ],
+        "outcomes": [
+          "10 second time penalty. 2 penalty points (total of 4 for the 12 month period).",
+          "10 second time penalty. 2 penalty points (total of 8 for the 12 month period)."
+        ],
+        "similarity": 0.890568733215332,
+        "suppressed": false,
+        "evidence": []
+      }
+    ],
+    "output": {
+      "answer": "The Stewards did not apply the same penalty for causing a collision under Appendix L Chapter IV Article 2(d) at the 2023 Monaco and Qatar Grands Prix. For the 2023 Monaco Grand Prix, the penalty was 5 second time penalty and 2 penalty points (total of 2 for the 12 month period). For the 2023 Qatar Grand Prix, the penalty was No further action. These decisions diverge in the severity of the penalty applied.",
+      "citations": [
+        {
+          "doc_id": "dec:2023:Monaco Grand Prix:49",
+          "article_or_decision": "Document 49",
+          "quote_or_paraphrase": "5 second time penalty. 2 penalty points (total of 2 for the 12 month period)"
+        },
+        {
+          "doc_id": "dec:2023:Qatar Grand Prix:86",
+          "article_or_decision": "Document 86",
+          "quote_or_paraphrase": "No further action."
+        }
+      ],
+      "contradictions_flagged": [
+        "dec:2023:Monaco Grand Prix:49",
+        "dec:2023:Qatar Grand Prix:86"
+      ]
+    }
+  },
+  {
+    "question_id": "q03",
+    "retrieved_chunk_ids": [
+      "dec:2023:Monaco Grand Prix:17",
+      "dec:2023:Singapore Grand Prix:19",
+      "dec:2023:Singapore Grand Prix:20",
+      "dec:2023:Monaco Grand Prix:48",
+      "dec:2023:Monaco Grand Prix:50",
+      "dec:2023:Monaco Grand Prix:25",
+      "dec:2023:Monaco Grand Prix:28",
+      "dec:2023:Monaco Grand Prix:27"
+    ],
+    "flags": [
+      {
+        "type": "divergent_precedent",
+        "article": "34.7",
+        "decisions": [
+          "dec:2023:Singapore Grand Prix:19",
+          "dec:2023:Singapore Grand Prix:20"
+        ],
+        "outcomes": [
+          "The competitor (MoneyGram Haas F1 Team) is fined \u20ac400.",
+          "The competitor (Scuderia Ferrari) is fined \u20ac100."
+        ],
+        "similarity": 0.9572231769561768,
+        "suppressed": false,
+        "evidence": []
+      },
+      {
+        "type": "divergent_precedent",
+        "article": "34.7",
+        "decisions": [
+          "dec:2023:Singapore Grand Prix:19",
+          "dec:2023:Monaco Grand Prix:25"
+        ],
+        "outcomes": [
+          "The competitor (MoneyGram Haas F1 Team) is fined \u20ac400.",
+          "The competitor (Mercedes-AMG PETRONAS F1 Team) is fined \u20ac600."
+        ],
+        "similarity": 0.9648439884185791,
+        "suppressed": false,
+        "evidence": []
+      },
+      {
+        "type": "divergent_precedent",
+        "article": "34.7",
+        "decisions": [
+          "dec:2023:Singapore Grand Prix:19",
+          "dec:2023:Monaco Grand Prix:28"
+        ],
+        "outcomes": [
+          "The competitor (MoneyGram Haas F1 Team) is fined \u20ac400.",
+          "The competitor (Williams Racing) is fined \u20ac100."
+        ],
+        "similarity": 0.9625019431114197,
+        "suppressed": false,
+        "evidence": []
+      },
+      {
+        "type": "divergent_precedent",
+        "article": "34.7",
+        "decisions": [
+          "dec:2023:Singapore Grand Prix:19",
+          "dec:2023:Monaco Grand Prix:27"
+        ],
+        "outcomes": [
+          "The competitor (MoneyGram Haas F1 Team) is fined \u20ac400.",
+          "The competitor (Williams Racing) is fined \u20ac200."
+        ],
+        "similarity": 0.9490858912467957,
+        "suppressed": false,
+        "evidence": []
+      },
+      {
+        "type": "divergent_precedent",
+        "article": "34.7",
+        "decisions": [
+          "dec:2023:Singapore Grand Prix:20",
+          "dec:2023:Monaco Grand Prix:25"
+        ],
+        "outcomes": [
+          "The competitor (Scuderia Ferrari) is fined \u20ac100.",
+          "The competitor (Mercedes-AMG PETRONAS F1 Team) is fined \u20ac600."
+        ],
+        "similarity": 0.9739925861358643,
+        "suppressed": false,
+        "evidence": []
+      },
+      {
+        "type": "divergent_precedent",
+        "article": "34.7",
+        "decisions": [
+          "dec:2023:Singapore Grand Prix:20",
+          "dec:2023:Monaco Grand Prix:28"
+        ],
+        "outcomes": [
+          "The competitor (Scuderia Ferrari) is fined \u20ac100.",
+          "The competitor (Williams Racing) is fined \u20ac100."
+        ],
+        "similarity": 0.9908075332641602,
+        "suppressed": false,
+        "evidence": []
+      },
+      {
+        "type": "divergent_precedent",
+        "article": "34.7",
+        "decisions": [
+          "dec:2023:Singapore Grand Prix:20",
+          "dec:2023:Monaco Grand Prix:27"
+        ],
+        "outcomes": [
+          "The competitor (Scuderia Ferrari) is fined \u20ac100.",
+          "The competitor (Williams Racing) is fined \u20ac200."
+        ],
+        "similarity": 0.9627896547317505,
+        "suppressed": false,
+        "evidence": []
+      },
+      {
+        "type": "divergent_precedent",
+        "article": "34.7",
+        "decisions": [
+          "dec:2023:Monaco Grand Prix:25",
+          "dec:2023:Monaco Grand Prix:28"
+        ],
+        "outcomes": [
+          "The competitor (Mercedes-AMG PETRONAS F1 Team) is fined \u20ac600.",
+          "The competitor (Williams Racing) is fined \u20ac100."
+        ],
+        "similarity": 0.9757561683654785,
+        "suppressed": false,
+        "evidence": []
+      },
+      {
+        "type": "divergent_precedent",
+        "article": "34.7",
+        "decisions": [
+          "dec:2023:Monaco Grand Prix:25",
+          "dec:2023:Monaco Grand Prix:27"
+        ],
+        "outcomes": [
+          "The competitor (Mercedes-AMG PETRONAS F1 Team) is fined \u20ac600.",
+          "The competitor (Williams Racing) is fined \u20ac200."
+        ],
+        "similarity": 0.9614027142524719,
+        "suppressed": false,
+        "evidence": []
+      },
+      {
+        "type": "divergent_precedent",
+        "article": "34.7",
+        "decisions": [
+          "dec:2023:Monaco Grand Prix:28",
+          "dec:2023:Monaco Grand Prix:27"
+        ],
+        "outcomes": [
+          "The competitor (Williams Racing) is fined \u20ac100.",
+          "The competitor (Williams Racing) is fined \u20ac200."
+        ],
+        "similarity": 0.9745314121246338,
+        "suppressed": false,
+        "evidence": []
+      },
+      {
+        "type": "divergent_precedent",
+        "article": "34.7",
+        "decisions": [
+          "dec:2023:Monaco Grand Prix:17",
+          "dec:2023:Singapore Grand Prix:19"
+        ],
+        "outcomes": [
+          "The competitor (Scuderia AlphaTauri) is fined \u20ac1,000 and the driver is given a warning.",
+          "The competitor (MoneyGram Haas F1 Team) is fined \u20ac400."
+        ],
+        "similarity": 0.9620580673217773,
+        "suppressed": true,
+        "evidence": [
+          "different session: Practice 2 vs Practice 3"
+        ]
+      },
+      {
+        "type": "divergent_precedent",
+        "article": "34.7",
+        "decisions": [
+          "dec:2023:Monaco Grand Prix:17",
+          "dec:2023:Singapore Grand Prix:20"
+        ],
+        "outcomes": [
+          "The competitor (Scuderia AlphaTauri) is fined \u20ac1,000 and the driver is given a warning.",
+          "The competitor (Scuderia Ferrari) is fined \u20ac100."
+        ],
+        "similarity": 0.9708086252212524,
+        "suppressed": true,
+        "evidence": [
+          "different session: Practice 2 vs Practice 3"
+        ]
+      },
+      {
+        "type": "divergent_precedent",
+        "article": "34.7",
+        "decisions": [
+          "dec:2023:Monaco Grand Prix:17",
+          "dec:2023:Monaco Grand Prix:48"
+        ],
+        "outcomes": [
+          "The competitor (Scuderia AlphaTauri) is fined \u20ac1,000 and the driver is given a warning.",
+          "The competitor (Williams Racing) is fined \u20ac100."
+        ],
+        "similarity": 0.975294828414917,
+        "suppressed": true,
+        "evidence": [
+          "different session: Practice 2 vs Reconnaissance Laps"
+        ]
+      },
+      {
+        "type": "divergent_precedent",
+        "article": "34.7",
+        "decisions": [
+          "dec:2023:Monaco Grand Prix:17",
+          "dec:2023:Monaco Grand Prix:50"
+        ],
+        "outcomes": [
+          "The competitor (Scuderia AlphaTauri) is fined \u20ac1,000 and the driver is given a warning.",
+          "5 second time penalty."
+        ],
+        "similarity": 0.974827229976654,
+        "suppressed": true,
+        "evidence": [
+          "different session: Practice 2 vs Race"
+        ]
+      },
+      {
+        "type": "divergent_precedent",
+        "article": "34.7",
+        "decisions": [
+          "dec:2023:Monaco Grand Prix:17",
+          "dec:2023:Monaco Grand Prix:25"
+        ],
+        "outcomes": [
+          "The competitor (Scuderia AlphaTauri) is fined \u20ac1,000 and the driver is given a warning.",
+          "The competitor (Mercedes-AMG PETRONAS F1 Team) is fined \u20ac600."
+        ],
+        "similarity": 0.9714381098747253,
+        "suppressed": true,
+        "evidence": [
+          "different session: Practice 2 vs Practice 3"
+        ]
+      },
+      {
+        "type": "divergent_precedent",
+        "article": "34.7",
+        "decisions": [
+          "dec:2023:Monaco Grand Prix:17",
+          "dec:2023:Monaco Grand Prix:28"
+        ],
+        "outcomes": [
+          "The competitor (Scuderia AlphaTauri) is fined \u20ac1,000 and the driver is given a warning.",
+          "The competitor (Williams Racing) is fined \u20ac100."
+        ],
+        "similarity": 0.975294828414917,
+        "suppressed": true,
+        "evidence": [
+          "different session: Practice 2 vs Practice 3"
+        ]
+      },
+      {
+        "type": "divergent_precedent",
+        "article": "34.7",
+        "decisions": [
+          "dec:2023:Monaco Grand Prix:17",
+          "dec:2023:Monaco Grand Prix:27"
+        ],
+        "outcomes": [
+          "The competitor (Scuderia AlphaTauri) is fined \u20ac1,000 and the driver is given a warning.",
+          "The competitor (Williams Racing) is fined \u20ac200."
+        ],
+        "similarity": 0.9597288370132446,
+        "suppressed": true,
+        "evidence": [
+          "different session: Practice 2 vs Practice 3"
+        ]
+      },
+      {
+        "type": "divergent_precedent",
+        "article": "34.7",
+        "decisions": [
+          "dec:2023:Singapore Grand Prix:19",
+          "dec:2023:Monaco Grand Prix:48"
+        ],
+        "outcomes": [
+          "The competitor (MoneyGram Haas F1 Team) is fined \u20ac400.",
+          "The competitor (Williams Racing) is fined \u20ac100."
+        ],
+        "similarity": 0.9625019431114197,
+        "suppressed": true,
+        "evidence": [
+          "different session: Practice 3 vs Reconnaissance Laps"
+        ]
+      },
+      {
+        "type": "divergent_precedent",
+        "article": "34.7",
+        "decisions": [
+          "dec:2023:Singapore Grand Prix:19",
+          "dec:2023:Monaco Grand Prix:50"
+        ],
+        "outcomes": [
+          "The competitor (MoneyGram Haas F1 Team) is fined \u20ac400.",
+          "5 second time penalty."
+        ],
+        "similarity": 0.9704014658927917,
+        "suppressed": true,
+        "evidence": [
+          "different session: Practice 3 vs Race"
+        ]
+      },
+      {
+        "type": "divergent_precedent",
+        "article": "34.7",
+        "decisions": [
+          "dec:2023:Singapore Grand Prix:20",
+          "dec:2023:Monaco Grand Prix:48"
+        ],
+        "outcomes": [
+          "The competitor (Scuderia Ferrari) is fined \u20ac100.",
+          "The competitor (Williams Racing) is fined \u20ac100."
+        ],
+        "similarity": 0.9908075332641602,
+        "suppressed": true,
+        "evidence": [
+          "different session: Practice 3 vs Reconnaissance Laps"
+        ]
+      },
+      {
+        "type": "divergent_precedent",
+        "article": "34.7",
+        "decisions": [
+          "dec:2023:Singapore Grand Prix:20",
+          "dec:2023:Monaco Grand Prix:50"
+        ],
+        "outcomes": [
+          "The competitor (Scuderia Ferrari) is fined \u20ac100.",
+          "5 second time penalty."
+        ],
+        "similarity": 0.9900539517402649,
+        "suppressed": true,
+        "evidence": [
+          "different session: Practice 3 vs Race"
+        ]
+      },
+      {
+        "type": "divergent_precedent",
+        "article": "34.7",
+        "decisions": [
+          "dec:2023:Monaco Grand Prix:48",
+          "dec:2023:Monaco Grand Prix:50"
+        ],
+        "outcomes": [
+          "The competitor (Williams Racing) is fined \u20ac100.",
+          "5 second time penalty."
+        ],
+        "similarity": 0.9926339983940125,
+        "suppressed": true,
+        "evidence": [
+          "different session: Reconnaissance Laps vs Race"
+        ]
+      },
+      {
+        "type": "divergent_precedent",
+        "article": "34.7",
+        "decisions": [
+          "dec:2023:Monaco Grand Prix:48",
+          "dec:2023:Monaco Grand Prix:25"
+        ],
+        "outcomes": [
+          "The competitor (Williams Racing) is fined \u20ac100.",
+          "The competitor (Mercedes-AMG PETRONAS F1 Team) is fined \u20ac600."
+        ],
+        "similarity": 0.9757561683654785,
+        "suppressed": true,
+        "evidence": [
+          "different session: Reconnaissance Laps vs Practice 3"
+        ]
+      },
+      {
+        "type": "divergent_precedent",
+        "article": "34.7",
+        "decisions": [
+          "dec:2023:Monaco Grand Prix:48",
+          "dec:2023:Monaco Grand Prix:27"
+        ],
+        "outcomes": [
+          "The competitor (Williams Racing) is fined \u20ac100.",
+          "The competitor (Williams Racing) is fined \u20ac200."
+        ],
+        "similarity": 0.9745314121246338,
+        "suppressed": true,
+        "evidence": [
+          "different session: Reconnaissance Laps vs Practice 3"
+        ]
+      },
+      {
+        "type": "divergent_precedent",
+        "article": "34.7",
+        "decisions": [
+          "dec:2023:Monaco Grand Prix:50",
+          "dec:2023:Monaco Grand Prix:25"
+        ],
+        "outcomes": [
+          "5 second time penalty.",
+          "The competitor (Mercedes-AMG PETRONAS F1 Team) is fined \u20ac600."
+        ],
+        "similarity": 0.9749612212181091,
+        "suppressed": true,
+        "evidence": [
+          "different session: Race vs Practice 3"
+        ]
+      },
+      {
+        "type": "divergent_precedent",
+        "article": "34.7",
+        "decisions": [
+          "dec:2023:Monaco Grand Prix:50",
+          "dec:2023:Monaco Grand Prix:28"
+        ],
+        "outcomes": [
+          "5 second time penalty.",
+          "The competitor (Williams Racing) is fined \u20ac100."
+        ],
+        "similarity": 0.9926339983940125,
+        "suppressed": true,
+        "evidence": [
+          "different session: Race vs Practice 3"
+        ]
+      },
+      {
+        "type": "divergent_precedent",
+        "article": "34.7",
+        "decisions": [
+          "dec:2023:Monaco Grand Prix:50",
+          "dec:2023:Monaco Grand Prix:27"
+        ],
+        "outcomes": [
+          "5 second time penalty.",
+          "The competitor (Williams Racing) is fined \u20ac200."
+        ],
+        "similarity": 0.9648449420928955,
+        "suppressed": true,
+        "evidence": [
+          "different session: Race vs Practice 3"
+        ]
+      }
+    ],
+    "output": {
+      "answer": "The fines for pit lane speeding under Article 34.7 were not consistent between the 2023 Monaco and Singapore Grands Prix for near-identical speeding margins. For example, in the Singapore Grand Prix, the penalties were as follows: Scuderia Ferrari was fined \u20ac100, Williams Racing was fined \u20ac100, and the MoneyGram Haas F1 Team was fined \u20ac400 for similar speeding infractions. In the Monaco Grand Prix, penalties were: Williams Racing was fined \u20ac100 for speeding by 0.1 km/h, and Scuderia Ferrari was fined \u20ac100 for speeding by 0.7 km/h. These instances demonstrate divergent precedents based on the same Article.",
+      "citations": [
+        {
+          "doc_id": "dec:2023:Singapore Grand Prix:19",
+          "article_or_decision": "Decision 19",
+          "quote_or_paraphrase": "The competitor (MoneyGram Haas F1 Team) is fined \u20ac400."
+        },
+        {
+          "doc_id": "dec:2023:Singapore Grand Prix:20",
+          "article_or_decision": "Decision 20",
+          "quote_or_paraphrase": "The competitor (Scuderia Ferrari) is fined \u20ac100."
+        },
+        {
+          "doc_id": "dec:2023:Monaco Grand Prix:48",
+          "article_or_decision": "Decision 48",
+          "quote_or_paraphrase": "The competitor (Williams Racing) is fined \u20ac100."
+        },
+        {
+          "doc_id": "dec:2023:Monaco Grand Prix:50",
+          "article_or_decision": "Decision 50",
+          "quote_or_paraphrase": "5 second time penalty."
+        }
+      ],
+      "contradictions_flagged": [
+        "dec:2023:Singapore Grand Prix:19",
+        "dec:2023:Singapore Grand Prix:20",
+        "dec:2023:Singapore Grand Prix:19",
+        "dec:2023:Singapore Grand Prix:28",
+        "dec:2023:Singapore Grand Prix:19",
+        "dec:2023:Singapore Grand Prix:20",
+        "dec:2023:Singapore Grand Prix:20",
+        "dec:2023:Singapore Grand Prix:20",
+        "dec:2023:Singapore Grand Prix:20",
+        "dec:2023:Singapore Grand Prix:20",
+        "dec:2023:Singapore Grand Prix:20",
+        "dec:2023:Singapore Grand Prix:20"
+      ]
+    }
+  }
+]

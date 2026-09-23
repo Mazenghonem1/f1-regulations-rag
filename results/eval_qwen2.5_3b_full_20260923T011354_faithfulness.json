@@ -1,0 +1,102 @@
+{
+  "faithfulness": 0.6842105263157895,
+  "scored": 19,
+  "unsupported": 6,
+  "per_citation": [
+    {
+      "question_id": "q01",
+      "doc_id": "dec:2023:Austrian Grand Prix:66",
+      "supported": false
+    },
+    {
+      "question_id": "q01",
+      "doc_id": "dec:2023:Austrian Grand Prix:67",
+      "supported": true
+    },
+    {
+      "question_id": "q01",
+      "doc_id": "dec:2023:Austrian Grand Prix:61",
+      "supported": true
+    },
+    {
+      "question_id": "q01",
+      "doc_id": "dec:2023:Austrian Grand Prix:63",
+      "supported": true
+    },
+    {
+      "question_id": "q02",
+      "doc_id": "dec:2023:Monaco Grand Prix:49",
+      "supported": true
+    },
+    {
+      "question_id": "q02",
+      "doc_id": "dec:2023:Qatar Grand Prix:86",
+      "supported": true
+    },
+    {
+      "question_id": "q03",
+      "doc_id": "dec:2023:Monaco Grand Prix:48",
+      "supported": false
+    },
+    {
+      "question_id": "q03",
+      "doc_id": "dec:2023:Monaco Grand Prix:27",
+      "supported": false
+    },
+    {
+      "question_id": "q05",
+      "doc_id": "dec:2023:Austrian Grand Prix:66",
+      "supported": false
+    },
+    {
+      "question_id": "q11",
+      "doc_id": "reg:2023:sporting:2:33",
+      "supported": true
+    },
+    {
+      "question_id": "q14",
+      "doc_id": "reg:2024:sporting:2:48",
+      "supported": true
+    },
+    {
+      "question_id": "q21",
+      "doc_id": "reg:2023:sporting:4:33",
+      "supported": true
+    },
+    {
+      "question_id": "q22",
+      "doc_id": "reg:2025:sporting:1:48",
+      "supported": false
+    },
+    {
+      "question_id": "q22",
+      "doc_id": "dec:2024:Mexico City Grand Prix:42",
+      "supported": true
+    },
+    {
+      "question_id": "q23",
+      "doc_id": "reg:2023:sporting:1:33",
+      "supported": true
+    },
+    {
+      "question_id": "q25",
+      "doc_id": "dec:2023:Austrian Grand Prix:16",
+      "supported": true
+    },
+    {
+      "question_id": "q25",
+      "doc_id": "dec:2023:Austrian Grand Prix:17",
+      "supported": true
+    },
+    {
+      "question_id": "q32",
+      "doc_id": "dec:2023:Qatar Grand Prix:65",
+      "supported": false
+    },
+    {
+      "question_id": "q32",
+      "doc_id": "dec:2024:United States Grand Prix:37",
+      "supported": true
+    }
+  ]
+}
