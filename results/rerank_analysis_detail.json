@@ -1,0 +1,92 @@
+[
+  {
+    "id": "q04",
+    "direction": "improved",
+    "question": "Does the 2023 United States Grand Prix Decision (Document 58, citing Article 44) still reflect the current Race Starting Procedure regulation?",
+    "gold_chunk_id": "dec:2023:United States Grand Prix:58",
+    "pre_rerank_rank": 9,
+    "post_rerank_rank": 1,
+    "displaced_by": [
+      "dec:2023:Australian Grand Prix:47",
+      "dec:2023:United States Grand Prix:49",
+      "dec:2023:United States Grand Prix:48"
+    ]
+  },
+  {
+    "id": "q13",
+    "direction": "improved",
+    "question": "How many power units may a driver use during the Championship season?",
+    "gold_chunk_id": "reg:2023:sporting:1:28",
+    "pre_rerank_rank": 11,
+    "post_rerank_rank": 6,
+    "displaced_by": [
+      "reg:2024:sporting:1:28",
+      "reg:2024:sporting:2:28",
+      "reg:2024:sporting:3:28"
+    ]
+  },
+  {
+    "id": "q27",
+    "direction": "improved",
+    "question": "What happened in the 2023 Singapore Grand Prix qualifying session involving impeding, and was a penalty applied?",
+    "gold_chunk_id": "dec:2023:Singapore Grand Prix:41",
+    "pre_rerank_rank": 11,
+    "post_rerank_rank": 7,
+    "displaced_by": [
+      "dec:2023:Singapore Grand Prix:28",
+      "dec:2023:Singapore Grand Prix:32",
+      "dec:2023:Singapore Grand Prix:30"
+    ]
+  },
+  {
+    "id": "q14",
+    "direction": "regressed",
+    "question": "What penalty applies to a driver who starts the race from an incorrect grid location?",
+    "gold_chunk_id": "reg:2023:sporting:1:48",
+    "pre_rerank_rank": 2,
+    "post_rerank_rank": 11,
+    "displaced_by": [
+      "reg:2024:sporting:2:48",
+      "reg:2024:sporting:4:48"
+    ]
+  },
+  {
+    "id": "q19",
+    "direction": "regressed",
+    "question": "What are the Parc Ferme conditions that apply before a Sprint or Race?",
+    "gold_chunk_id": "reg:2024:sporting:4:40",
+    "pre_rerank_rank": 4,
+    "post_rerank_rank": 9,
+    "displaced_by": [
+      "reg:2024:sporting:7:40",
+      "reg:2024:sporting:6:40",
+      "reg:2025:sporting:3:40"
+    ]
+  },
+  {
+    "id": "q20",
+    "direction": "regressed",
+    "question": "What construction requirements apply to a Formula One car's survival cell (chassis)?",
+    "gold_chunk_id": "reg:2023:technical:1:12",
+    "pre_rerank_rank": 3,
+    "post_rerank_rank": 12,
+    "displaced_by": [
+      "reg:2024:technical:4:12",
+      "reg:2024:technical:6:12",
+      "reg:2024:technical:5:12"
+    ]
+  },
+  {
+    "id": "q30",
+    "direction": "regressed",
+    "question": "What usage restrictions apply to Restricted Number Components (RNCs) during the Championship?",
+    "gold_chunk_id": "reg:2023:sporting:1:29",
+    "pre_rerank_rank": 6,
+    "post_rerank_rank": 16,
+    "displaced_by": [
+      "reg:2023:sporting:7:29",
+      "reg:2023:sporting:8:29",
+      "reg:2024:sporting:1:29"
+    ]
+  }
+]
