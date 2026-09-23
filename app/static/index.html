@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>F1 Regulations RAG</title>
+<style>
+  :root { color-scheme: light dark; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    max-width: 760px; margin: 2rem auto; padding: 0 1rem; line-height: 1.5;
+  }
+  h1 { font-size: 1.3rem; }
+  textarea { width: 100%; box-sizing: border-box; font: inherit; padding: 0.5rem; }
+  button { padding: 0.5rem 1.2rem; font: inherit; cursor: pointer; }
+  .flag {
+    border-left: 4px solid #d97706; background: rgba(217,119,6,0.08);
+    padding: 0.5rem 0.75rem; margin: 0.5rem 0; border-radius: 4px;
+  }
+  .flag.superseded { border-color: #7c3aed; background: rgba(124,58,237,0.08); }
+  .citation {
+    border: 1px solid currentColor; opacity: 0.85;
+    padding: 0.4rem 0.6rem; margin: 0.3rem 0; border-radius: 4px; font-size: 0.9rem;
+  }
+  .error { color: #dc2626; }
+  #answer { white-space: pre-wrap; }
+  .muted { opacity: 0.6; font-size: 0.85rem; }
+</style>
+</head>
+<body>
+<h1>F1 Regulations &amp; Stewards&rsquo; Decisions RAG</h1>
+<p class="muted">Answers only from retrieved FIA regulation/decision text. Contradictions between sources are flagged explicitly rather than blended away.</p>
+
+<textarea id="question" rows="2" placeholder="e.g. What penalty applies to a driver who starts the race from an incorrect grid location?"></textarea>
+<div style="margin-top: 0.5rem;">
+  <button id="ask">Ask</button>
+  <span id="status" class="muted"></span>
+</div>
+
+<div id="result" style="margin-top: 1.5rem;"></div>
+
+<script>
+const askBtn = document.getElementById('ask');
+const questionEl = document.getElementById('question');
+const statusEl = document.getElementById('status');
+const resultEl = document.getElementById('result');
+
+async function ask() {
+  const question = questionEl.value.trim();
+  if (!question) return;
+  askBtn.disabled = true;
+  statusEl.textContent = 'Retrieving, checking for contradictions, generating... (can take a while on CPU)';
+  resultEl.innerHTML = '';
+  try {
+    const res = await fetch('/ask', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ question }),
+    });
+    const data = await res.json();
+    render(data);
+  } catch (e) {
+    resultEl.innerHTML = `<p class="error">Request failed: ${escapeHtml(String(e))}</p>`;
+  } finally {
+    askBtn.disabled = false;
+    statusEl.textContent = '';
+  }
+}
+
+function escapeHtml(s) {
+  return s.replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+}
+
+function render(data) {
+  if (data.error) {
+    resultEl.innerHTML = `<p class="error">${escapeHtml(data.error)}</p>`;
+    return;
+  }
+  const out = data.output || {};
+  let html = '';
+
+  if (out.error) {
+    html += `<p class="error">Generation error: ${escapeHtml(out.error)}</p>`;
+  } else {
+    html += `<h3>Answer</h3><p id="answer">${escapeHtml(out.answer || '(no answer)')}</p>`;
+  }
+
+  if (data.flags && data.flags.length) {
+    const shown = data.flags.slice(0, 8);
+    html += `<h3>Contradiction flags (${data.flags.length}${data.flags.length > shown.length ? `, showing first ${shown.length}` : ''})</h3>`;
+    for (const f of shown) {
+      const cls = f.type === 'superseded_precedent' ? 'flag superseded' : 'flag';
+      const label = f.type === 'superseded_precedent'
+        ? `Superseded Precedent &mdash; Article ${escapeHtml(f.article)}: cited ${escapeHtml(f.decision)} (${escapeHtml(f.decision_date)}), Article changed ${escapeHtml(f.changed_on)} [${escapeHtml(f.match_granularity)}]`
+        : `Divergent Precedent &mdash; Article ${escapeHtml(f.article)}${f.suppressed ? ' (suppressed: justified distinction)' : ''}`;
+      html += `<div class="${cls}">${label}</div>`;
+    }
+  }
+
+  if (out.citations && out.citations.length) {
+    html += '<h3>Citations</h3>';
+    for (const c of out.citations) {
+      html += `<div class="citation"><strong>${escapeHtml(c.doc_id)}</strong> (${escapeHtml(c.article_or_decision)})<br>${escapeHtml(c.quote_or_paraphrase)}</div>`;
+    }
+  }
+
+  html += `<p class="muted">Retrieved: ${(data.retrieved_chunk_ids || []).map(escapeHtml).join(', ')}</p>`;
+  resultEl.innerHTML = html;
+}
+
+askBtn.addEventListener('click', ask);
+questionEl.addEventListener('keydown', e => {
+  if (e.key === 'Enter' && (e.metaKey || e.ctrlKey)) ask();
+});
+</script>
+</body>
+</html>

@@ -5,3 +5,4 @@ data/raw/
 data/processed/.embed_cache/
 .DS_Store
 *.egg-info/
+.playwright-mcp/

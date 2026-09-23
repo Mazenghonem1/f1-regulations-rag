@@ -123,6 +123,21 @@ Self-checks (no test framework, just `assert`-based scripts):
 .venv/bin/python -m src.eval.analyse_rerank
 ```
 
+### Minimal demo UI
+
+A thin FastAPI wrapper (`app/main.py`) around the same pipeline stages, with
+a single-page HTML frontend (`app/static/index.html`, no build step, no JS
+framework) — for demo-ability, not a second codebase. Ask a question, see
+the retrieved chunks, contradiction flags, and citation-grounded answer.
+
+```bash
+.venv/bin/uvicorn app.main:app --reload
+# open http://127.0.0.1:8000
+```
+
+Answers take a while on CPU-only hardware (RECON.md: ~8-12 tok/s for
+qwen2.5:3b) — the UI says so rather than looking stuck.
+
 ## A worked example
 
 **q34**: *"Does the 2023 Qatar Grand Prix Decision (Document 70, citing
