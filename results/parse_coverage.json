@@ -36,5 +36,17 @@
     "present": 165,
     "total": 169,
     "rate": 0.976
+  },
+  "citation_corpus_coverage": {
+    "distinct_cited_articles": 37,
+    "isc_no_corpus_counterpart": 7,
+    "isc_examples": [
+      "Appendix L Chapter III Article 5(o)",
+      "Appendix L Chapter IV Article 2(b)",
+      "Appendix L Chapter IV Article 2(c)",
+      "Appendix L Chapter IV Article 2(d)",
+      "Appendix L Chapter IV Article 2(e)"
+    ],
+    "normalisable_to_top_level_article": 30
   }
 }

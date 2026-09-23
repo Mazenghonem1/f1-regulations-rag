@@ -5,6 +5,7 @@ Run: python -m src.chunk.run
 import json
 import pathlib
 
+from ..contradiction.article_ids import top_level_article
 from .article_changes import diff_issues, latest_versions
 from .decisions import parse_decision
 from .dedupe import dedupe_decisions
@@ -73,6 +74,15 @@ def process_decisions() -> tuple[list[dict], dict]:
         "present": len(both),
         "total": len(templated),
         "rate": round(len(both) / len(templated), 3) if templated else 0.0,
+    }
+
+    cited = {a for r in templated for a in r.get("cited_articles") or []}
+    isc = {a for a in cited if top_level_article(a) is None}
+    coverage["citation_corpus_coverage"] = {
+        "distinct_cited_articles": len(cited),
+        "isc_no_corpus_counterpart": len(isc),
+        "isc_examples": sorted(isc)[:5],
+        "normalisable_to_top_level_article": len(cited) - len(isc),
     }
     return kept, coverage
 

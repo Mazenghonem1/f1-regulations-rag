@@ -4,6 +4,7 @@ predating an Article change -> superseded.
 
 Run: python -m src.contradiction.test_contradiction
 """
+from .article_ids import top_level_article
 from .divergent_precedent import detect_divergent_precedent
 from .superseded_precedent import detect_superseded_precedent
 
@@ -68,6 +69,41 @@ assert flags[0]["changed_on"] == "2023-06-01"
 # a Decision *after* the amendment is not superseded by it
 decision_new = {**decision_old, "chunk_id": "dec:new", "date": "2023-12-01"}
 assert detect_superseded_precedent([decision_new], article_changes) == []
+
+# top_level_article: sub-clause -> Article normalisation for change lookup
+assert top_level_article("33.3") == "33"
+assert top_level_article("12.2.1") == "12"
+assert top_level_article("C3.14.4") == "C3"
+assert top_level_article("44") == "44"
+assert top_level_article("Appendix L Chapter IV Article 2(d)") is None
+
+# a Decision citing a sub-clause, predating a change to the top-level
+# Article, is flagged -- and the flag still reports the sub-clause, not
+# the normalised Article
+decision_subclause = {
+    "chunk_id": "dec:sub",
+    "cited_articles": ["12.2.1"],
+    "date": "2023-01-01",
+}
+flags = detect_superseded_precedent([decision_subclause], article_changes)
+assert len(flags) == 1, flags
+assert flags[0]["article"] == "12.2.1", flags[0]
+assert flags[0]["match_granularity"] == "article", flags[0]
+
+# a bare Article citation that matches directly is "exact", not "article"
+decision_bare = {"chunk_id": "dec:bare", "cited_articles": ["12"], "date": "2023-01-01"}
+flags = detect_superseded_precedent([decision_bare], article_changes)
+assert len(flags) == 1, flags
+assert flags[0]["match_granularity"] == "exact", flags[0]
+
+# an Appendix L (ISC) citation has no corpus counterpart -- not flagged,
+# does not raise
+decision_isc = {
+    "chunk_id": "dec:isc",
+    "cited_articles": ["Appendix L Chapter IV Article 2(d)"],
+    "date": "2023-01-01",
+}
+assert detect_superseded_precedent([decision_isc], article_changes) == []
 
 print(
     "OK — Divergent Precedent flags and suppresses correctly; "
