@@ -231,7 +231,7 @@ itself.
   recall 0.889 (unchanged), precision 0.667 -> **1.0** -- the tradeoff from
   the second restatement is now fully resolved.
 
-## Known limitations (see also CLAUDE.md / PLAN.md)
+## Known limitations (see also PROJECT_BRIEF.md / PLAN.md)
 
 - **The judge is qwen2.5:3b judging qwen2.5-family output.** Not
   GPT-4-class evaluation; the faithfulness numbers above should be read as

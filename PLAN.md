@@ -1,8 +1,8 @@
 # Implementation Plan
 
-Planned with Opus, executed with Sonnet, one phase per session.
+Planned and executed one phase per session.
 Decisions settled in the grilling session of 2026-09-22; see `CONTEXT.md` for
-vocabulary and `docs/adr/` for the two overrides of `CLAUDE.md`.
+vocabulary and `docs/adr/` for the two overrides of `PROJECT_BRIEF.md`.
 
 ## Ground rules for the executing agent
 
@@ -42,7 +42,7 @@ vocabulary and `docs/adr/` for the two overrides of `CLAUDE.md`.
 2. `git init`; `.gitignore` excluding `.venv/`, `data/raw/`, `__pycache__/`.
 3. `requirements.txt`: `requests`, `beautifulsoup4`, `pdfminer.six`,
    `sentence-transformers`, `rank_bm25`, `numpy`. **No faiss.**
-4. Directory skeleton per `CLAUDE.md`, plus `data/raw/`, `data/processed/`,
+4. Directory skeleton per `PROJECT_BRIEF.md`, plus `data/raw/`, `data/processed/`,
    `results/`.
 
 **Check:** a script that imports every dependency and asserts Python is 3.11.
@@ -152,7 +152,7 @@ change; a known amended one reports a change with a plausible date.
 **Done when:** the change table covers every Article cited by the Phase 1
 controversies.
 
-> This is what turns `CLAUDE.md`'s vaguest contradiction rule into a fact
+> This is what turns `PROJECT_BRIEF.md`'s vaguest contradiction rule into a fact
 > rather than a guess. Fall back to hand-coding supersession for eval-set
 > Articles only if the diff proves intractable.
 

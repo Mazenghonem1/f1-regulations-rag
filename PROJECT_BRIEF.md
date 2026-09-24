@@ -36,7 +36,7 @@ keys, no paid vector DB tiers, no paid reranker APIs. Use:
 - **Hybrid search (BM25)**: `rank_bm25` (pure Python, free) combined with
   FAISS dense retrieval.
 
-Claude Code: confirm Ollama is installed and a model is pulled before
+Before building: confirm Ollama is installed and a model is pulled before
 building the generation module. If it isn't installed, stop and tell the
 user to run `ollama pull llama3.1:8b` (or the chosen model) first — don't
 silently fall back to a paid API.
@@ -157,7 +157,7 @@ Metrics to compute and report:
 
 ```
 f1-rag/
-├── CLAUDE.md
+├── PROJECT_BRIEF.md
 ├── data/
 │   ├── raw/              # scraped PDFs
 │   ├── processed/        # extracted text + metadata JSON
@@ -174,7 +174,7 @@ f1-rag/
 └── app/                    # optional FastAPI + minimal UI
 ```
 
-## Notes for Claude Code when building
+## Notes for whoever (or whatever) builds this
 
 - Keep each pipeline stage (retrieve / rerank / contradiction-check /
   generate) as an independently callable, testable module — not one

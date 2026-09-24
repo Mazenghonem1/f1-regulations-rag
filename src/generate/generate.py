@@ -1,7 +1,7 @@
 """Phase 7 entrypoint: citation-grounded structured generation via local
 Ollama. Retrieval/rerank/contradiction stages are already independently
 callable (Phases 5-6) -- this module only adds the generation step, gated
-on Ollama being present (no paid-API fallback, CLAUDE.md).
+on Ollama being present (no paid-API fallback, PROJECT_BRIEF.md).
 """
 import requests
 

@@ -1,6 +1,6 @@
 # Implementation Plan — Phases 9–12 (post-PLAN.md)
 
-Planned with Opus, executed with Sonnet, one phase per session.
+Planned and executed one phase per session.
 Continues `PLAN.md`, which ended at Phase 8. Same ground rules apply.
 
 ## Ground rules for the executing agent
@@ -236,7 +236,7 @@ metrics recomputed, write-up restated to reflect Phases 9–11.
 ## Phase 12 — README and portfolio write-up
 
 **Goal:** the thing a recruiter or interviewer actually opens first. Right
-now the repo root has `CLAUDE.md`, `CONTEXT.md`, `PLAN.md` — all internal
+now the repo root has `PROJECT_BRIEF.md`, `CONTEXT.md`, `PLAN.md` — all internal
 working documents — and **no README**.
 
 **Audience:** a technical reader who has not seen this project, is deciding
@@ -273,7 +273,7 @@ Not a teammate with context. Write for that person.
    `results/*_generation.json` rather than inventing it. This does more to
    convey what the system does than any description.
 4. **Optional, only if the user wants it:** the FastAPI + minimal UI that
-   `CLAUDE.md` lists as optional. **Ask before building it** — it's a
+   `PROJECT_BRIEF.md` lists as optional. **Ask before building it** — it's a
    different kind of work than the rest of this plan, and a good README may
    make it unnecessary. If built, keep it in `app/` (the directory exists and
    is empty), keep it thin, and don't let it become a second codebase.

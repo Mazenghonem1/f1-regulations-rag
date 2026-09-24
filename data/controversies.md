@@ -323,5 +323,5 @@ history) against real Issue diffs.
 
 12 entries: 8 Divergent Precedent, 3 Superseded Precedent (Entry 2 double-tagged
 as both). Track limits, safety car restarts, qualifying impeding, and unsafe
-release are all represented, matching the categories named in `CLAUDE.md` and
+release are all represented, matching the categories named in `PROJECT_BRIEF.md` and
 `PLAN.md` Phase 1.
