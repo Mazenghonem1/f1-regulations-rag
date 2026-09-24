@@ -1,0 +1,35 @@
+{
+  "model": "qwen2.5:7b",
+  "smoke": false,
+  "num_questions": 45,
+  "retrieval_precision_at_8": {
+    "without_reranking": 0.6944444444444444,
+    "with_reranking": 0.6944444444444444,
+    "scored": 36,
+    "skipped_no_gold": 9
+  },
+  "contradiction_metrics": {
+    "divergent_precedent": {
+      "tp": 8,
+      "fn": 1,
+      "tn": 3,
+      "fp": 4,
+      "recall": 0.8888888888888888,
+      "precision": 0.6666666666666666
+    },
+    "superseded_precedent": {
+      "tp": 4,
+      "fn": 0,
+      "tn": 0,
+      "fp": 0,
+      "recall": 1.0,
+      "precision": 1.0
+    }
+  },
+  "citation_faithfulness": {
+    "score": 0.2631578947368421,
+    "scored": 114,
+    "unsupported": 84
+  },
+  "generation_errors": 1
+}

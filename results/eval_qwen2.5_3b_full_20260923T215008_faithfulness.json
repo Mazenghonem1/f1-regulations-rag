@@ -1,0 +1,148 @@
+{
+  "faithfulness": 0.8928571428571429,
+  "scored": 28,
+  "unsupported": 3,
+  "per_citation": [
+    {
+      "question_id": "q01",
+      "doc_id": "dec:2023:Austrian Grand Prix:75",
+      "supported": true
+    },
+    {
+      "question_id": "q01",
+      "doc_id": "dec:2023:Austrian Grand Prix:66",
+      "supported": true
+    },
+    {
+      "question_id": "q01",
+      "doc_id": "dec:2023:Austrian Grand Prix:59",
+      "supported": true
+    },
+    {
+      "question_id": "q01",
+      "doc_id": "dec:2023:Austrian Grand Prix:67",
+      "supported": true
+    },
+    {
+      "question_id": "q01",
+      "doc_id": "dec:2023:Austrian Grand Prix:62",
+      "supported": true
+    },
+    {
+      "question_id": "q01",
+      "doc_id": "dec:2023:Austrian Grand Prix:61",
+      "supported": true
+    },
+    {
+      "question_id": "q01",
+      "doc_id": "dec:2023:Austrian Grand Prix:68",
+      "supported": true
+    },
+    {
+      "question_id": "q01",
+      "doc_id": "dec:2023:Austrian Grand Prix:63",
+      "supported": true
+    },
+    {
+      "question_id": "q02",
+      "doc_id": "dec:2023:Monaco Grand Prix:49",
+      "supported": true
+    },
+    {
+      "question_id": "q02",
+      "doc_id": "dec:2023:Qatar Grand Prix:86",
+      "supported": true
+    },
+    {
+      "question_id": "q05",
+      "doc_id": "dec:2023:Austrian Grand Prix:66",
+      "supported": true
+    },
+    {
+      "question_id": "q05",
+      "doc_id": "dec:2023:Austrian Grand Prix:63",
+      "supported": true
+    },
+    {
+      "question_id": "q11",
+      "doc_id": "reg:2023:sporting:2:33",
+      "supported": true
+    },
+    {
+      "question_id": "q14",
+      "doc_id": "reg:2024:sporting:2:48",
+      "supported": true
+    },
+    {
+      "question_id": "q15",
+      "doc_id": "reg:2023:sporting:1:63",
+      "supported": true
+    },
+    {
+      "question_id": "q15",
+      "doc_id": "reg:2023:sporting:2:63",
+      "supported": true
+    },
+    {
+      "question_id": "q15",
+      "doc_id": "reg:2023:sporting:3:63",
+      "supported": true
+    },
+    {
+      "question_id": "q18",
+      "doc_id": "Ql234567890",
+      "supported": false,
+      "reason": "doc_id not found in retrieved chunks"
+    },
+    {
+      "question_id": "q21",
+      "doc_id": "reg:2023:sporting:4:33",
+      "supported": true
+    },
+    {
+      "question_id": "q22",
+      "doc_id": "reg:2025:sporting:1:48",
+      "supported": true
+    },
+    {
+      "question_id": "q22",
+      "doc_id": "reg:2025:sporting:5:48",
+      "supported": true
+    },
+    {
+      "question_id": "q22",
+      "doc_id": "reg:2025:sporting:4:48",
+      "supported": true
+    },
+    {
+      "question_id": "q22",
+      "doc_id": "reg:2025:sporting:3:48",
+      "supported": true
+    },
+    {
+      "question_id": "q22",
+      "doc_id": "reg:2025:sporting:2:48",
+      "supported": false
+    },
+    {
+      "question_id": "q22",
+      "doc_id": "reg:2024:sporting:7:48",
+      "supported": true
+    },
+    {
+      "question_id": "q22",
+      "doc_id": "reg:2024:sporting:6:48",
+      "supported": true
+    },
+    {
+      "question_id": "q23",
+      "doc_id": "reg:2023:sporting:1:33",
+      "supported": true
+    },
+    {
+      "question_id": "q41",
+      "doc_id": "reg:2025:sporting:5:27",
+      "supported": false
+    }
+  ]
+}

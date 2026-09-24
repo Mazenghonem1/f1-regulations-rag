@@ -12,6 +12,7 @@ detector with unrelated pairs (verified: 1285 raw pairs on this corpus,
 A Fact-text similarity gate is the "materially similar incident" check
 CONTEXT.md asks for, ahead of the Mitigating Factor suppression check.
 """
+import re
 from itertools import combinations
 
 import numpy as np
@@ -21,13 +22,26 @@ from .mitigating import is_justified_distinction
 
 SIMILARITY_THRESHOLD = 0.75
 
+# "(N seconds added to elapsed Race/Sprint time)" is a boilerplate clause
+# some Decision PDFs append and others omit for the identical penalty --
+# verified false positives (Phase 11, q05/q38): "5 second time penalty."
+# and "5 second time penalty. (5 seconds added to elapsed Race time)." are
+# the same Outcome. Penalty-points text is NOT stripped -- that is a real
+# difference in what was imposed, not phrasing noise.
+_ADDED_TO_ELAPSED_RE = re.compile(
+    r"\.?\s*\(\d+\s+seconds?\s+added\s+to\s+elapsed\s+[^)]*\)\.?", re.IGNORECASE
+)
+
 
 def _normalise_outcome(outcome: str) -> str:
-    """Strip trailing punctuation -- "5 second time penalty" and "5 second
-    time penalty." are the same Outcome, not a divergence (verified: this
-    exact pair appeared as a spurious flag on a real query, purely from
-    inconsistent trailing periods in the source PDFs)."""
-    return outcome.strip().lower().rstrip(".")
+    """Strip the "(N seconds added to elapsed ... time)" boilerplate clause
+    and trailing punctuation -- "5 second time penalty" and "5 second time
+    penalty. (5 seconds added to elapsed Race time)." are the same Outcome,
+    not a divergence (verified: this exact pair appeared as a spurious flag
+    on a real query, purely from inconsistent trailing periods and an
+    optional restatement clause in the source PDFs)."""
+    stripped = _ADDED_TO_ELAPSED_RE.sub("", outcome)
+    return stripped.strip().lower().rstrip(".")
 
 
 def _outcomes_differ(a: dict, b: dict) -> bool:

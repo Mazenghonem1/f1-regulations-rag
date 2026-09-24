@@ -6,6 +6,16 @@ system correctly NOT flag.
 """
 from ..contradiction.detect import detect_contradictions
 
+# Wider than precision@8's k=8 -- a Divergent Precedent pair needs BOTH
+# Decisions retrieved to be detectable at all, and the top-8 for several
+# real questions (q01, q10, q32) only surfaced one half of the pair
+# (verified: all 8 retrieved chunks were from a single Grand Prix in q01's
+# case). This retrieval call only feeds the contradiction check, never
+# generation or precision@k, so widening it here doesn't touch what an LLM
+# sees or redefine "precision@8" -- it only gives the detector more
+# candidates to find a real pair in.
+CONTRADICTION_RETRIEVAL_TOP_N = 16
+
 
 def _flagged_for_article(flags: list[dict], article: str, detector: str) -> bool:
     for f in flags:
@@ -32,7 +42,7 @@ def contradiction_metrics(retriever, questions: list[dict], article_changes: dic
             continue
         by_detector.setdefault(detector, {"tp": 0, "fn": 0, "tn": 0, "fp": 0})
 
-        result = retriever.retrieve(q["question"], top_n=8, use_reranker=True)
+        result = retriever.retrieve(q["question"], top_n=CONTRADICTION_RETRIEVAL_TOP_N, use_reranker=True)
         flags = detect_contradictions(result["chunks"], article_changes)
         flagged = _flagged_for_article(flags, q["gold_article"], detector)
 

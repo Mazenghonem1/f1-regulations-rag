@@ -5,7 +5,7 @@ predating an Article change -> superseded.
 Run: python -m src.contradiction.test_contradiction
 """
 from .article_ids import top_level_article
-from .divergent_precedent import detect_divergent_precedent
+from .divergent_precedent import _normalise_outcome, detect_divergent_precedent
 from .superseded_precedent import detect_superseded_precedent
 
 # two Decisions, same Article, different Outcomes, no distinguishing facts -> flagged
@@ -44,6 +44,31 @@ assert flags[0]["evidence"], "suppression must carry evidence, not just a bool"
 # same Outcome -> not a divergence at all, no flag either way
 decision_c = {**decision_b, "outcome": "5 second time penalty."}
 assert detect_divergent_precedent([decision_a, decision_c]) == []
+
+# _normalise_outcome: "(N seconds added to elapsed ... time)" is boilerplate,
+# not a different outcome -- real false positives found in Phase 11 (q05,
+# q38): "5 second time penalty." and "5 second time penalty. (5 seconds
+# added to elapsed Race time)." must normalise identically
+assert _normalise_outcome("5 second time penalty.") == _normalise_outcome(
+    "5 second time penalty. (5 seconds added to elapsed Race time)."
+)
+assert _normalise_outcome("10 second time penalty (10 seconds added to elapsed Race time).") == _normalise_outcome(
+    "10 second time penalty."
+)
+# penalty points ARE a materially different outcome -- must not collapse
+assert _normalise_outcome("10 second time penalty.") != _normalise_outcome(
+    "10 second time penalty (10 seconds added to elapsed Race time). "
+    "2 penalty points (total of 2 for the 12 month period)."
+)
+
+# the exact q05 false positive: same real outcome, boilerplate-only diff -> no flag
+decision_d = {**decision_a, "chunk_id": "dec:d", "outcome": "5 second time penalty."}
+decision_e = {
+    **decision_a,
+    "chunk_id": "dec:e",
+    "outcome": "5 second time penalty. (5 seconds added to elapsed Race time).",
+}
+assert detect_divergent_precedent([decision_d, decision_e]) == []
 
 # a Decision predating a later Article amendment -> superseded
 decision_old = {
