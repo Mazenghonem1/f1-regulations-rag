@@ -80,6 +80,12 @@ def run_eval(smoke: bool = False, model: str = "qwen2.5:3b") -> dict:
             "with_reranking": precision_with_rerank["precision"],
             "scored": precision_with_rerank["scored"],
             "skipped_no_gold": precision_with_rerank["skipped"],
+            # Credits any Issue of the gold Article, not just the pinned
+            # one -- see precision_at_k.py's docstring. Only for questions
+            # whose text doesn't name a specific year.
+            "article_level_without_reranking": precision_no_rerank["article_level"]["precision"],
+            "article_level_with_reranking": precision_with_rerank["article_level"]["precision"],
+            "article_level_scored": precision_with_rerank["article_level"]["scored"],
         },
         "contradiction_metrics": contradiction_scores,
         "citation_faithfulness": {
