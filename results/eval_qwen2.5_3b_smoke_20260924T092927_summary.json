@@ -1,0 +1,27 @@
+{
+  "model": "qwen2.5:3b",
+  "smoke": true,
+  "num_questions": 3,
+  "retrieval_precision_at_8": {
+    "without_reranking": 1.0,
+    "with_reranking": 1.0,
+    "scored": 3,
+    "skipped_no_gold": 0
+  },
+  "contradiction_metrics": {
+    "divergent_precedent": {
+      "tp": 3,
+      "fn": 0,
+      "tn": 0,
+      "fp": 0,
+      "recall": 1.0,
+      "precision": 1.0
+    }
+  },
+  "citation_faithfulness": {
+    "score": 1.0,
+    "scored": 5,
+    "unsupported": 0
+  },
+  "generation_errors": 0
+}

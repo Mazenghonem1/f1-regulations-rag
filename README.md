@@ -36,10 +36,10 @@ Mac. Full numbers, per-question detail, and the story behind each one:
 | Metric | qwen2.5:3b | qwen2.5:7b |
 |---|---|---|
 | Retrieval precision@8 (no rerank / reranked) | 0.694 / 0.694 | identical — retrieval is generation-model-independent |
-| Divergent Precedent recall / precision | 0.889 / 0.667 | identical |
+| Divergent Precedent recall / precision | **0.889 / 1.0** | identical |
 | Superseded Precedent recall / precision | 1.0 / 1.0 | identical |
-| Citations produced (of 45 questions) | 28 citations, 28 questions | 114 citations, 39 questions |
-| Citation faithfulness (LLM-judge) | **0.893** | **0.263** |
+| Citations produced (of 45 questions) | 42 citations, 11 questions | 91 citations, 38 questions |
+| Citation faithfulness (LLM-judge) | **0.905** | **0.462** |
 
 Reported without cherry-picking:
 
@@ -52,21 +52,26 @@ Reported without cherry-picking:
   among these near-identical Issues close to arbitrarily — it never promotes
   a genuinely wrong Article, which was the original (wrong) hypothesis.
 - **3B is silent, 7B is confidently wrong** — direction holds, magnitude
-  varies run to run (Ollama sampling is unseeded). qwen2.5:3b is
-  consistently the more conservative, more faithful model; qwen2.5:7b
-  consistently cites more often at a much lower faithfulness rate, traced
-  concretely to cross-chunk conflation when several near-identical Decisions
-  sit together in context. Neither is flattering; both are real and worth
-  knowing before you pick a model size for a legal/compliance-adjacent
-  domain. Full numbers and the run-to-run variance caveat:
-  [`results/phase8_writeup.md`](results/phase8_writeup.md).
-- **A detector precision/recall tradeoff, found and explained, not hidden:**
-  fixing a real outcome-normalisation bug and a retrieval-depth recall gap in
-  Divergent Precedent raised recall (0.667 → 0.889) but exposed a separate,
-  pre-existing metric-granularity gap that dropped precision (0.75 → 0.667)
-  — the detector's own flags are still correct, but the eval's per-Article
-  scoring is coarser than "the specific pair this question is about."
-  Documented, not papered over, in the write-up.
+  varies run to run (Ollama sampling is unseeded; 7B's faithfulness has
+  ranged 0.263–0.462 across recent runs). qwen2.5:3b is consistently the
+  more conservative, more faithful model; qwen2.5:7b consistently cites more
+  often at a much lower faithfulness rate, traced concretely to cross-chunk
+  conflation when several near-identical Decisions sit together in context.
+  Neither is flattering; both are real and worth knowing before you pick a
+  model size for a legal/compliance-adjacent domain. Full numbers and the
+  run-to-run variance caveat: [`results/phase8_writeup.md`](results/phase8_writeup.md).
+- **A three-bug chain, found and fixed in sequence, not hidden:** an outcome-
+  normalisation bug and a retrieval-depth gap in Divergent Precedent were
+  fixed first, which raised recall (0.667 → 0.889) but exposed a third,
+  separate metric-granularity bug that cost precision (0.75 → 0.667) — the
+  detector's own flags were still correct, but the eval scored "any flag for
+  this Article" instead of "the specific pair this question is about."
+  Fixing that (plus two more real regex bugs found while verifying it)
+  brought precision back to **1.0** with no loss of recall. A semantic
+  (embedding-similarity) alternative was tried and measured before being
+  rejected with evidence — it couldn't reliably separate "same penalty,
+  reworded" from "different penalty, same template" on this corpus. The
+  full chain is documented, not smoothed over, in the write-up.
 
 ## Architecture
 

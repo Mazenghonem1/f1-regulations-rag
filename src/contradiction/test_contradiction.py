@@ -6,6 +6,7 @@ Run: python -m src.contradiction.test_contradiction
 """
 from .article_ids import top_level_article
 from .divergent_precedent import _normalise_outcome, detect_divergent_precedent
+from .mitigating import _occasion_count
 from .superseded_precedent import detect_superseded_precedent
 
 # two Decisions, same Article, different Outcomes, no distinguishing facts -> flagged
@@ -129,6 +130,42 @@ decision_isc = {
     "date": "2023-01-01",
 }
 assert detect_superseded_precedent([decision_isc], article_changes) == []
+
+# _occasion_count: the compound "Nth and Mth occasions" form (2023 Qatar GP
+# Document 81, verified false negative -- the original regex only matched
+# singular "occasion" and missed this real Decision's text entirely,
+# wrongly suppressing a genuine divergence). The first ordinal is the
+# escalation point that matters.
+assert _occasion_count("on the fourth (4th) occasion") == 4
+assert _occasion_count(
+    "after having received 5 second time penalties on the fourth (4th) and fifth (5th) occasions"
+) == 4
+assert _occasion_count("no occasion language here") is None
+
+# the exact q01 false negative: Document 81's real text states an occasion
+# count via the compound form -- the pair must still be a genuine,
+# unsuppressed divergence (10s vs 5s, no distinguishing prior sanction)
+decision_66 = {
+    "chunk_id": "dec:2023:Austrian Grand Prix:66",
+    "cited_articles": ["33.3"],
+    "outcome": "10 second time penalty.",
+    "session": "Race",
+    "fact": "Leaving the track without a justifiable reason multiple times.",
+    "reason": "The car left the track on seven (7) occasions after having received "
+    "a 5 second time penalty on the fourth (4th) occasion.",
+}
+decision_81 = {
+    "chunk_id": "dec:2023:Qatar Grand Prix:81",
+    "cited_articles": ["33.3"],
+    "outcome": "5 second time penalty.",
+    "session": "Race",
+    "fact": "Leaving the track without a justifiable reason multiple times.",
+    "reason": "The car left the track on six (6) occasions without justifiable reason, "
+    "after having received 5 second time penalties on the fourth (4th) and fifth (5th) occasions.",
+}
+flags = detect_divergent_precedent([decision_66, decision_81])
+assert len(flags) == 1, flags
+assert flags[0]["suppressed"] is False, flags[0]
 
 print(
     "OK — Divergent Precedent flags and suppresses correctly; "

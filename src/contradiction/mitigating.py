@@ -27,11 +27,22 @@ _ORDINAL_WORDS = {
 # black-and-white *flag* on the 3rd occasion got 5s; treating both as
 # merely "repeat_offence" without the occasion/prior-sanction-kind would
 # wrongly suppress that pair).
+#
+# A compound form also occurs ("on the fourth (4th) and fifth (5th)
+# occasions" -- 2023 Qatar GP Document 81, verified false-negative on
+# is_justified_distinction: the original singular-only "occasion" pattern
+# didn't match "occasions" at all, so this real Decision's occasion_count
+# read as None, wrongly suppressing a genuine divergence against Document
+# 66). The first ordinal is the one that matters -- it's the occasion the
+# prior sanction was escalated from, same as the single-ordinal form.
 OCCASION_COUNT_RE = re.compile(
-    r"on the (\w+)(?:\s*\(\d+\w{0,2}\))? occasion", re.I
+    r"on the (\w+)(?:\s*\(\d+\w{0,2}\))?(?:\s+and\s+\w+\s*\(\d+\w{0,2}\))?\s+occasions?", re.I
 )
-PRIOR_PENALTY_RE = re.compile(r"after having received (?:a|the) [\w .-]*?penalty", re.I)
-PRIOR_FLAG_RE = re.compile(r"after having received (?:a|the) [\w .-]*?(flag|warning)", re.I)
+# The article ("a"/"the") is optional -- the plural compound form ("received
+# 5 second time penalties on the fourth and fifth occasions", Document 81)
+# drops it entirely, unlike the singular form ("received a ... penalty").
+PRIOR_PENALTY_RE = re.compile(r"after having received (?:(?:a|the)\s+)?[\w .-]*?penalt(?:y|ies)", re.I)
+PRIOR_FLAG_RE = re.compile(r"after having received (?:(?:a|the)\s+)?[\w .-]*?(flag|warning)", re.I)
 WET_DRY_RE = re.compile(r"\b(wet|dry|intermediate|rain)\b", re.I)
 INTENT_RE = re.compile(r"\b(deliberate|intentional|racing incident|no intent)\b", re.I)
 
