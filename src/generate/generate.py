@@ -1,7 +1,7 @@
-"""Phase 7 entrypoint: citation-grounded structured generation via local
-Ollama. Retrieval/rerank/contradiction stages are already independently
-callable (Phases 5-6) -- this module only adds the generation step, gated
-on Ollama being present (no paid-API fallback, PROJECT_BRIEF.md).
+"""Citation-grounded structured generation via local Ollama.
+Retrieval/rerank/contradiction stages are already independently callable --
+this module only adds the generation step, gated on Ollama being present
+(no paid-API fallback).
 """
 import requests
 
@@ -17,7 +17,7 @@ from .prompt import build_prompt
 GENERATE_TIMEOUT_S = 600
 
 
-# The exact response shape (PLAN.md): {answer, citations: [{doc_id,
+# The exact response shape: {answer, citations: [{doc_id,
 # article_or_decision, quote_or_paraphrase}], contradictions_flagged}.
 # Passed to Ollama as a JSON Schema (not just format="json") so the required
 # keys are grammar-constrained at decode time, not merely requested in text.
@@ -69,7 +69,7 @@ def generate(
     `flags` (contradiction flags, unsuppressed ones surfaced explicitly).
     Gates on Ollama being reachable with `model` pulled; retries the
     generation once on malformed JSON, then raises rather than silently
-    dropping a flag (PLAN.md)."""
+    dropping a flag."""
     require_ollama(model)
     prompt = build_prompt(query, chunks, flags)
 

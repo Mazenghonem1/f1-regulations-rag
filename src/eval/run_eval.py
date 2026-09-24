@@ -1,7 +1,7 @@
-"""Phase 8 orchestrator: run the full eval set through retrieval (with and
+"""Eval orchestrator: run the full eval set through retrieval (with and
 without reranking), contradiction detection, generation, and the
 no-retrieval baseline, computing all four metrics and logging every run to
-results/ (PLAN.md's "reproducibility is the point").
+results/ for reproducibility.
 
 Run: python -m src.eval.run_eval [--smoke] [--model qwen2.5:3b]
 """

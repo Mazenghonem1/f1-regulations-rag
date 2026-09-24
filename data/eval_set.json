@@ -7,7 +7,7 @@
     "gold_article": "33.3",
     "gold_chunk_ids": ["dec:2023:Austrian Grand Prix:66", "dec:2023:Qatar Grand Prix:81"],
     "expected_flag": true,
-    "notes": "Real divergence: 2023 Austrian GP Document 66 gave a 10s penalty, 2023 Qatar GP Document 81 gave 5s, both citing Article 33.3 with materially similar Fact text ('leaving the track without a justifiable reason multiple times'). Verified in Phase 6."
+    "notes": "Real divergence: 2023 Austrian GP Document 66 gave a 10s penalty, 2023 Qatar GP Document 81 gave 5s, both citing Article 33.3 with materially similar Fact text ('leaving the track without a justifiable reason multiple times'). Verified against real corpus data."
   },
   {
     "id": "q02",
@@ -37,7 +37,7 @@
     "gold_article": "44",
     "gold_chunk_ids": ["dec:2023:United States Grand Prix:58"],
     "expected_flag": true,
-    "notes": "Real Superseded Precedent: Decision dated 2023-10-22 cites Article 44 (Race Starting Procedure), which was amended on 2023-10-25 (Issue 6->7) and again multiple times through 2024. Verified against article_changes.json in Phase 6."
+    "notes": "Real Superseded Precedent: Decision dated 2023-10-22 cites Article 44 (Race Starting Procedure), which was amended on 2023-10-25 (Issue 6->7) and again multiple times through 2024. Verified against article_changes.json."
   },
   {
     "id": "q05",
@@ -47,7 +47,7 @@
     "gold_article": "33.3",
     "gold_chunk_ids": ["dec:2023:Austrian Grand Prix:66", "dec:2023:Austrian Grand Prix:63"],
     "expected_flag": false,
-    "notes": "Justified Distinction, not a contradiction: Document 66's car left the track on its 4th occasion after already having served a 5s penalty (real repeat-offence escalation); Document 63's car was only on its 3rd occasion after a black-and-white flag warning (a lesser prior sanction). Different occasion_count and prior_sanction kind -- correctly suppressed in Phase 6."
+    "notes": "Justified Distinction, not a contradiction: Document 66's car left the track on its 4th occasion after already having served a 5s penalty (real repeat-offence escalation); Document 63's car was only on its 3rd occasion after a black-and-white flag warning (a lesser prior sanction). Different occasion_count and prior_sanction kind -- correctly suppressed, verified against real corpus data."
   },
   {
     "id": "q06",
@@ -57,7 +57,7 @@
     "gold_article": "12.2.1",
     "gold_chunk_ids": ["dec:2023:Australian Grand Prix:27", "dec:2023:Singapore Grand Prix:41"],
     "expected_flag": false,
-    "notes": "Justified Distinction: different Session (Practice 3 vs Race) -- the incidents occurred under different circumstances, so a different outcome is not a Divergent Precedent. Correctly suppressed in Phase 6."
+    "notes": "Justified Distinction: different Session (Practice 3 vs Race) -- the incidents occurred under different circumstances, so a different outcome is not a Divergent Precedent. Correctly suppressed, verified against real corpus data."
   },
   {
     "id": "q07",
@@ -67,7 +67,7 @@
     "gold_article": "Appendix L Chapter IV Article 2(d)",
     "gold_chunk_ids": ["dec:2023:Australian Grand Prix:52", "dec:2023:Australian Grand Prix:46"],
     "expected_flag": false,
-    "notes": "Justified Distinction: Reason text differs on intent (one Decision's Reason discusses deliberate/intentional language, the other doesn't) -- correctly suppressed in Phase 6."
+    "notes": "Justified Distinction: Reason text differs on intent (one Decision's Reason discusses deliberate/intentional language, the other doesn't) -- correctly suppressed, verified against real corpus data."
   },
   {
     "id": "q08",
@@ -77,7 +77,7 @@
     "gold_article": "33.3",
     "gold_chunk_ids": [],
     "expected_flag": true,
-    "notes": "From Phase 1 controversy research (entry 1, Austin 2023 / entry 2, Austria 2023): stewards themselves admitted enforcement was 'completely unsatisfactory'. Open-ended question exercising the same Article 33.3 pool as q01/q05 -- gold chunk ids intentionally left open since many valid (Decision, Decision) pairs exist; grade on whether at least one real, unsuppressed Divergent Precedent under 33.3 is surfaced."
+    "notes": "From controversy research (entry 1, Austin 2023 / entry 2, Austria 2023): stewards themselves admitted enforcement was 'completely unsatisfactory'. Open-ended question exercising the same Article 33.3 pool as q01/q05 -- gold chunk ids intentionally left open since many valid (Decision, Decision) pairs exist; grade on whether at least one real, unsuppressed Divergent Precedent under 33.3 is surfaced."
   },
   {
     "id": "q09",
@@ -87,7 +87,7 @@
     "gold_article": "33.3",
     "gold_chunk_ids": [],
     "expected_flag": true,
-    "notes": "From Phase 1 controversy research (entry 1): 35 lap times deleted, multiple post-race penalties of varying severity applied at COTA 2023. Same underlying phenomenon as q01/q08 -- tests whether retrieval surfaces this event's specific Decisions."
+    "notes": "From controversy research (entry 1): 35 lap times deleted, multiple post-race penalties of varying severity applied at COTA 2023. Same underlying phenomenon as q01/q08 -- tests whether retrieval surfaces this event's specific Decisions."
   },
   {
     "id": "q10",
@@ -97,7 +97,7 @@
     "gold_article": "Appendix L Chapter IV Article 2(b)",
     "gold_chunk_ids": ["dec:2023:United States Grand Prix:41", "dec:2024:Austrian Grand Prix:33"],
     "expected_flag": true,
-    "notes": "Pinned in Phase 11: verified against detect_divergent_precedent's actual (unsuppressed) output. 2023 US GP Document 41 (Appendix L Ch. IV Art. 2(b), unsafe release) gave 'No further action'; 2024 Austrian GP Document 33, same Article, gave a 10s penalty + 2 penalty points. A second valid unsuppressed pair also exists in the corpus (2024 Austrian GP Doc 33 vs 2024 Italian GP Doc 54, and 2024 Mexico City Doc 49 vs Doc 47) -- this question credits any one of them via detector output, but gold_chunk_ids pins the pair the original notes named."
+    "notes": "Pinned: verified against detect_divergent_precedent's actual (unsuppressed) output. 2023 US GP Document 41 (Appendix L Ch. IV Art. 2(b), unsafe release) gave 'No further action'; 2024 Austrian GP Document 33, same Article, gave a 10s penalty + 2 penalty points. A second valid unsuppressed pair also exists in the corpus (2024 Austrian GP Doc 33 vs 2024 Italian GP Doc 54, and 2024 Mexico City Doc 49 vs Doc 47) -- this question credits any one of them via detector output, but gold_chunk_ids pins the pair the original notes named."
   },
   {
     "id": "q11",
@@ -106,7 +106,7 @@
     "gold_article": "33",
     "gold_chunk_ids": ["reg:2023:sporting:1:33"],
     "expected_flag": false,
-    "notes": "Verified in Phase 5 manual query smoke test -- Article 33 is the correct top BM25/hybrid result for this exact wording."
+    "notes": "Verified in a manual query smoke test -- Article 33 is the correct top BM25/hybrid result for this exact wording."
   },
   {
     "id": "q12",
@@ -115,7 +115,7 @@
     "gold_article": "35",
     "gold_chunk_ids": ["reg:2023:sporting:1:35"],
     "expected_flag": false,
-    "notes": "Verified in Phase 5 manual smoke test -- Article 35 (WEIGHING)."
+    "notes": "Verified in a manual smoke test -- Article 35 (WEIGHING)."
   },
   {
     "id": "q13",
@@ -124,7 +124,7 @@
     "gold_article": "28",
     "gold_chunk_ids": ["reg:2023:sporting:1:28"],
     "expected_flag": false,
-    "notes": "Verified in Phase 5 manual smoke test -- Article 28 (POWER UNIT USAGE)."
+    "notes": "Verified in a manual smoke test -- Article 28 (POWER UNIT USAGE)."
   },
   {
     "id": "q14",
@@ -142,7 +142,7 @@
     "gold_article": "63",
     "gold_chunk_ids": ["reg:2023:sporting:1:63", "reg:2023:sporting:2:63"],
     "expected_flag": false,
-    "notes": "Verified in Phase 5 manual smoke test -- Article 63 (PODIUM CEREMONY AND POST RACE PRESS CONFERENCE)."
+    "notes": "Verified in a manual smoke test -- Article 63 (PODIUM CEREMONY AND POST RACE PRESS CONFERENCE)."
   },
   {
     "id": "q16",
@@ -160,7 +160,7 @@
     "gold_article": "57",
     "gold_chunk_ids": ["reg:2024:sporting:1:57", "reg:2025:sporting:1:57"],
     "expected_flag": false,
-    "notes": "Verified in Phase 5 manual smoke test under the query 'unsafe rejoin after leaving the track', which surfaced Article 57 (SUSPENDING A SPRINT SESSION OR A RACE)."
+    "notes": "Verified in a manual smoke test under the query 'unsafe rejoin after leaving the track', which surfaced Article 57 (SUSPENDING A SPRINT SESSION OR A RACE)."
   },
   {
     "id": "q18",
@@ -169,7 +169,7 @@
     "gold_article": "58",
     "gold_chunk_ids": ["reg:2025:sporting:1:58"],
     "expected_flag": false,
-    "notes": "Verified in Phase 5 manual smoke test -- Article 58 (RESUMING A SPRINT SESSION OR A RACE), the safety-car-restart-adjacent Article referenced in Phase 1 controversy entries 8 and 11."
+    "notes": "Verified in a manual smoke test -- Article 58 (RESUMING A SPRINT SESSION OR A RACE), the safety-car-restart-adjacent Article referenced in the controversy research entries 8 and 11."
   },
   {
     "id": "q19",
@@ -178,7 +178,7 @@
     "gold_article": "40",
     "gold_chunk_ids": ["reg:2024:sporting:4:40"],
     "expected_flag": false,
-    "notes": "Verified in Phase 5 manual smoke test -- Article 40 (PRE-SPRINT AND PRE-RACE PARC FERME). Article 40 only exists from 2024 Issue 4 onward (not Issue 1-3) -- checked against the actual corpus rather than assumed."
+    "notes": "Verified in a manual smoke test -- Article 40 (PRE-SPRINT AND PRE-RACE PARC FERME). Article 40 only exists from 2024 Issue 4 onward (not Issue 1-3) -- checked against the actual corpus rather than assumed."
   },
   {
     "id": "q20",
@@ -205,7 +205,7 @@
     "gold_article": "48",
     "gold_chunk_ids": ["reg:2025:sporting:1:48"],
     "expected_flag": false,
-    "notes": "Verified in Phase 5 manual smoke test -- 2025 Article 48 is FALSE START (this Article was renumbered/repurposed between the 2023 and 2025 seasons, see q14's note)."
+    "notes": "Verified in a manual smoke test -- 2025 Article 48 is FALSE START (this Article was renumbered/repurposed between the 2023 and 2025 seasons, see q14's note)."
   },
   {
     "id": "q23",
@@ -214,7 +214,7 @@
     "gold_article": "33",
     "gold_chunk_ids": ["reg:2024:sporting:1:33"],
     "expected_flag": false,
-    "notes": "Verified in Phase 5 manual smoke test."
+    "notes": "Verified in a manual smoke test."
   },
   {
     "id": "q24",
@@ -223,7 +223,7 @@
     "gold_article": "12.2.1",
     "gold_chunk_ids": [],
     "expected_flag": false,
-    "notes": "Article 12.2.1 is an International Sporting Code Article, not an FIA F1 Sporting/Technical Regulation Article, so it is NOT present in regulation_articles.json at all -- this question tests whether the system correctly reports it cannot find the Article text in the regulation corpus, rather than hallucinating an answer, since only Decisions (which cite 12.2.1) are in the corpus. Deliberately left unpinned (Phase 11): there is no correct gold_chunk_id to pin -- the corpus has no chunk for this Article, so any non-empty gold_chunk_ids would misrepresent the test. Load-bearing (see PLAN_PHASE9_12.md's carried-forward notes) -- keep even though precision@k scores it as skipped."
+    "notes": "Article 12.2.1 is an International Sporting Code Article, not an FIA F1 Sporting/Technical Regulation Article, so it is NOT present in regulation_articles.json at all -- this question tests whether the system correctly reports it cannot find the Article text in the regulation corpus, rather than hallucinating an answer, since only Decisions (which cite 12.2.1) are in the corpus. Deliberately left unpinned: there is no correct gold_chunk_id to pin -- the corpus has no chunk for this Article, so any non-empty gold_chunk_ids would misrepresent the test. Load-bearing (a load-bearing test case) -- keep even though precision@k scores it as skipped."
   },
   {
     "id": "q25",
@@ -232,7 +232,7 @@
     "gold_article": "34.7",
     "gold_chunk_ids": [],
     "expected_flag": false,
-    "notes": "Tests a combined regulation + Decision lookup: the Article number should come from a Decision's cited_articles field, cross-referenced against the pit lane speeding Decision documents visible in Phase 5's smoke test. Deliberately left unpinned (Phase 11): a correct answer legitimately draws on both the regulation Article chunk and at least one 2023 Austrian GP pit-lane-speeding Decision chunk (e.g. dec:2023:Austrian Grand Prix:15/16), and pinning to one would understate a correct multi-source answer -- precision@k skips it rather than mis-scoring a valid combined answer as a miss."
+    "notes": "Tests a combined regulation + Decision lookup: the Article number should come from a Decision's cited_articles field, cross-referenced against the pit lane speeding Decision documents visible in an earlier manual smoke test. Deliberately left unpinned: a correct answer legitimately draws on both the regulation Article chunk and at least one 2023 Austrian GP pit-lane-speeding Decision chunk (e.g. dec:2023:Austrian Grand Prix:15/16), and pinning to one would understate a correct multi-source answer -- precision@k skips it rather than mis-scoring a valid combined answer as a miss."
   },
   {
     "id": "q26",
@@ -250,7 +250,7 @@
     "gold_article": "12.2.1",
     "gold_chunk_ids": ["dec:2023:Singapore Grand Prix:41"],
     "expected_flag": false,
-    "notes": "From Phase 1 controversy research (entry 3): Verstappen impeding incidents at Singapore 2023 qualifying, where stewards said the outcome 'will not serve as a precedent'. Framed here as a plain lookup rather than a seeded contradiction, since the eval set only has ground truth for the specific Decision documents verified in the corpus, not the exact Verstappen incident reported in the press (which may not be the same Document number)."
+    "notes": "From controversy research (entry 3): Verstappen impeding incidents at Singapore 2023 qualifying, where stewards said the outcome 'will not serve as a precedent'. Framed here as a plain lookup rather than a seeded contradiction, since the eval set only has ground truth for the specific Decision documents verified in the corpus, not the exact Verstappen incident reported in the press (which may not be the same Document number)."
   },
   {
     "id": "q28",
@@ -268,7 +268,7 @@
     "gold_article": "44",
     "gold_chunk_ids": ["reg:2023:sporting:6:44", "reg:2023:sporting:7:44"],
     "expected_flag": false,
-    "notes": "Directly tests article_changes.json (Phase 4) retrieval/use -- same underlying change as q04's Superseded Precedent flag, asked as a direct regulation-history question rather than a Decision-vs-regulation contradiction."
+    "notes": "Directly tests article_changes.json retrieval/use -- same underlying change as q04's Superseded Precedent flag, asked as a direct regulation-history question rather than a Decision-vs-regulation contradiction."
   },
   {
     "id": "q30",
@@ -297,7 +297,7 @@
     "gold_article": "40.9",
     "gold_chunk_ids": ["dec:2023:Qatar Grand Prix:69", "dec:2024:United States Grand Prix:60"],
     "expected_flag": true,
-    "notes": "Pinned in Phase 11: verified against detect_divergent_precedent's actual (unsuppressed) output. Qatar 2023 Document 69 ('Car 11 is required to start the Race from pit lane') and US GP 2024 Document 60 ('Required to start the Race from the pit lane') both cite Article 40.9, differently worded but materially the same pit-lane-start outcome, flagged as an unsuppressed divergence by the corpus-wide detector run."
+    "notes": "Pinned: verified against detect_divergent_precedent's actual (unsuppressed) output. Qatar 2023 Document 69 ('Car 11 is required to start the Race from pit lane') and US GP 2024 Document 60 ('Required to start the Race from the pit lane') both cite Article 40.9, differently worded but materially the same pit-lane-start outcome, flagged as an unsuppressed divergence by the corpus-wide detector run."
   },
   {
     "id": "q33",
@@ -307,7 +307,7 @@
     "gold_article": "27.1",
     "gold_chunk_ids": ["dec:2023:Qatar Grand Prix:69"],
     "expected_flag": true,
-    "notes": "Real Superseded Precedent, verified in Phase 11 by diffing regulation_articles.json sub-clause text (not just the Article-level change table): Decision dated 2023-10-08 cites Article 27.1 ('no more than two (2) cars available for use'), which was materially amended on 2024-02-28 (2024 sporting Issue 4->5) to add a genuine-damage/Technical-Delegate-approved exception permitting a third car -- a real addition, not renumbering noise. match_granularity is \"article\" (27.1 normalises to top-level Article 27 for the change-table lookup)."
+    "notes": "Real Superseded Precedent, verified by diffing regulation_articles.json sub-clause text (not just the Article-level change table): Decision dated 2023-10-08 cites Article 27.1 ('no more than two (2) cars available for use'), which was materially amended on 2024-02-28 (2024 sporting Issue 4->5) to add a genuine-damage/Technical-Delegate-approved exception permitting a third car -- a real addition, not renumbering noise. match_granularity is \"article\" (27.1 normalises to top-level Article 27 for the change-table lookup)."
   },
   {
     "id": "q34",
@@ -317,7 +317,7 @@
     "gold_article": "48.1",
     "gold_chunk_ids": ["dec:2023:Qatar Grand Prix:70"],
     "expected_flag": true,
-    "notes": "Real Superseded Precedent, verified in Phase 11 by sub-clause text diff: Decision dated 2023-10-08 cites Article 48.1 clause a) which specified movement judged 'by an FIA approved and supplied transponder fitted to each car'. That transponder-detection clause was removed on 2024-07-31 (2024 sporting Issue 6->7) -- a genuine narrowing of how a jump start is established, not just rewording. match_granularity is \"article\"."
+    "notes": "Real Superseded Precedent, verified by sub-clause text diff: Decision dated 2023-10-08 cites Article 48.1 clause a) which specified movement judged 'by an FIA approved and supplied transponder fitted to each car'. That transponder-detection clause was removed on 2024-07-31 (2024 sporting Issue 6->7) -- a genuine narrowing of how a jump start is established, not just rewording. match_granularity is \"article\"."
   },
   {
     "id": "q35",
@@ -327,7 +327,7 @@
     "gold_article": "40.3",
     "gold_chunk_ids": ["dec:2023:Singapore Grand Prix:38"],
     "expected_flag": true,
-    "notes": "Real Superseded Precedent, verified in Phase 11 by sub-clause text diff: Decision dated 2023-09-17 (Car 24, Power Unit elements replaced without Technical Delegate approval during Parc Ferme) cites Article 40.3. On 2024-04-30 (2024 sporting Issue 5->6) an entire paragraph permitting a survival-cell-linked component swap was removed -- a genuine content deletion, not renumbering. match_granularity is \"article\"."
+    "notes": "Real Superseded Precedent, verified by sub-clause text diff: Decision dated 2023-09-17 (Car 24, Power Unit elements replaced without Technical Delegate approval during Parc Ferme) cites Article 40.3. On 2024-04-30 (2024 sporting Issue 5->6) an entire paragraph permitting a survival-cell-linked component swap was removed -- a genuine content deletion, not renumbering. match_granularity is \"article\"."
   },
   {
     "id": "q36",
@@ -337,7 +337,7 @@
     "gold_article": "37.5",
     "gold_chunk_ids": ["dec:2023:Austrian Grand Prix:27", "dec:2023:Monaco Grand Prix:40"],
     "expected_flag": true,
-    "notes": "Real divergence, added in Phase 11 from detect_divergent_precedent's actual unsuppressed output: 2023 Austrian GP Document 27 (Car 1 allegedly unnecessarily impeded Car 20 in Turn 1, Qualifying) gave 'No further action'; 2023 Monaco GP Document 40 (unnecessary impeding of Car 4 by Car 16 in Turn 9, Qualifying), same Article and session type, gave a 3-grid-position drop."
+    "notes": "Real divergence, verified from detect_divergent_precedent's actual unsuppressed output: 2023 Austrian GP Document 27 (Car 1 allegedly unnecessarily impeded Car 20 in Turn 1, Qualifying) gave 'No further action'; 2023 Monaco GP Document 40 (unnecessary impeding of Car 4 by Car 16 in Turn 9, Qualifying), same Article and session type, gave a 3-grid-position drop."
   },
   {
     "id": "q37",
@@ -347,7 +347,7 @@
     "gold_article": "54.4",
     "gold_chunk_ids": ["dec:2023:Austrian Grand Prix:65", "dec:2023:Monaco Grand Prix:52"],
     "expected_flag": true,
-    "notes": "Real divergence, added in Phase 11 from detect_divergent_precedent's actual unsuppressed output: 2023 Austrian GP Document 65 (alleged failure to serve a penalty during a pit stop, Race) gave 'No further action'; 2023 Monaco GP Document 52 (failure to serve a penalty during a pit stop, Race), same Article and session, gave a 10 second time penalty."
+    "notes": "Real divergence, verified from detect_divergent_precedent's actual unsuppressed output: 2023 Austrian GP Document 65 (alleged failure to serve a penalty during a pit stop, Race) gave 'No further action'; 2023 Monaco GP Document 52 (failure to serve a penalty during a pit stop, Race), same Article and session, gave a 10 second time penalty."
   },
   {
     "id": "q38",
@@ -357,7 +357,7 @@
     "gold_article": "12.2.1",
     "gold_chunk_ids": ["dec:2023:Qatar Grand Prix:39", "dec:2024:Italian Grand Prix:42"],
     "expected_flag": false,
-    "notes": "Justified Distinction, added in Phase 11 from detect_divergent_precedent's real suppressed output: both Decisions reached the same outcome (No further action) for allegedly driving unnecessarily slowly, but the detector's own evidence records 'different session: Sprint Shootout vs Qualifying'. Included as a same-outcome negative distinct from q05-q07's different-outcome negatives -- tests that the system does not manufacture a contradiction where none exists just because two Decisions share an Article."
+    "notes": "Justified Distinction, verified from detect_divergent_precedent's real suppressed output: both Decisions reached the same outcome (No further action) for allegedly driving unnecessarily slowly, but the detector's own evidence records 'different session: Sprint Shootout vs Qualifying'. Included as a same-outcome negative distinct from q05-q07's different-outcome negatives -- tests that the system does not manufacture a contradiction where none exists just because two Decisions share an Article."
   },
   {
     "id": "q39",
@@ -367,7 +367,7 @@
     "gold_article": "Appendix L Chapter IV Article 2(d)",
     "gold_chunk_ids": ["dec:2023:Australian Grand Prix:53", "dec:2023:Australian Grand Prix:46"],
     "expected_flag": false,
-    "notes": "Justified Distinction, added in Phase 11 from detect_divergent_precedent's real suppressed output: evidence records 'intent differs: True vs False' -- Document 46's Reason text establishes deliberate/intentional causing of the incident, Document 53's does not. Different Article 2(d) case from q07 (also Appendix L Ch. IV Art. 2(d), different Decision pair, same suppression mechanism: intent)."
+    "notes": "Justified Distinction, verified from detect_divergent_precedent's real suppressed output: evidence records 'intent differs: True vs False' -- Document 46's Reason text establishes deliberate/intentional causing of the incident, Document 53's does not. Different Article 2(d) case from q07 (also Appendix L Ch. IV Art. 2(d), different Decision pair, same suppression mechanism: intent)."
   },
   {
     "id": "q40",
@@ -377,7 +377,7 @@
     "gold_article": "34.7",
     "gold_chunk_ids": ["dec:2023:Australian Grand Prix:15", "dec:2023:Australian Grand Prix:26"],
     "expected_flag": false,
-    "notes": "Justified Distinction, added in Phase 11 from detect_divergent_precedent's real suppressed output: evidence records 'different session: Practice 1 vs Practice 3'. Different fine amounts (€700 vs €100) under the same Article but different session -- suppressed correctly, distinct from q03's genuine same-session Article 34.7 divergence."
+    "notes": "Justified Distinction, verified from detect_divergent_precedent's real suppressed output: evidence records 'different session: Practice 1 vs Practice 3'. Different fine amounts (€700 vs €100) under the same Article but different session -- suppressed correctly, distinct from q03's genuine same-session Article 34.7 divergence."
   },
   {
     "id": "q41",
@@ -386,7 +386,7 @@
     "gold_article": "27",
     "gold_chunk_ids": [],
     "expected_flag": false,
-    "notes": "Added in Phase 11 to exercise Article 27 (SPARE CARS), the same Article family as q33's Superseded Precedent case, from the regulation text directly rather than a Decision."
+    "notes": "Added to exercise Article 27 (SPARE CARS), the same Article family as q33's Superseded Precedent case, from the regulation text directly rather than a Decision."
   },
   {
     "id": "q42",
@@ -395,7 +395,7 @@
     "gold_article": "26",
     "gold_chunk_ids": [],
     "expected_flag": false,
-    "notes": "Added in Phase 11 for Article 26 (GENERAL SAFETY), not previously exercised by any eval question."
+    "notes": "Added for Article 26 (GENERAL SAFETY), not previously exercised by any eval question."
   },
   {
     "id": "q43",
@@ -404,7 +404,7 @@
     "gold_article": "15",
     "gold_chunk_ids": [],
     "expected_flag": false,
-    "notes": "Added in Phase 11 for Technical Regulations Article 15 (MATERIALS), distinct from q20's Technical Article 12 survival cell question. Verified against regulation_articles.json -- Technical Regulations run Articles 1-17 in this corpus, unlike Sporting's much longer numbering."
+    "notes": "Added for Technical Regulations Article 15 (MATERIALS), distinct from q20's Technical Article 12 survival cell question. Verified against regulation_articles.json -- Technical Regulations run Articles 1-17 in this corpus, unlike Sporting's much longer numbering."
   },
   {
     "id": "q44",
@@ -413,7 +413,7 @@
     "gold_article": "25",
     "gold_chunk_ids": [],
     "expected_flag": false,
-    "notes": "Added in Phase 11 for Article 25 (POWER UNIT MANUFACTURER FACTORY SHUTDOWN PERIOD), not previously exercised by any eval question."
+    "notes": "Added for Article 25 (POWER UNIT MANUFACTURER FACTORY SHUTDOWN PERIOD), not previously exercised by any eval question."
   },
   {
     "id": "q45",
@@ -422,6 +422,6 @@
     "gold_article": "9",
     "gold_chunk_ids": [],
     "expected_flag": false,
-    "notes": "Added in Phase 11 for Article 9 (CAR LIVERY AND COMPETITION NUMBERS), not previously exercised by any eval question."
+    "notes": "Added for Article 9 (CAR LIVERY AND COMPETITION NUMBERS), not previously exercised by any eval question."
   }
 ]

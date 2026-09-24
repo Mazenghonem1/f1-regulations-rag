@@ -1,7 +1,7 @@
 """Prompt construction: answer only from retrieved context, no outside
-knowledge, structured JSON output with citations and contradiction flags
-(PLAN.md). Contradiction flags are passed in explicitly so the model must
-surface them rather than silently pick a source (CONTEXT.md's whole point).
+knowledge, structured JSON output with citations and contradiction flags.
+Contradiction flags are passed in explicitly so the model must surface them
+rather than silently pick a source (CONTEXT.md's whole point).
 """
 SYSTEM_PROMPT = """You are an assistant answering questions about FIA Formula 1 \
 regulations and Stewards' Decisions. Answer ONLY using the retrieved context \

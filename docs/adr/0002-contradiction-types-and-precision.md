@@ -4,7 +4,7 @@ Date: 2026-09-22
 
 ## Status
 
-Accepted. Extends the evaluation contract in `PROJECT_BRIEF.md`.
+Accepted. Extends the project's evaluation contract.
 
 ## Context
 

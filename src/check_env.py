@@ -1,4 +1,4 @@
-"""Phase 0 check: venv is Python 3.11 and every dependency imports.
+"""Environment check: venv is Python 3.11 and every dependency imports.
 
 Run inside the venv: python src/check_env.py
 """

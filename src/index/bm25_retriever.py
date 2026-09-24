@@ -1,5 +1,5 @@
 """BM25 retriever -- carries exact Article-number and driver-name lookups,
-which dense embeddings handle poorly (PLAN.md).
+which dense embeddings handle poorly.
 """
 import re
 

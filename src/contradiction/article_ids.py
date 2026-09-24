@@ -1,5 +1,5 @@
 """Normalise a Decision's cited Article ID to the top-level Article ID
-article_changes.json is keyed by (CONTEXT.md: Phase 3 chunks Regulations at
+article_changes.json is keyed by (CONTEXT.md: Regulations are chunked at
 top-level Article granularity, so change history is only tracked there).
 """
 import re

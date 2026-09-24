@@ -1,6 +1,6 @@
-"""Phase 12 (optional app) check: the API wiring works end-to-end against
-the real corpus and a real local Ollama call -- this is not a unit test of
-retrieve()/generate() (already covered in src/), just proof the glue holds.
+"""Check: the API wiring works end-to-end against the real corpus and a
+real local Ollama call -- this is not a unit test of retrieve()/generate()
+(already covered in src/), just proof the glue holds.
 
 Run: python -m app.test_main
 """

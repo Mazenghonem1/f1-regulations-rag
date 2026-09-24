@@ -1,4 +1,4 @@
-"""Phase 2 check: era-routing and the Decision filename filter.
+"""Check: era-routing and the Decision filename filter.
 
 Run: python -m src.scrape.test_scrape
 """

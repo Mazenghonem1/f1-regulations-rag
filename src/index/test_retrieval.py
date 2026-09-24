@@ -1,4 +1,4 @@
-"""Phase 5 check: a literal Article-number query ranks the exact Article
+"""Check: a literal Article-number query ranks the exact Article
 first (BM25 earning its place); RRF handles one retriever returning nothing.
 
 Run: python -m src.index.test_retrieval
@@ -17,7 +17,7 @@ fused = reciprocal_rank_fusion(
 assert fused[0][0] == "a", fused
 
 # a literal Article-number query ranks the exact Article chunk first --
-# dense embeddings are bad at this (PLAN.md), BM25 should nail it
+# dense embeddings are bad at this, BM25 should nail it
 chunks = [
     {"chunk_id": "reg:2023:sporting:1:33", "text": "Article 33 (Sporting Regulations, 2023): DRIVING\nDrivers must make every reasonable effort to use the track at all times and may not leave the track without a justifiable reason. 33.3 governs leaving the track."},
     {"chunk_id": "reg:2023:sporting:1:12", "text": "Article 12 (Sporting Regulations, 2023): PENALTIES\nThe stewards may impose a penalty for a breach of these regulations."},

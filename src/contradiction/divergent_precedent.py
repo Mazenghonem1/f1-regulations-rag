@@ -24,8 +24,8 @@ SIMILARITY_THRESHOLD = 0.75
 
 # "(N seconds added to elapsed Race/Sprint time)" is a boilerplate clause
 # some Decision PDFs append and others omit for the identical penalty --
-# verified false positives (Phase 11, q05/q38): "5 second time penalty."
-# and "5 second time penalty. (5 seconds added to elapsed Race time)." are
+# verified false positives (q05/q38): "5 second time penalty." and
+# "5 second time penalty. (5 seconds added to elapsed Race time)." are
 # the same Outcome. Penalty-points text is NOT stripped -- that is a real
 # difference in what was imposed, not phrasing noise.
 _ADDED_TO_ELAPSED_RE = re.compile(

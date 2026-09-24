@@ -1,6 +1,6 @@
 """Hybrid retrieval entrypoint: BM25 + dense, fused by RRF, optionally
-reranked. The eval harness needs both configurations (PLAN.md), so
-`use_reranker` is a plain switch rather than two separate call paths.
+reranked. The eval harness needs both configurations, so `use_reranker`
+is a plain switch rather than two separate call paths.
 """
 import pathlib
 
@@ -53,8 +53,7 @@ class Retriever:
 
 def log_query(query: str, result: dict, run_name: str = "manual") -> None:
     """Append one retrieval result to results/retrieval_log.jsonl -- every
-    retrieved chunk id and the rerank order delta, reproducible per run
-    (PLAN.md's "log everything" rule)."""
+    retrieved chunk id and the rerank order delta, reproducible per run."""
     import json
 
     RESULTS_DIR.mkdir(parents=True, exist_ok=True)

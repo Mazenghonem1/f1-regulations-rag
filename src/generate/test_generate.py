@@ -1,4 +1,4 @@
-"""Phase 7 check: the Ollama gate raises with a useful message when the
+"""Check: the Ollama gate raises with a useful message when the
 service is down; the JSON parser handles a known-malformed response.
 
 Run: python -m src.generate.test_generate

@@ -1,8 +1,7 @@
-"""Phase 4: diff consecutive Regulation Issues per Article.
+"""Diff consecutive Regulation Issues per Article.
 
 Ground truth for Superseded Precedent (CONTEXT.md) -- a Decision applying an
-Article that was later amended. Built from real Issue diffs, not heuristics
-(PLAN.md).
+Article that was later amended. Built from real Issue diffs, not heuristics.
 
 2023-2025 regulations use bare Article IDs only (no section-prefixed 2026+
 notation was scraped -- docs/RECON.md), so there is no cross-notation

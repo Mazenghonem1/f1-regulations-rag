@@ -1,5 +1,5 @@
-"""Phase 2 entry point: scrape 3 seasons of regulations (all issues) and
-decisions for the controversy-targeted events, raw PDFs to data/raw/.
+"""Scrape 3 seasons of regulations (all issues) and decisions for the
+controversy-targeted events, raw PDFs to data/raw/.
 
 Usage: python -m src.scrape.run [--priority-only]
 """
@@ -12,7 +12,7 @@ from .storage import save
 
 SEASONS = (2023, 2024, 2025)
 
-# Events named in data/controversies.md (Phase 1) -- these get priority so a
+# Events named in data/controversies.md -- these get priority so a
 # partial/interrupted run still covers the eval set's seeded contradictions.
 PRIORITY_EVENTS = {
     2023: {
@@ -69,9 +69,8 @@ def main():
     parser.add_argument(
         "--priority-only",
         action="store_true",
-        help="only scrape the controversy-targeted events (PLAN.md Phase 2 note: "
-        "scrape all three seasons raw when doing a full run; this flag is for "
-        "a faster first pass)",
+        help="only scrape the controversy-targeted events -- scrape all three "
+        "seasons raw when doing a full run; this flag is for a faster first pass",
     )
     args = parser.parse_args()
 

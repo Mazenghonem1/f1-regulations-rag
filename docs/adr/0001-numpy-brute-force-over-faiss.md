@@ -4,7 +4,7 @@ Date: 2026-09-22
 
 ## Status
 
-Accepted. Supersedes the FAISS requirement in `PROJECT_BRIEF.md`.
+Accepted. Supersedes the project's original FAISS requirement.
 
 ## Context
 

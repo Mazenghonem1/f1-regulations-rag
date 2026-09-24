@@ -1,6 +1,6 @@
-"""Ollama availability gate (PLAN.md): real code, not a comment. No paid-API
-fallback anywhere in this project (PROJECT_BRIEF.md) -- if Ollama is absent, stop
-loudly and name the exact command to fix it.
+"""Ollama availability gate: real code, not a comment. No paid-API fallback
+anywhere in this project -- if Ollama is absent, stop loudly and name the
+exact command to fix it.
 """
 import requests
 

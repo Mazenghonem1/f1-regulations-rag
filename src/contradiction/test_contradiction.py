@@ -1,4 +1,4 @@
-"""Phase 6 check: two Decisions, same Article, different Outcomes -> flagged;
+"""Check: two Decisions, same Article, different Outcomes -> flagged;
 the same pair with a Mitigating Factor present -> not flagged; a Decision
 predating an Article change -> superseded.
 
@@ -47,9 +47,9 @@ decision_c = {**decision_b, "outcome": "5 second time penalty."}
 assert detect_divergent_precedent([decision_a, decision_c]) == []
 
 # _normalise_outcome: "(N seconds added to elapsed ... time)" is boilerplate,
-# not a different outcome -- real false positives found in Phase 11 (q05,
-# q38): "5 second time penalty." and "5 second time penalty. (5 seconds
-# added to elapsed Race time)." must normalise identically
+# not a different outcome -- real false positives found (q05, q38):
+# "5 second time penalty." and "5 second time penalty. (5 seconds added to
+# elapsed Race time)." must normalise identically
 assert _normalise_outcome("5 second time penalty.") == _normalise_outcome(
     "5 second time penalty. (5 seconds added to elapsed Race time)."
 )

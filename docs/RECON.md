@@ -11,7 +11,7 @@ re-verify anything that looks stale.
 | Python | 3.13.3 system. **Pin 3.11** — 3.11 is not yet installed |
 | `pdftotext` | Present at `/usr/local/bin/pdftotext` |
 | Also present | `pdfminer.six`, `pypdf`. **`pymupdf` is not** |
-| Ollama | **Not installed.** Blocks Phase 7 only |
+| Ollama | **Not installed.** Blocks the generation step only |
 
 CPU-only inference: an 8B model runs ~2–4 tok/s here, a 3B ~8–12 tok/s. This
 drove the `qwen2.5:3b` choice.

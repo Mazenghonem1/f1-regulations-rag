@@ -1,11 +1,10 @@
-# Controversies — Phase 1 Research
+# Controversies Research
 
 Documented F1 stewarding controversies, 2023–2025, gathered as candidate
-targets for the scraper (Phase 2) and eval set (Phase 8). Terms
-("Divergent Precedent", "Superseded Precedent") used exactly per `CONTEXT.md`.
-Article numbers are best-guess from reporting, not verified against the
-regulation text — that verification happens in Phase 4 (article change
-history) against real Issue diffs.
+targets for the scraper and eval set. Terms ("Divergent Precedent",
+"Superseded Precedent") used exactly per `CONTEXT.md`. Article numbers are
+best-guess from reporting, not verified against the regulation text -- that
+verification happens against the article change history (real Issue diffs).
 
 ---
 
@@ -60,7 +59,7 @@ history) against real Issue diffs.
 - **Cars / drivers:** Max Verstappen (car 1) impeding Yuki Tsunoda
   (AlphaTauri) and Logan Sargeant (Williams) in separate Q1/Q2 incidents.
 - **Likely cited Article:** 39.4 / impeding under qualifying procedure
-  regulations (exact sub-article TBD in Phase 3 parsing).
+  regulations (exact sub-article TBD in parsing).
 - **Why contested:** Verstappen received only two reprimands and no grid
   penalty, despite "unmistakable" impeding that would normally cost three
   grid places. FIA stewards explicitly stated afterward that the decision
@@ -289,7 +288,7 @@ history) against real Issue diffs.
   release from the garage during Q3 at the Austrian GP 2024, no time
   penalty to the driver.
 - **Likely cited Article:** 27 / pit lane procedure articles governing
-  safe release (exact sub-article TBD in Phase 3 parsing).
+  safe release (exact sub-article TBD in parsing).
 - **Why contested:** The same offence category — an unsafe release
   endangering another driver — produced outcomes ranging from a team-only
   fine with no driver penalty (Mercedes, Austria) to a driver time penalty
@@ -323,5 +322,5 @@ history) against real Issue diffs.
 
 12 entries: 8 Divergent Precedent, 3 Superseded Precedent (Entry 2 double-tagged
 as both). Track limits, safety car restarts, qualifying impeding, and unsafe
-release are all represented, matching the categories named in `PROJECT_BRIEF.md` and
-`PLAN.md` Phase 1.
+release are all represented, matching the project's own contradiction
+categories.

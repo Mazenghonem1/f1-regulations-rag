@@ -1,8 +1,8 @@
 """Cross-encoder reranking of the top ~20 fused candidates down to top 5-8.
 
 Logs pre- vs post-rerank order so the rank-change delta can be reported as
-an eval result (PLAN.md) -- "reranking changed the top result in X% of
-queries" needs the before/after orderings, not just the final list.
+an eval result -- "reranking changed the top result in X% of queries" needs
+the before/after orderings, not just the final list.
 """
 from sentence_transformers import CrossEncoder
 

@@ -1,4 +1,4 @@
-"""Phase 3 check: fuzzy label matching, both Article ID forms, dedupe.
+"""Check: fuzzy label matching, both Article ID forms, dedupe.
 
 Run: python -m src.chunk.test_parse
 """

@@ -31,7 +31,7 @@ ways:
 45-question eval set (13 seeded contradictions, 7 negative Justified
 Distinction cases, 25 ordinary lookups), both models CPU-only on an Intel
 Mac. Full numbers, per-question detail, and the story behind each one:
-[`results/phase8_writeup.md`](results/phase8_writeup.md).
+[`results/evaluation.md`](results/evaluation.md).
 
 | Metric | qwen2.5:3b | qwen2.5:7b |
 |---|---|---|
@@ -59,7 +59,7 @@ Reported without cherry-picking:
   conflation when several near-identical Decisions sit together in context.
   Neither is flattering; both are real and worth knowing before you pick a
   model size for a legal/compliance-adjacent domain. Full numbers and the
-  run-to-run variance caveat: [`results/phase8_writeup.md`](results/phase8_writeup.md).
+  run-to-run variance caveat: [`results/evaluation.md`](results/evaluation.md).
 - **A three-bug chain, found and fixed in sequence, not hidden:** an outcome-
   normalisation bug and a retrieval-depth gap in Divergent Precedent were
   fixed first, which raised recall (0.667 → 0.889) but exposed a third,
@@ -219,6 +219,6 @@ Full generation output: `results/eval_qwen2.5_7b_full_20260923T181153_generation
   run is roughly an hour per model.
 
 Full detail, per-run numbers, and the story behind every one of these:
-[`results/phase8_writeup.md`](results/phase8_writeup.md). Project glossary:
+[`results/evaluation.md`](results/evaluation.md). Project glossary:
 [`CONTEXT.md`](CONTEXT.md). Environment facts this build was verified
 against: [`docs/RECON.md`](docs/RECON.md).

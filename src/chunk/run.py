@@ -1,4 +1,4 @@
-"""Phase 3 orchestrator: data/raw/ -> data/processed/ chunks + coverage report.
+"""Chunking orchestrator: data/raw/ -> data/processed/ chunks + coverage report.
 
 Run: python -m src.chunk.run
 """
@@ -45,8 +45,8 @@ def process_decisions() -> tuple[list[dict], dict]:
     kept, dropped = dedupe_decisions(records)
     # Right of Review / Protest / Summons documents are real Decisions but
     # not the fixed-label per-incident template (see parse_decision) -- the
-    # >90% coverage bar in PLAN.md is about that template, so it's measured
-    # only over the subset that could plausibly carry the labels.
+    # >90% coverage bar is about that template, so it's measured only over
+    # the subset that could plausibly carry the labels.
     templated = [r for r in kept if r["is_incident_template"]]
     non_templated = [r for r in kept if not r["is_incident_template"]]
 

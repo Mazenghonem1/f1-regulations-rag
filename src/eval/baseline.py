@@ -1,8 +1,8 @@
 """No-retrieval baseline: ask the local LLM the eval questions directly,
 with no retrieved context at all, to show retrieval's marginal value on a
-domain-specific corpus (PLAN.md) -- base-model F1-rules knowledge should be
-visibly insufficient, especially for Decision-specific and Divergent
-Precedent questions no general model could know.
+domain-specific corpus -- base-model F1-rules knowledge should be visibly
+insufficient, especially for Decision-specific and Divergent Precedent
+questions no general model could know.
 """
 from ..generate.generate import call_ollama
 from ..generate.ollama_gate import MODEL, require_ollama

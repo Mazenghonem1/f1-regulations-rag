@@ -1,16 +1,16 @@
 """Superseded Precedent detector (CONTEXT.md): a Decision applying an
 Article that was later amended, so the Decision no longer reflects the
 current rule. Not a disagreement -- a timeline problem, using the Article's
-actual change date from article_changes.json (Phase 4), not a heuristic.
+actual change date from article_changes.json, not a heuristic.
 """
 from .article_ids import top_level_article
 
 
 def detect_superseded_precedent(decisions: list[dict], article_changes: dict) -> list[dict]:
     """`decisions` are Decision-type chunks with a `date` (ISO "YYYY-MM-DD")
-    and `cited_articles`. `article_changes` is the Phase 4 table: article_id
-    -> [{changed_on, from_issue, to_issue, change_summary, ...}], keyed by
-    top-level Article ID.
+    and `cited_articles`. `article_changes` is the change-history table:
+    article_id -> [{changed_on, from_issue, to_issue, change_summary, ...}],
+    keyed by top-level Article ID.
 
     Flags a Decision against an Article change with changed_on strictly
     after the Decision's date -- the Decision predates a later amendment.

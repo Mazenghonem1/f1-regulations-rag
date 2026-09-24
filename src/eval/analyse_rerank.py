@@ -1,4 +1,4 @@
-"""Phase 10: root-cause the reranker regression (Precision@8: 0.654 -> 0.615,
+"""Root-cause the reranker regression (Precision@8: 0.654 -> 0.615,
 17/26 -> 16/26 on results/eval_qwen2.5_3b_full_20260923T031322_precision_detail.json).
 
 precision_at_k never persists pre/post rerank orderings, so this re-runs
@@ -50,7 +50,7 @@ def analyse() -> list[dict]:
 
 
 def format_report(rows: list[dict]) -> str:
-    lines = ["# Reranker regression analysis (Phase 10)\n"]
+    lines = ["# Reranker regression analysis\n"]
     for row in rows:
         lines.append(f"## {row['id']} ({row['direction']}) — {row['question']}")
         lines.append(f"- gold: `{row['gold_chunk_id']}`")

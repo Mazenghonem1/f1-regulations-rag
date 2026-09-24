@@ -1,5 +1,5 @@
-"""Phase 12 (optional): thin FastAPI wrapper around the existing pipeline
-stages. Retrieval/rerank/contradiction/generation are already independently
+"""Thin FastAPI wrapper around the existing pipeline stages.
+Retrieval/rerank/contradiction/generation are already independently
 callable (src/index, src/rerank folded into retrieve(), src/contradiction,
 src/generate) -- this file only wires them to one HTTP endpoint and serves
 the static UI. No new pipeline logic lives here.

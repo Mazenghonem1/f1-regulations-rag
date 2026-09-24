@@ -1,5 +1,5 @@
-"""Phase 6 orchestrator: run both named detectors over a retrieved chunk
-set and log every flag to results/ (PLAN.md's "log everything" rule).
+"""Contradiction-check orchestrator: run both named detectors over a
+retrieved chunk set and log every flag to results/ for reproducibility.
 """
 import json
 import pathlib

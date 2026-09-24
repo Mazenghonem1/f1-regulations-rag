@@ -1,4 +1,4 @@
-# Reranker regression analysis (Phase 10)
+# Reranker regression analysis
 
 Evidence: `results/rerank_analysis_detail.json`, produced by
 `python -m src.eval.analyse_rerank` re-running retrieval for the 7 flipped
@@ -9,7 +9,7 @@ deterministic given the fixed corpus, so this reproduces exactly what
 
 ## What was hypothesized
 
-Phase 8's write-up guessed the cross-encoder demotes a literal Article-number
+The write-up guessed the cross-encoder demotes a literal Article-number
 match that BM25 ranked correctly, in favour of a semantically-related but
 *wrong* Article.
 
@@ -59,25 +59,25 @@ Issue) counts the swap as a miss.
 
 ## Question-type split
 
-The plan noted q14/q19/q20/q30 are all `ordinary_lookup`, q04/q13/q27 span a
+q14/q19/q20/q30 are all `ordinary_lookup`, q04/q13/q27 span a
 `seeded_contradiction` (q04) and lookups (q13, q27). That split does not
 explain the direction of the flip — q13 is `ordinary_lookup` too, and
 improved via the identical same-Article-different-Issue mechanism as the
 four regressions. Question type is not the driver; **whether an Article has
 many near-duplicate historical Issues in the corpus is.**
 
-## Recommendation (not implemented this phase)
+## Recommendation (not implemented at the time of this analysis)
 
 The precision cost here is largely an artifact of scoring against one
 gold Issue while the corpus intentionally retains all Issues. Two options,
-neither implemented here per the plan's scope boundary:
+neither implemented at the time of this analysis:
 
 1. **Eval-side**: score precision@k as a hit if *any* Issue of the gold
    Article appears in top-k, not just the pinned Issue — this measures
    "found the right Article" separately from "found the current Issue."
+   (Later added -- see `src/eval/precision_at_k.py`'s `article_level` metric.)
 2. **Retrieval-side**: query-time season/recency biasing, or collapsing
    near-duplicate Issues at rerank time — out of scope here; changing
-   retrieval mid-plan would invalidate Phase 9's and the upcoming Phase 11
-   numbers.
+   retrieval would invalidate other eval numbers already reported elsewhere.
 
-No pipeline code was changed in this phase.
+No pipeline code was changed as part of this analysis.

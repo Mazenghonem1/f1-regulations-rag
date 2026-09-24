@@ -1,6 +1,6 @@
 """Defensive parsing of the LLM's structured JSON output. A 3B model will
-occasionally wrap the JSON in prose or markdown fences (PLAN.md) -- extract
-and parse defensively rather than requiring exact output.
+occasionally wrap the JSON in prose or markdown fences -- extract and parse
+defensively rather than requiring exact output.
 """
 import json
 import re
@@ -19,7 +19,7 @@ def parse_structured_output(raw: str) -> dict:
     markdown code fences or leading/trailing prose around it. Raises
     MalformedOutputError if no valid, complete object can be recovered --
     the caller retries once, then fails loudly rather than silently
-    dropping a flag (PLAN.md)."""
+    dropping a flag."""
     match = _JSON_OBJECT_RE.search(raw)
     if not match:
         raise MalformedOutputError(f"No JSON object found in output: {raw!r}")

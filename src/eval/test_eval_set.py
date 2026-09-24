@@ -1,5 +1,5 @@
-"""Phase 11 check: every question's gold_chunk_ids actually exist in the
-corpus (Phase 8 hit exactly this bug with a chunk id that didn't exist).
+"""Check: every question's gold_chunk_ids actually exist in the corpus
+(a real bug hit exactly this once: a chunk id that didn't exist).
 
 Run: python -m src.eval.test_eval_set
 """

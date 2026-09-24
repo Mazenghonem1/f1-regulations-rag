@@ -1,4 +1,4 @@
-"""Phase 4 check: a known unchanged Article reports no change; a known
+"""Check: a known unchanged Article reports no change; a known
 amended one reports a change with a plausible date.
 
 Run: python -m src.chunk.test_article_changes

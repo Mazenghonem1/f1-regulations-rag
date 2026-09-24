@@ -1,6 +1,6 @@
 """Retrieval precision@k: does at least one gold chunk_id appear in the
 top-k retrieved chunks. Computed with and without reranking so the delta
-is a reportable eval result (PLAN.md).
+is a reportable eval result.
 
 Questions with no gold_chunk_ids (open-ended seeded contradictions, where
 several valid pairs exist -- see eval_set.json's q08/q09/q10/q32 notes) are

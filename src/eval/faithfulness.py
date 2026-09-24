@@ -1,8 +1,8 @@
 """Citation faithfulness: does a generated citation's quote_or_paraphrase
 actually appear in / get supported by the chunk it cites. Scored with the
-local LLM as judge (PROJECT_BRIEF.md -- no paid judge model), against a plain
-yes/no rubric per citation. Known limitation, stated plainly: qwen2.5
-judging its own family's output is not GPT-4-class evaluation (PLAN.md).
+local LLM as judge (no paid judge model), against a plain yes/no rubric
+per citation. Known limitation, stated plainly: qwen2.5 judging its own
+family's output is not GPT-4-class evaluation.
 """
 from ..generate.generate import call_ollama
 from ..generate.ollama_gate import MODEL, require_ollama
