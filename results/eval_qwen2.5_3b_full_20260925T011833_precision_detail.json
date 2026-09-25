@@ -1,0 +1,436 @@
+{
+  "without_reranking": {
+    "precision": 0.6944444444444444,
+    "scored": 36,
+    "skipped": 9,
+    "per_question": [
+      {
+        "id": "q01",
+        "hit": true
+      },
+      {
+        "id": "q02",
+        "hit": true
+      },
+      {
+        "id": "q03",
+        "hit": true
+      },
+      {
+        "id": "q04",
+        "hit": false
+      },
+      {
+        "id": "q05",
+        "hit": true
+      },
+      {
+        "id": "q06",
+        "hit": true
+      },
+      {
+        "id": "q07",
+        "hit": true
+      },
+      {
+        "id": "q10",
+        "hit": false
+      },
+      {
+        "id": "q11",
+        "hit": false
+      },
+      {
+        "id": "q12",
+        "hit": true
+      },
+      {
+        "id": "q13",
+        "hit": false
+      },
+      {
+        "id": "q14",
+        "hit": true
+      },
+      {
+        "id": "q15",
+        "hit": true
+      },
+      {
+        "id": "q16",
+        "hit": false
+      },
+      {
+        "id": "q17",
+        "hit": true
+      },
+      {
+        "id": "q18",
+        "hit": true
+      },
+      {
+        "id": "q19",
+        "hit": true
+      },
+      {
+        "id": "q20",
+        "hit": true
+      },
+      {
+        "id": "q21",
+        "hit": true
+      },
+      {
+        "id": "q22",
+        "hit": true
+      },
+      {
+        "id": "q23",
+        "hit": false
+      },
+      {
+        "id": "q26",
+        "hit": false
+      },
+      {
+        "id": "q27",
+        "hit": false
+      },
+      {
+        "id": "q28",
+        "hit": false
+      },
+      {
+        "id": "q29",
+        "hit": false
+      },
+      {
+        "id": "q30",
+        "hit": true
+      },
+      {
+        "id": "q31",
+        "hit": true
+      },
+      {
+        "id": "q32",
+        "hit": true
+      },
+      {
+        "id": "q33",
+        "hit": true
+      },
+      {
+        "id": "q34",
+        "hit": true
+      },
+      {
+        "id": "q35",
+        "hit": true
+      },
+      {
+        "id": "q36",
+        "hit": true
+      },
+      {
+        "id": "q37",
+        "hit": true
+      },
+      {
+        "id": "q38",
+        "hit": true
+      },
+      {
+        "id": "q39",
+        "hit": true
+      },
+      {
+        "id": "q40",
+        "hit": false
+      }
+    ],
+    "article_level": {
+      "precision": 1.0,
+      "scored": 15,
+      "per_question": [
+        {
+          "id": "q12",
+          "hit": true
+        },
+        {
+          "id": "q13",
+          "hit": true
+        },
+        {
+          "id": "q14",
+          "hit": true
+        },
+        {
+          "id": "q15",
+          "hit": true
+        },
+        {
+          "id": "q16",
+          "hit": true
+        },
+        {
+          "id": "q17",
+          "hit": true
+        },
+        {
+          "id": "q18",
+          "hit": true
+        },
+        {
+          "id": "q19",
+          "hit": true
+        },
+        {
+          "id": "q20",
+          "hit": true
+        },
+        {
+          "id": "q21",
+          "hit": true
+        },
+        {
+          "id": "q22",
+          "hit": true
+        },
+        {
+          "id": "q23",
+          "hit": true
+        },
+        {
+          "id": "q26",
+          "hit": true
+        },
+        {
+          "id": "q28",
+          "hit": true
+        },
+        {
+          "id": "q30",
+          "hit": true
+        }
+      ]
+    }
+  },
+  "with_reranking": {
+    "precision": 0.6944444444444444,
+    "scored": 36,
+    "skipped": 9,
+    "per_question": [
+      {
+        "id": "q01",
+        "hit": true
+      },
+      {
+        "id": "q02",
+        "hit": true
+      },
+      {
+        "id": "q03",
+        "hit": true
+      },
+      {
+        "id": "q04",
+        "hit": true
+      },
+      {
+        "id": "q05",
+        "hit": true
+      },
+      {
+        "id": "q06",
+        "hit": true
+      },
+      {
+        "id": "q07",
+        "hit": true
+      },
+      {
+        "id": "q10",
+        "hit": false
+      },
+      {
+        "id": "q11",
+        "hit": false
+      },
+      {
+        "id": "q12",
+        "hit": true
+      },
+      {
+        "id": "q13",
+        "hit": true
+      },
+      {
+        "id": "q14",
+        "hit": false
+      },
+      {
+        "id": "q15",
+        "hit": true
+      },
+      {
+        "id": "q16",
+        "hit": false
+      },
+      {
+        "id": "q17",
+        "hit": true
+      },
+      {
+        "id": "q18",
+        "hit": true
+      },
+      {
+        "id": "q19",
+        "hit": false
+      },
+      {
+        "id": "q20",
+        "hit": false
+      },
+      {
+        "id": "q21",
+        "hit": true
+      },
+      {
+        "id": "q22",
+        "hit": true
+      },
+      {
+        "id": "q23",
+        "hit": false
+      },
+      {
+        "id": "q26",
+        "hit": false
+      },
+      {
+        "id": "q27",
+        "hit": true
+      },
+      {
+        "id": "q28",
+        "hit": false
+      },
+      {
+        "id": "q29",
+        "hit": false
+      },
+      {
+        "id": "q30",
+        "hit": false
+      },
+      {
+        "id": "q31",
+        "hit": true
+      },
+      {
+        "id": "q32",
+        "hit": true
+      },
+      {
+        "id": "q33",
+        "hit": true
+      },
+      {
+        "id": "q34",
+        "hit": true
+      },
+      {
+        "id": "q35",
+        "hit": true
+      },
+      {
+        "id": "q36",
+        "hit": true
+      },
+      {
+        "id": "q37",
+        "hit": true
+      },
+      {
+        "id": "q38",
+        "hit": true
+      },
+      {
+        "id": "q39",
+        "hit": true
+      },
+      {
+        "id": "q40",
+        "hit": true
+      }
+    ],
+    "article_level": {
+      "precision": 1.0,
+      "scored": 15,
+      "per_question": [
+        {
+          "id": "q12",
+          "hit": true
+        },
+        {
+          "id": "q13",
+          "hit": true
+        },
+        {
+          "id": "q14",
+          "hit": true
+        },
+        {
+          "id": "q15",
+          "hit": true
+        },
+        {
+          "id": "q16",
+          "hit": true
+        },
+        {
+          "id": "q17",
+          "hit": true
+        },
+        {
+          "id": "q18",
+          "hit": true
+        },
+        {
+          "id": "q19",
+          "hit": true
+        },
+        {
+          "id": "q20",
+          "hit": true
+        },
+        {
+          "id": "q21",
+          "hit": true
+        },
+        {
+          "id": "q22",
+          "hit": true
+        },
+        {
+          "id": "q23",
+          "hit": true
+        },
+        {
+          "id": "q26",
+          "hit": true
+        },
+        {
+          "id": "q28",
+          "hit": true
+        },
+        {
+          "id": "q30",
+          "hit": true
+        }
+      ]
+    }
+  }
+}

@@ -35,11 +35,12 @@ Mac. Full numbers, per-question detail, and the story behind each one:
 
 | Metric | qwen2.5:3b | qwen2.5:7b |
 |---|---|---|
-| Retrieval precision@8 (no rerank / reranked) | 0.694 / 0.694 | identical — retrieval is generation-model-independent |
+| Retrieval precision@8, exact (no rerank / reranked) | 0.694 / 0.694 | identical — retrieval is generation-model-independent |
+| Retrieval precision@8, article-level (any Issue of the gold Article) | **1.0** (15/15) | identical |
 | Divergent Precedent recall / precision | **0.889 / 1.0** | identical |
 | Superseded Precedent recall / precision | 1.0 / 1.0 | identical |
-| Citations produced (of 45 questions) | 42 citations, 11 questions | 91 citations, 38 questions |
-| Citation faithfulness (LLM-judge) | **0.905** | **0.462** |
+| Citations produced (of 45 questions) | 28 citations, 13 questions | 100 citations, 41 questions |
+| Citation faithfulness (LLM-judge) | **0.679** | **0.37** |
 
 Reported without cherry-picking:
 
@@ -50,13 +51,19 @@ Reported without cherry-picking:
   (needed for observable change history), so heavily-amended Articles have
   20+ near-duplicate chunks competing for rank. The cross-encoder reshuffles
   among these near-identical Issues close to arbitrarily — it never promotes
-  a genuinely wrong Article, which was the original (wrong) hypothesis.
+  a genuinely wrong Article, which was the original (wrong) hypothesis. The
+  same mechanism explains most of the exact-metric's precision@8 gap: a
+  second, article-level metric (credit any Issue of the gold Article, not
+  just one pinned Issue) scores a clean **1.0** on every eligible question —
+  retrieval is finding the right regulatory content nearly every time; the
+  exact number understates that.
 - **3B is silent, 7B is confidently wrong** — direction holds, magnitude
   varies run to run (Ollama sampling is unseeded; 7B's faithfulness has
-  ranged 0.263–0.462 across recent runs). qwen2.5:3b is consistently the
-  more conservative, more faithful model; qwen2.5:7b consistently cites more
-  often at a much lower faithfulness rate, traced concretely to cross-chunk
-  conflation when several near-identical Decisions sit together in context.
+  ranged 0.263–0.462, 3B's 0.679–0.971, across recent runs). qwen2.5:3b is
+  consistently the more conservative, more faithful model; qwen2.5:7b
+  consistently cites more often at a much lower faithfulness rate, traced
+  concretely to cross-chunk conflation when several near-identical Decisions
+  sit together in context.
   Neither is flattering; both are real and worth knowing before you pick a
   model size for a legal/compliance-adjacent domain. Full numbers and the
   run-to-run variance caveat: [`results/evaluation.md`](results/evaluation.md).

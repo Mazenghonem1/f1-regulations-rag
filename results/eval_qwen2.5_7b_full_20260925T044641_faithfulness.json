@@ -1,0 +1,529 @@
+{
+  "faithfulness": 0.37,
+  "scored": 100,
+  "unsupported": 63,
+  "per_citation": [
+    {
+      "question_id": "q01",
+      "doc_id": "dec:2023:Austrian Grand Prix:59",
+      "supported": false
+    },
+    {
+      "question_id": "q01",
+      "doc_id": "dec:2023:Austrian Grand Prix:66",
+      "supported": false
+    },
+    {
+      "question_id": "q01",
+      "doc_id": "dec:2023:Austrian Grand Prix:67",
+      "supported": false
+    },
+    {
+      "question_id": "q01",
+      "doc_id": "dec:2023:Austrian Grand Prix:61",
+      "supported": false
+    },
+    {
+      "question_id": "q02",
+      "doc_id": "dec:2023:Monaco Grand Prix:49",
+      "supported": true
+    },
+    {
+      "question_id": "q02",
+      "doc_id": "dec:2023:Qatar Grand Prix:86",
+      "supported": true
+    },
+    {
+      "question_id": "q04",
+      "doc_id": "dec:2023:United States Grand Prix:49",
+      "supported": false
+    },
+    {
+      "question_id": "q04",
+      "doc_id": "dec:2023:United States Grand Prix:49",
+      "supported": false
+    },
+    {
+      "question_id": "q04",
+      "doc_id": "dec:2023:United States Grand Prix:49",
+      "supported": false
+    },
+    {
+      "question_id": "q04",
+      "doc_id": "dec:2023:United States Grand Prix:49",
+      "supported": false
+    },
+    {
+      "question_id": "q04",
+      "doc_id": "dec:2023:United States Grand Prix:49",
+      "supported": false
+    },
+    {
+      "question_id": "q04",
+      "doc_id": "dec:2023:United States Grand Prix:48",
+      "supported": false
+    },
+    {
+      "question_id": "q04",
+      "doc_id": "dec:2023:United States Grand Prix:48",
+      "supported": false
+    },
+    {
+      "question_id": "q04",
+      "doc_id": "dec:2023:United States Grand Prix:48",
+      "supported": false
+    },
+    {
+      "question_id": "q04",
+      "doc_id": "dec:2023:United States Grand Prix:48",
+      "supported": false
+    },
+    {
+      "question_id": "q04",
+      "doc_id": "dec:2023:United States Grand Prix:48",
+      "supported": false
+    },
+    {
+      "question_id": "q05",
+      "doc_id": "dec:2023:Austrian Grand Prix:66",
+      "supported": true
+    },
+    {
+      "question_id": "q05",
+      "doc_id": "dec:2023:Austrian Grand Prix:63",
+      "supported": true
+    },
+    {
+      "question_id": "q07",
+      "doc_id": "dec:2023:Qatar Grand Prix:53",
+      "supported": true
+    },
+    {
+      "question_id": "q07",
+      "doc_id": "dec:2023:Qatar Grand Prix:55",
+      "supported": true
+    },
+    {
+      "question_id": "q07",
+      "doc_id": "dec:2023:Qatar Grand Prix:54",
+      "supported": true
+    },
+    {
+      "question_id": "q07",
+      "doc_id": "dec:2023:Qatar Grand Prix:86",
+      "supported": true
+    },
+    {
+      "question_id": "q08",
+      "doc_id": "dec:2023:United States Grand Prix:64",
+      "supported": false
+    },
+    {
+      "question_id": "q08",
+      "doc_id": "dec:2023:United States Grand Prix:65",
+      "supported": false
+    },
+    {
+      "question_id": "q09",
+      "doc_id": "dec:2023:Austrian Grand Prix:75",
+      "supported": true
+    },
+    {
+      "question_id": "q10",
+      "doc_id": "dec:2024:Austrian Grand Prix:49",
+      "supported": false
+    },
+    {
+      "question_id": "q10",
+      "doc_id": "dec:2023:Monaco Grand Prix:52",
+      "supported": false
+    },
+    {
+      "question_id": "q10",
+      "doc_id": "dec:2023:Monaco Grand Prix:52",
+      "supported": false
+    },
+    {
+      "question_id": "q10",
+      "doc_id": "dec:2023:Monaco Grand Prix:52",
+      "supported": false
+    },
+    {
+      "question_id": "q10",
+      "doc_id": "dec:2023:Monaco Grand Prix:17",
+      "supported": false
+    },
+    {
+      "question_id": "q10",
+      "doc_id": "dec:2023:Monaco Grand Prix:17",
+      "supported": false
+    },
+    {
+      "question_id": "q10",
+      "doc_id": "dec:2024:United States Grand Prix:75",
+      "supported": false
+    },
+    {
+      "question_id": "q10",
+      "doc_id": "dec:2024:United States Grand Prix:75",
+      "supported": false
+    },
+    {
+      "question_id": "q10",
+      "doc_id": "dec:2023:Australian Grand Prix:55",
+      "supported": false
+    },
+    {
+      "question_id": "q10",
+      "doc_id": "dec:2023:Australian Grand Prix:55",
+      "supported": false
+    },
+    {
+      "question_id": "q11",
+      "doc_id": "reg:2023:sporting:2:33",
+      "supported": true
+    },
+    {
+      "question_id": "q12",
+      "doc_id": "reg:2025:sporting:1:35",
+      "supported": true
+    },
+    {
+      "question_id": "q13",
+      "doc_id": "[reg:2023:sporting:7:28] (regulation, 28)",
+      "supported": false,
+      "reason": "doc_id not found in retrieved chunks"
+    },
+    {
+      "question_id": "q14",
+      "doc_id": "reg:2024:sporting:2:48",
+      "supported": true
+    },
+    {
+      "question_id": "q14",
+      "doc_id": "reg:2024:sporting:3:48",
+      "supported": true
+    },
+    {
+      "question_id": "q14",
+      "doc_id": "reg:2024:sporting:4:48",
+      "supported": false
+    },
+    {
+      "question_id": "q15",
+      "doc_id": "reg:2023:sporting:1:63",
+      "supported": true
+    },
+    {
+      "question_id": "q16",
+      "doc_id": "30.1",
+      "supported": false,
+      "reason": "doc_id not found in retrieved chunks"
+    },
+    {
+      "question_id": "q16",
+      "doc_id": "30.1",
+      "supported": false,
+      "reason": "doc_id not found in retrieved chunks"
+    },
+    {
+      "question_id": "q16",
+      "doc_id": "30.5",
+      "supported": false,
+      "reason": "doc_id not found in retrieved chunks"
+    },
+    {
+      "question_id": "q16",
+      "doc_id": "30.6",
+      "supported": false,
+      "reason": "doc_id not found in retrieved chunks"
+    },
+    {
+      "question_id": "q17",
+      "doc_id": "reg:2024:sporting:1:57",
+      "supported": true
+    },
+    {
+      "question_id": "q18",
+      "doc_id": "FIA-GT-Specification-2021",
+      "supported": false,
+      "reason": "doc_id not found in retrieved chunks"
+    },
+    {
+      "question_id": "q19",
+      "doc_id": "40.4-40.12",
+      "supported": false,
+      "reason": "doc_id not found in retrieved chunks"
+    },
+    {
+      "question_id": "q19",
+      "doc_id": "40.6",
+      "supported": false,
+      "reason": "doc_id not found in retrieved chunks"
+    },
+    {
+      "question_id": "q19",
+      "doc_id": "40.9",
+      "supported": false,
+      "reason": "doc_id not found in retrieved chunks"
+    },
+    {
+      "question_id": "q20",
+      "doc_id": "2024 Formula 1 Technical Regulations",
+      "supported": false,
+      "reason": "doc_id not found in retrieved chunks"
+    },
+    {
+      "question_id": "q21",
+      "doc_id": "reg:2023:sporting:2:33",
+      "supported": true
+    },
+    {
+      "question_id": "q22",
+      "doc_id": "dec:2024:Mexico City Grand Prix:42",
+      "supported": true
+    },
+    {
+      "question_id": "q23",
+      "doc_id": "reg:2023:sporting:1:33",
+      "supported": true
+    },
+    {
+      "question_id": "q23",
+      "doc_id": "reg:2023:sporting:3:33",
+      "supported": true
+    },
+    {
+      "question_id": "q23",
+      "doc_id": "reg:2023:sporting:4:33",
+      "supported": true
+    },
+    {
+      "question_id": "q24",
+      "doc_id": "Decision dec:2023:Australian Grand Prix:55 (2023-04-02)",
+      "supported": false,
+      "reason": "doc_id not found in retrieved chunks"
+    },
+    {
+      "question_id": "q25",
+      "doc_id": "dec:2023:Austrian Grand Prix:65",
+      "supported": false
+    },
+    {
+      "question_id": "q26",
+      "doc_id": "30.5b",
+      "supported": false,
+      "reason": "doc_id not found in retrieved chunks"
+    },
+    {
+      "question_id": "q27",
+      "doc_id": "Decision dec:2023:Singapore Grand Prix:31",
+      "supported": false,
+      "reason": "doc_id not found in retrieved chunks"
+    },
+    {
+      "question_id": "q28",
+      "doc_id": "reg:2024:sporting:4:31",
+      "supported": true
+    },
+    {
+      "question_id": "q29",
+      "doc_id": "[reg:2024:sporting:1:1]",
+      "supported": false,
+      "reason": "doc_id not found in retrieved chunks"
+    },
+    {
+      "question_id": "q29",
+      "doc_id": "[reg:2024:sporting:2:1]",
+      "supported": false,
+      "reason": "doc_id not found in retrieved chunks"
+    },
+    {
+      "question_id": "q29",
+      "doc_id": "[reg:2024:sporting:3:1]",
+      "supported": false,
+      "reason": "doc_id not found in retrieved chunks"
+    },
+    {
+      "question_id": "q30",
+      "doc_id": "[reg:2024:sporting:7:29]",
+      "supported": false,
+      "reason": "doc_id not found in retrieved chunks"
+    },
+    {
+      "question_id": "q31",
+      "doc_id": "Decision dec:2023:Australian Grand Prix:27 (2023-04-01)",
+      "supported": false,
+      "reason": "doc_id not found in retrieved chunks"
+    },
+    {
+      "question_id": "q31",
+      "doc_id": "Decision dec:2023:Singapore Grand Prix:41 (2023-09-17)",
+      "supported": false,
+      "reason": "doc_id not found in retrieved chunks"
+    },
+    {
+      "question_id": "q32",
+      "doc_id": "Decision dec:2023:Qatar Grand Prix:65",
+      "supported": false,
+      "reason": "doc_id not found in retrieved chunks"
+    },
+    {
+      "question_id": "q32",
+      "doc_id": "Decision dec:2024:United States Grand Prix:49, 48, 46",
+      "supported": false,
+      "reason": "doc_id not found in retrieved chunks"
+    },
+    {
+      "question_id": "q33",
+      "doc_id": "dec:2023:Qatar Grand Prix:69",
+      "supported": false
+    },
+    {
+      "question_id": "q34",
+      "doc_id": "dec:2023:Qatar Grand Prix:70",
+      "supported": false
+    },
+    {
+      "question_id": "q35",
+      "doc_id": "dec:2023:Singapore Grand Prix:38",
+      "supported": false
+    },
+    {
+      "question_id": "q35",
+      "doc_id": "dec:2023:Singapore Grand Prix:38",
+      "supported": false
+    },
+    {
+      "question_id": "q35",
+      "doc_id": "dec:2023:Singapore Grand Prix:38",
+      "supported": false
+    },
+    {
+      "question_id": "q35",
+      "doc_id": "dec:2023:Singapore Grand Prix:38",
+      "supported": false
+    },
+    {
+      "question_id": "q35",
+      "doc_id": "dec:2023:Singapore Grand Prix:38",
+      "supported": false
+    },
+    {
+      "question_id": "q36",
+      "doc_id": "dec:2023:Austrian Grand Prix:27",
+      "supported": false
+    },
+    {
+      "question_id": "q36",
+      "doc_id": "dec:2023:Monaco Grand Prix:40",
+      "supported": false
+    },
+    {
+      "question_id": "q37",
+      "doc_id": "dec:2023:Austrian Grand Prix:65",
+      "supported": true
+    },
+    {
+      "question_id": "q37",
+      "doc_id": "dec:2023:Monaco Grand Prix:52",
+      "supported": true
+    },
+    {
+      "question_id": "q40",
+      "doc_id": "dec:2023:Australian Grand Prix:15",
+      "supported": false
+    },
+    {
+      "question_id": "q40",
+      "doc_id": "dec:2023:Australian Grand Prix:26",
+      "supported": false
+    },
+    {
+      "question_id": "q41",
+      "doc_id": "reg:2024:sporting:7:27",
+      "supported": true
+    },
+    {
+      "question_id": "q42",
+      "doc_id": "reg:2024:sporting:3:26",
+      "supported": true
+    },
+    {
+      "question_id": "q42",
+      "doc_id": "reg:2024:sporting:3:26",
+      "supported": true
+    },
+    {
+      "question_id": "q42",
+      "doc_id": "reg:2024:sporting:3:26",
+      "supported": true
+    },
+    {
+      "question_id": "q42",
+      "doc_id": "reg:2024:sporting:3:26",
+      "supported": true
+    },
+    {
+      "question_id": "q42",
+      "doc_id": "reg:2024:sporting:3:26",
+      "supported": true
+    },
+    {
+      "question_id": "q42",
+      "doc_id": "reg:2024:sporting:3:26",
+      "supported": true
+    },
+    {
+      "question_id": "q42",
+      "doc_id": "reg:2024:sporting:3:26",
+      "supported": false
+    },
+    {
+      "question_id": "q42",
+      "doc_id": "reg:2024:sporting:3:26",
+      "supported": true
+    },
+    {
+      "question_id": "q42",
+      "doc_id": "reg:2024:sporting:3:26",
+      "supported": true
+    },
+    {
+      "question_id": "q42",
+      "doc_id": "reg:2024:sporting:3:26",
+      "supported": true
+    },
+    {
+      "question_id": "q43",
+      "doc_id": "2024 Formula 1 Technical Regulations",
+      "supported": false,
+      "reason": "doc_id not found in retrieved chunks"
+    },
+    {
+      "question_id": "q44",
+      "doc_id": "reg:2024:sporting:3:25",
+      "supported": true
+    },
+    {
+      "question_id": "q44",
+      "doc_id": "reg:2024:sporting:1:25",
+      "supported": true
+    },
+    {
+      "question_id": "q45",
+      "doc_id": "reg:2024:sporting:1:9",
+      "supported": true
+    },
+    {
+      "question_id": "q45",
+      "doc_id": "reg:2024:sporting:3:9",
+      "supported": true
+    },
+    {
+      "question_id": "q45",
+      "doc_id": "reg:2024:sporting:2:9",
+      "supported": false
+    }
+  ]
+}
